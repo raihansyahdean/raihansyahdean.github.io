@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Game Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Raihansyah A. Andrian</h1>
+                <p class="subtitle">Game Developer & Creative Technologist</p>
+                <p style="color: #a0a0a0; max-width: 600px; margin: 0 auto;">
+                    Crafting immersive experiences and pushing the boundaries of interactive entertainment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <h1 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">🎮</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Alpha</h3>
+                        <p class="project-desc">A fast-paced action game featuring dynamic combat systems and procedurally generated levels.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">🕹️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">VR Adventure</h3>
+                        <p class="project-desc">Immersive virtual reality experience with intuitive controls and stunning environments.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">⚔️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">RPG Quest</h3>
+                        <p class="project-desc">Story-driven RPG with branching narratives and deep character customization.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">🎯</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Puzzle Dimension</h3>
+                        <p class="project-desc">Mind-bending puzzle game with unique mechanics and beautiful minimalist design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Page -->
+        <div id="experience" class="page">
+            <h1 style="text-align: center; margin-bottom: 3rem;">Work Experience</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">Senior Game Developer</h3>
+                        <p class="timeline-company">Gaming Studio Inc.</p>
+                        <p>Leading development of next-gen gaming experiences, managing team of 5 developers, implementing advanced AI systems.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <h3 class="timeline-title">Game Developer</h3>
+                        <p class="timeline-company">Indie Games Co.</p>
+                        <p>Developed multiple indie titles, specialized in Unity and Unreal Engine, created custom shaders and visual effects.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <h3 class="timeline-title">Junior Developer</h3>
+                        <p class="timeline-company">Tech Games Ltd.</p>
+                        <p>Assisted in development of mobile games, bug fixing, implementing gameplay features, optimizing performance.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <h1 style="text-align: center; margin-bottom: 2rem;">About Me</h1>
+            <div class="about-content">
+                <p>I'm a passionate game developer with over 5 years of experience creating engaging and innovative gaming experiences. My journey started with a love for games and evolved into a career dedicated to bringing creative visions to life.</p>
+                <p style="margin-top: 1rem;">I specialize in gameplay programming, AI systems, and creating immersive player experiences. When I'm not coding, you'll find me exploring new game mechanics, studying game design, or playing the latest indie releases.</p>
+                
+                <h3 style="color: #58a6ff; margin-top: 2rem; margin-bottom: 1rem;">Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Unreal Engine</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">3D Graphics</span>
+                    <span class="skill-tag">AI Development</span>
+                    <span class="skill-tag">VR/AR</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Get In Touch</h1>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
