@@ -19,13 +19,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Form submission
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    e.target.reset();
-});
-
 // Add hover effect to project cards
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
