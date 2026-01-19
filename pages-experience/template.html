@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE TITLE -->
+    <title>Work - [WORK NAME]</title>
+    <link rel="stylesheet" href="../css/experience-page.css">
+</head>
+<body>
+    <div class="project-header">
+        <a href="../index.html#experience" class="back-button">
+            ← Back to Portfolio
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Project Title -->
+        <h1 class="project-title">Senior Game Developer Project</h1>
+        <p class="project-subtitle">Gaming Studio Inc. | 2023 - Present</p>
+
+        <!-- GAME DETAILS SECTION -->
+        <section class="section">
+            <h2 class="section-title">Game Details</h2>
+
+            <!-- Slideshow -->
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <video controls>
+                        <source src="videos/project-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="slide">
+                    <img src="images/project/screenshot1.jpg" alt="Game Screenshot 1">
+                </div>
+                <div class="slide">
+                    <img src="images/project/screenshot2.jpg" alt="Game Screenshot 2">
+                </div>
+                <div class="slide">
+                    <img src="images/project/screenshot3.jpg" alt="Game Screenshot 3">
+                </div>
+
+                <button class="prev-slide" onclick="changeSlide(-1)">❮</button>
+                <button class="next-slide" onclick="changeSlide(1)">❯</button>
+
+                <div class="slide-controls">
+                    <span class="slide-dot active" onclick="currentSlide(0)"></span>
+                    <span class="slide-dot" onclick="currentSlide(1)"></span>
+                    <span class="slide-dot" onclick="currentSlide(2)"></span>
+                    <span class="slide-dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+            <!-- Game Description -->
+            <div class="description-box">
+                <p>
+                    This is a detailed description of your game project. Explain the concept, the story, the gameplay mechanics, and what makes this game unique. Talk about the target audience, the game's setting, and the core experience you wanted to create for players. This paragraph should give readers a comprehensive understanding of what the game is about and why it matters.
+                </p>
+            </div>
+
+            <!-- Details, Goals, Constraints Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div class="info-list">
+                    <h3>Project Details</h3>
+                    <ul>
+                        <li>Team size: 5 developers</li>
+                        <li>Duration: 18 months</li>
+                        <li>Engine: Unity 2022</li>
+                        <li>Platform: PC, Console</li>
+                        <li>My Role: Lead Programmer</li>
+                    </ul>
+                </div>
+
+                <div class="info-list">
+                    <h3>Goals</h3>
+                    <ul>
+                        <li>Create immersive multiplayer experience</li>
+                        <li>Implement advanced AI systems</li>
+                        <li>Optimize for 60 FPS on all platforms</li>
+                        <li>Build scalable backend infrastructure</li>
+                        <li>Launch with 100K+ active users</li>
+                    </ul>
+                </div>
+
+                <div class="info-list">
+                    <h3>Constraints</h3>
+                    <ul>
+                        <li>Tight 18-month deadline</li>
+                        <li>Limited budget for middleware</li>
+                        <li>Cross-platform compatibility required</li>
+                        <li>Small team with multiple responsibilities</li>
+                        <li>Performance requirements for older hardware</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section class="section">
+            <h2 class="section-title">Process</h2>
+
+            <!-- 3-Column Process Overview -->
+            <div class="process-columns">
+                <div class="process-column">
+                    <div class="process-number">01</div>
+                    <h3>Planning & Design</h3>
+                    <ul>
+                        <li>Conducted market research</li>
+                        <li>Created design documents</li>
+                        <li>Built prototypes</li>
+                        <li>Gathered team feedback</li>
+                        <li>Defined technical requirements</li>
+                    </ul>
+                </div>
+
+                <div class="process-column">
+                    <div class="process-number">02</div>
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Set up version control</li>
+                        <li>Implemented core mechanics</li>
+                        <li>Built multiplayer systems</li>
+                        <li>Created AI behaviors</li>
+                        <li>Optimized performance</li>
+                    </ul>
+                </div>
+
+                <div class="process-column">
+                    <div class="process-number">03</div>
+                    <h3>Testing & Launch</h3>
+                    <ul>
+                        <li>Alpha testing phase</li>
+                        <li>Beta testing with users</li>
+                        <li>Bug fixing iteration</li>
+                        <li>Platform certification</li>
+                        <li>Marketing and launch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed Process Breakdown -->
+            <div class="process-breakdown">
+                <h3 style="color: #58a6ff; font-size: 1.5rem; margin-bottom: 2rem;">Detailed Breakdown</h3>
+
+                <!-- Breakdown Item 1 -->
+                <div class="breakdown-item">
+                    <div class="breakdown-content">
+                        <h4>Initial Prototyping</h4>
+                        <ul>
+                            <li>Built <a href="https://unity.com" class="highlight-link" target="_blank">Unity prototype</a> in first 2 weeks</li>
+                            <li>Tested core gameplay loop with focus group</li>
+                            <li>Implemented <a href="#" class="highlight-link">custom physics system</a> for unique movement</li>
+                            <li>Created modular architecture for scalability</li>
+                            <li>Established coding standards and documentation</li>
+                        </ul>
+                    </div>
+                    <div class="breakdown-image">
+                        <img src="images/process/prototyping.jpg" alt="Prototyping Phase">
+                    </div>
+                </div>
+
+                <!-- Breakdown Item 2 -->
+                <div class="breakdown-item">
+                    <div class="breakdown-content">
+                        <h4>Multiplayer Implementation</h4>
+                        <ul>
+                            <li>Integrated <a href="https://www.photonengine.com" class="highlight-link" target="_blank">Photon networking</a> framework</li>
+                            <li>Developed custom server architecture</li>
+                            <li>Implemented lag compensation techniques</li>
+                            <li>Created matchmaking system with ELO ranking</li>
+                            <li>Stress tested with 10,000+ concurrent users</li>
+                        </ul>
+                    </div>
+                    <div class="breakdown-image">
+                        <img src="images/process/multiplayer.jpg" alt="Multiplayer Development">
+                    </div>
+                </div>
+
+                <!-- Breakdown Item 3 -->
+                <div class="breakdown-item">
+                    <div class="breakdown-content">
+                        <h4>AI & Optimization</h4>
+                        <ul>
+                            <li>Built behavior tree system for enemy AI</li>
+                            <li>Used <a href="#" class="highlight-link">Unity Profiler</a> to identify bottlenecks</li>
+                            <li>Optimized rendering with LOD systems</li>
+                            <li>Reduced memory footprint by 40%</li>
+                            <li>Achieved stable 60 FPS on target hardware</li>
+                        </ul>
+                    </div>
+                    <div class="breakdown-image">
+                        <img src="images/process/optimization.jpg" alt="AI and Optimization">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY SOLUTIONS SECTION (Placeholder) -->
+        <section class="section">
+            <h2 class="section-title">Key Solutions</h2>
+            <div class="description-box">
+                <p>
+                    [This section will detail the key technical solutions and innovations you implemented. I'll help you design this section once you provide more details about what you'd like to include here.]
+                </p>
+            </div>
+        </section>
+
+        <!-- RESULTS & TAKEAWAYS SECTION (Placeholder) -->
+        <section class="section">
+            <h2 class="section-title">Results & Takeaways</h2>
+            <div class="description-box">
+                <p>
+                    [This section will showcase the results of your project and key learnings. I'll help you design this section once you provide more details about what you'd like to include here.]
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/slideshow.js"></script>
+</body>
+</html>
