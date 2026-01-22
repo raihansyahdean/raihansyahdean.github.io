@@ -26,3 +26,27 @@ projectCards.forEach(card => {
         alert('Click to view full project details (add your project links here)');
     });
 });
+
+// Handle hash navigation on page load
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        setTimeout(() => {
+            const targetElement = document.querySelector(hash);
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            
+            if (targetElement) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                pages.forEach(page => page.classList.remove('active'));
+                
+                const targetLink = document.querySelector(`a[href="${hash}"]`);
+                if (targetLink) {
+                    targetLink.classList.add('active');
+                }
+                targetElement.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }, 100);
+    }
+});
