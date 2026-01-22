@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bg-styles.css">
     <link rel="stylesheet" href="css/experience-style.css">
+    <link rel="stylesheet" href="css/projects-style.css">
 </head>
 <body>
 
@@ -67,34 +68,211 @@
 
         <!-- Projects Page -->
         <div id="projects" class="page">
-            <h1 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h1>
+            <h1>Featured Projects</h1>
             <div class="project-grid">
+
+                <!-- Project Card 6 - Light Grows -->
                 <div class="project-card">
-                    <div class="project-img">🎮</div>
+                    <!-- Cover Image -->
+                    <div class="project-cover">
+                        <img src="images/projects/alpha-cover.jpg" alt="Light Grows Cover">
+                    </div>
+                    
+                    <!-- Title Image with Orange Background -->
+                    <div class="project-title-container">
+                        <img src="images/projects/alpha-title.png" alt="Light Grows Title" class="project-title-img">
+                    </div>
+                    <!-- Text Title (when no image available) -->
+                    <!-- <div class="project-title-container">
+                        <h3 class="project-title-text">VR Adventure</h3>
+                    </div> -->
+                    
+                    <!-- Content -->
                     <div class="project-content">
-                        <h3 class="project-title">Project Alpha</h3>
-                        <p class="project-desc">A fast-paced action game featuring dynamic combat systems and procedurally generated levels.</p>
+                        <p class="project-desc">
+                            A fast-paced action game featuring dynamic combat systems and procedurally generated levels.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">Action</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="pages-projects/template.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <a href="https://example.com/project-alpha" target="_blank" class="external-link-btn" data-external="https://example.com/project-alpha" onclick="checkExternalLink(event, this)">
+                                🎮 Go to Project Page
+                            </a>
+                            <!-- <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
+                                ⏳ In Progress
+                            </button> -->
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project Card 5 - Pitch It! -->
                 <div class="project-card">
-                    <div class="project-img">🕹️</div>
+                    <div class="project-cover">
+                        <img src="images/projects/vr-cover.jpg" alt="Pitch It! Cover">
+                    </div>
+                    
+                    <!-- Text Title (when no image available) -->
+                    <div class="project-title-container">
+                        <h3 class="project-title-text">Pitch It!</h3>
+                    </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">VR Adventure</h3>
-                        <p class="project-desc">Immersive virtual reality experience with intuitive controls and stunning environments.</p>
+                        <p class="project-desc">
+                            Immersive virtual reality experience with intuitive controls and stunning environments.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Unreal Engine</span>
+                            <span class="project-tag">VR</span>
+                            <span class="project-tag">Adventure</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="projects/vr-adventure.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
+                                ⏳ In Progress
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project Card 4 - Formula Faceoff -->
                 <div class="project-card">
-                    <div class="project-img">⚔️</div>
+                    <div class="project-cover">
+                        <img src="images/projects/vr-cover.jpg" alt="Formula Faceoff Cover">
+                    </div>
+                    
+                    <!-- Text Title (when no image available) -->
+                    <div class="project-title-container">
+                        <h3 class="project-title-text">Formula Faceoff</h3>
+                    </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">RPG Quest</h3>
-                        <p class="project-desc">Story-driven RPG with branching narratives and deep character customization.</p>
+                        <p class="project-desc">
+                            Immersive virtual reality experience with intuitive controls and stunning environments.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Unreal Engine</span>
+                            <span class="project-tag">VR</span>
+                            <span class="project-tag">Adventure</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="projects/vr-adventure.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
+                                ⏳ In Progress
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project Card 3 - Reminiscence -->
                 <div class="project-card">
-                    <div class="project-img">🎯</div>
+                    <div class="project-cover">
+                        <img src="images/projects/vr-cover.jpg" alt="Reminiscence Cover">
+                    </div>
+                    
+                    <!-- Text Title (when no image available) -->
+                    <div class="project-title-container">
+                        <h3 class="project-title-text">Reminiscence</h3>
+                    </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">Puzzle Dimension</h3>
-                        <p class="project-desc">Mind-bending puzzle game with unique mechanics and beautiful minimalist design.</p>
+                        <p class="project-desc">
+                            Immersive virtual reality experience with intuitive controls and stunning environments.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Unreal Engine</span>
+                            <span class="project-tag">VR</span>
+                            <span class="project-tag">Adventure</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="projects/vr-adventure.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
+                                ⏳ In Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 - Covid Colony -->
+                <div class="project-card">
+                    <div class="project-cover">
+                        <img src="images/projects/rpg-cover.jpg" alt="Covid Colony Cover">
+                    </div>
+                    
+                    <div class="project-title-container">
+                        <img src="images/projects/rpg-title.png" alt="Covid Colony Title" class="project-title-img">
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-desc">
+                            Story-driven RPG with branching narratives and deep character customization.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">RPG</span>
+                            <span class="project-tag">Narrative</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="projects/rpg-quest.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <a href="https://example.com/rpg-quest" target="_blank" class="external-link-btn" data-external="https://example.com/rpg-quest" onclick="checkExternalLink(event, this)">
+                                🎮 Go to Project Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 1 - Unreal Logic -->
+                <div class="project-card">
+                    <div class="project-cover">
+                        <img src="images/projects/puzzle-cover.jpg" alt="Unreal Logic Cover">
+                    </div>
+                    
+                    <div class="project-title-container">
+                        <h3 class="project-title-text">Unreal Logic</h3>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-desc">
+                            Mind-bending puzzle game with unique mechanics and beautiful minimalist design.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Godot</span>
+                            <span class="project-tag">Puzzle</span>
+                            <span class="project-tag">Mobile</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details" data-project="projects/puzzle-dimension.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
+                                ⏳ In Progress
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,7 +286,7 @@
                 <div class="timeline">
                     <!-- Experience Item 3 -->
                     <div class="timeline-item">
-                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-ecomindo.html" onclick="checkProject(event, this)">
+                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-ecomindo.html" onclick="checkWorkPage(event, this)">
                             <img src="images/experience/ecomindo - cover.jpg" alt="eComindo">
                         </a>
 
@@ -242,14 +420,14 @@
 
                         <div class="timeline-dot"></div>
 
-                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-codomo.html" onclick="checkProject(event, this)">
+                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-codomo.html" onclick="checkWorkPage(event, this)">
                             <img src="images/experience/Potato Pirates - Cover.png" alt="Codomo">
                         </a>
                     </div>
 
                     <!-- Experience Item 1 -->
                     <div class="timeline-item">
-                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-projectseed.html" onclick="checkProject(event, this)">
+                        <a href="#" class="timeline-image-link" data-project="pages-experience/exp-projectseed.html" onclick="checkWorkPage(event, this)">
                             <img src="images/experience/Outland Odyssey - Cover.png" alt="Project Seed">
                         </a>
 
@@ -315,12 +493,32 @@
         </div>
 
         <!-- Modal Popup -->
-        <div id="projectModal" class="modal">
+        <div id="workModal" class="modal">
             <div class="modal-content">
                 <div class="modal-icon">📋</div>
                 <h2 class="modal-title">Coming Soon</h2>
                 <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
-                <button class="modal-close" onclick="closeModal()">Got it</button>
+                <button class="modal-close" onclick="closeWorkModal()">Got it</button>
+            </div>
+        </div>
+
+        <!-- Modal Popup for Project Details -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-icon">🎮</div>
+                <h2 class="modal-title">Coming Soon</h2>
+                <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
+                <button class="modal-close" onclick="closeProjectModal()">Got it</button>
+            </div>
+        </div>
+
+        <!-- Modal Popup for In Progress Projects -->
+        <div id="inProgressModal" class="modal">
+            <div class="modal-content in-progress-modal">
+                <div class="modal-icon">⏳</div>
+                <h2 class="modal-title">Work in Progress</h2>
+                <p class="modal-message">This project is currently in development. The project page will be available once it's released!</p>
+                <button class="modal-close" onclick="closeInProgressModal()">Understood</button>
             </div>
         </div>
 
@@ -548,6 +746,7 @@
 
     <script src="js/scripts.js"></script>
     <script src="js/particles.js"></script>
-    <script src="js/projectModal.js"></script>
+    <script src="js/workModal.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>

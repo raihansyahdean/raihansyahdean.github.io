@@ -19,14 +19,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Add hover effect to project cards
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        alert('Click to view full project details (add your project links here)');
-    });
-});
-
 // Handle hash navigation on page load
 window.addEventListener('load', function() {
     if (window.location.hash) {

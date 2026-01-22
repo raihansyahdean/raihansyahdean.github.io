@@ -1,6 +1,6 @@
 // Configuration: Set to true for projects that have pages created
 // Change to true when page is created
-const projectAvailability = {
+const workAvailability = {
     'pages-experience/template.html': true,
     'pages-experience/exp-ecomindo.html': false,
     'pages-experience/exp-codomo.html': false,
@@ -8,39 +8,39 @@ const projectAvailability = {
 };
 
 // Check if project page exists
-function checkProject(event, element) {
+function checkWorkPage(event, element) {
     event.preventDefault();
     const projectUrl = element.getAttribute('data-project');
     
     // Check if project is available in our config
-    if (projectAvailability[projectUrl]) {
+    if (workAvailability[projectUrl]) {
         // Project exists, navigate to it
         window.location.href = projectUrl;
     } else {
         // Project doesn't exist yet, show modal
-        showModal();
+        showWorkModal();
     }
 }
 
-function showModal() {
-    document.getElementById('projectModal').style.display = 'block';
+function showWorkModal() {
+    document.getElementById('workModal').style.display = 'block';
 }
 
-function closeModal() {
-    document.getElementById('projectModal').style.display = 'none';
+function closeWorkModal() {
+    document.getElementById('workModal').style.display = 'none';
 }
 
 // Close modal when clicking outside of it
 window.onclick = function(event) {
-    const modal = document.getElementById('projectModal');
+    const modal = document.getElementById('workModal');
     if (event.target === modal) {
-        closeModal();
+        closeWorkModal();
     }
 }
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
-        closeModal();
+        closeWorkModal();
     }
 });
