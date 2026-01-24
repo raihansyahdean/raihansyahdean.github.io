@@ -11,10 +11,11 @@ const projectAvailability = {
 
 // Configuration: External project links (set to null or empty string if in progress)
 const externalLinks = {
-    'https://example.com/project-alpha': 'https://your-actual-link.com/project-alpha',  // Set actual URL
+    'https://selahhan.itch.io/light-grows': 'https://selahhan.itch.io/light-grows',
     'https://example.com/vr-adventure': null,        // null = in progress
-    'https://example.com/rpg-quest': 'https://itch.io/your-rpg-game',  // Example
-    'https://example.com/puzzle-dimension': null     // null = in progress
+    'https://jduaar.itch.io/reminiscence': 'https://jduaar.itch.io/reminiscence',
+    'https://raihansyah-dean.itch.io/covid-colony': 'https://raihansyah-dean.itch.io/covid-colony',
+    'https://raihansyah-dean.itch.io/unreal-logic': 'https://raihansyah-dean.itch.io/unreal-logic'
 };
 
 // Check if project detail page exists
@@ -64,7 +65,7 @@ function closeInProgressModal() {
 }
 
 // Close modals when clicking outside of them
-window.onclick = function(event) {
+window.addEventListener('click', function(event) {
     const projectModal = document.getElementById('projectModal');
     const inProgressModal = document.getElementById('inProgressModal');
     
@@ -74,7 +75,7 @@ window.onclick = function(event) {
     if (event.target === inProgressModal) {
         closeInProgressModal();
     }
-}
+});
 
 // Close modals with Escape key
 document.addEventListener('keydown', function(event) {

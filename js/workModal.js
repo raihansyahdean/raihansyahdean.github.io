@@ -31,12 +31,12 @@ function closeWorkModal() {
 }
 
 // Close modal when clicking outside of it
-window.onclick = function(event) {
+ window.addEventListener('click', function(event) {
     const modal = document.getElementById('workModal');
     if (event.target === modal) {
         closeWorkModal();
     }
-}
+});
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(event) {

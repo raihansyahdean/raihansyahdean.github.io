@@ -113,6 +113,35 @@
     opacity: 1;
 }
 
+/* Unavailable/Coming Soon styling for experience images */
+.timeline-image-link.unavailable {
+    border-color: rgba(160, 160, 160, 0.3);
+    cursor: not-allowed;
+}
+
+.timeline-image-link.unavailable:hover {
+    border-color: #808080;
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(128, 128, 128, 0.3);
+}
+
+/* .timeline-image-link.unavailable img {
+    filter: grayscale(50%);
+} */
+
+.timeline-image-link.unavailable:hover img {
+    transform: scale(1.05);
+}
+
+.timeline-image-link.unavailable::after {
+    content: 'Details Page Coming Soon';
+    background: linear-gradient(to top, rgba(128, 128, 128, 0.9), transparent);
+}
+
+.timeline-image-link.unavailable:hover::after {
+    opacity: 1;
+}
+
 .timeline-content {
     background: rgba(20, 25, 50, 0.6);
     border: 1px solid rgba(88, 166, 255, 0.2);

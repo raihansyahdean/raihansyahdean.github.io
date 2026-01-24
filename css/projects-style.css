@@ -134,6 +134,27 @@ h1 {
     padding: 1rem;
 }
 
+/* Project Role & Date Section */
+.project-meta {
+    background: rgba(10, 14, 39, 0.8);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.project-role {
+    color: #58a6ff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.project-date {
+    color: #c792ea;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
 /* Project Content */
 .project-content {
     padding: 1.5rem;
@@ -145,21 +166,145 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* Project Tags */
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+/* Project Info Sections */
+.project-info {
     margin-bottom: 1.5rem;
 }
 
-.project-tag {
+.project-info-section {
+    background: rgba(10, 14, 39, 0.5);
+    border: 1px solid rgba(88, 166, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-info-label {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-info-label::before {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background: linear-gradient(180deg, #ff6b35, #58a6ff);
+    border-radius: 2px;
+}
+
+/* Tools/Tech Tags */
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tech-tag {
     background: rgba(88, 166, 255, 0.1);
     border: 1px solid #58a6ff;
-    padding: 0.3rem 0.6rem;
-    border-radius: 12px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
     color: #58a6ff;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    transition: all 0.3s;
+}
+
+.project-tech-tag:hover {
+    background: rgba(88, 166, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Platform Icons - Compact Version */
+.project-platform-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.project-platform-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-platform-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.project-platform-icon:hover {
+    background: rgba(255, 107, 53, 0.15);
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.project-platform-icon:hover img {
+    transform: scale(1.1);
+}
+
+ /* Platform Tooltip */
+.project-platform-icon::after {
+    content: attr(data-platform);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 14, 39, 0.95);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    z-index: 100;
+}
+
+.project-platform-icon:hover::after {
+    opacity: 1;
+}
+
+ /* Application Type Tags */
+.project-app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-app-tag {
+    background: rgba(247, 147, 30, 0.1);
+    border: 1px solid #f7931e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    color: #f7931e;
+    font-size: 0.75rem;
+    transition: all 0.3s;
+}
+
+.project-app-tag:hover {
+    background: rgba(247, 147, 30, 0.2);
+    transform: translateY(-1px);
 }
 
 /* Action Buttons Container */
@@ -193,6 +338,22 @@ h1 {
     border-color: #ff6b35;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+}
+
+/* Gray "View Details" for unavailable projects */
+.view-details.unavailable {
+    background: rgba(160, 160, 160, 0.1);
+    border: 1px solid #808080;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.view-details.unavailable:hover {
+    background: rgba(160, 160, 160, 0.15);
+    color: #a0a0a0;
+    border-color: #808080;
+    transform: none;
+    box-shadow: none;
 }
 
 /* External Link Button */
