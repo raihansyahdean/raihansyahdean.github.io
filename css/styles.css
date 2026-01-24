@@ -105,14 +105,186 @@ h1 {
 
 .subtitle {
     font-size: 1.5rem;
-    color: #a0a0a0;
+    color: #ff6b35;
     margin-bottom: 2rem;
+}
+
+/* Introduction Box */
+.intro-box {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background: rgba(20, 25, 50, 0.6);
+    border: 2px solid rgba(88, 166, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
     transition: all 0.3s;
 }
 
-.subtitle:hover {
-    color: #f7931e;
-    text-shadow: 0 0 15px rgba(247, 147, 30, 0.5);
+.intro-box:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.intro-box p {
+    color: #b0b0b0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Resume Download Buttons */
+.resume-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.resume-section h3 {
+    color: #58a6ff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.resume-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Compact Quote Section */
+.quote-section {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.quote-container {
+    background: rgba(20, 25, 50, 0.6);
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #ff6b35, #f7931e, #58a6ff) 1;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.quote-mark {
+    font-size: 4rem;
+    color: #ff6b35;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    font-style: italic;
+    margin: 0.5rem 0 1.5rem 0;
+    text-align: center;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.thank-you-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #58a6ff, #c792ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.thank-you-subtext {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Decorative elements around thank you */
+.thank-you-section::before,
+.thank-you-section::after {
+    content: '✨';
+    position: absolute;
+    font-size: 2rem;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.thank-you-section::before {
+    left: 20%;
+    top: 50%;
+    animation-delay: 0s;
+}
+
+.thank-you-section::after {
+    right: 20%;
+    top: 50%;
+    animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
 /* About Section */
@@ -207,51 +379,6 @@ button:hover {
     .timeline-item { flex-direction: column !important; }
     .timeline-content { width: calc(100% - 60px); margin-left: 60px; }
     .timeline-dot { left: 20px; }
-}
-
-/* Quote Section */
-.quote-section {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-}
-
-.quote-container {
-    background: rgba(20, 25, 50, 0.6);
-    border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #ff6b35, #f7931e, #58a6ff) 1;
-    border-radius: 15px;
-    padding: 3rem;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-
-.quote-mark {
-    font-size: 6rem;
-    color: #ff6b35;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    line-height: 1;
-    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
-}
-
-.quote-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-    font-style: italic;
-    margin: 1rem 0 2rem 0;
-    text-align: center;
-}
-
-.quote-author {
-    text-align: right;
-    font-size: 1.1rem;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
 }
 
 /* Contact Links Section */
@@ -602,5 +729,39 @@ button:hover {
     
     .skills-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .intro-box {
+        padding: 1.5rem;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .thank-you-text {
+        font-size: 1.8rem;
+    }
+
+    .thank-you-section::before,
+    .thank-you-section::after {
+        display: none;
     }
 }
