@@ -102,10 +102,31 @@
         <!-- Projects Page -->
         <div id="projects" class="page">
             <h1>Featured Projects</h1>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <span class="filter-label">Filter by Type</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">
+                        All Projects <span class="project-count" id="count-all">6</span>
+                    </button>
+                    <button class="filter-btn" data-filter="games" onclick="filterProjects('games')">
+                        🎮 Games <span class="project-count" id="count-games">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="visual-audio" onclick="filterProjects('visual-audio')">
+                        🎵 Visual & Audio <span class="project-count" id="count-visual-audio">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="graphics-tech" onclick="filterProjects('graphics-tech')">
+                        🎨 Graphics & Technical Art <span class="project-count" id="count-graphics-tech">0</span>
+                    </button>
+                </div>
+            </div>
+
             <div class="project-grid">
+                <!-- <div class="project-card" data-types="games visual-audio graphics-tech"></div> -->
 
                 <!-- Project Card 6 - Light Grows -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <!-- Cover Image -->
                     <div class="project-cover">
                         <img src="images/projects/Light Grows - Cover.png" alt="Light Grows Cover">
@@ -206,7 +227,7 @@
                 </div>
 
                 <!-- Project Card 5 - Pitch It! -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Pitch It - Cover.jpg" alt="Pitch It! Cover">
                     </div>
@@ -270,7 +291,7 @@
                 </div>
 
                 <!-- Project Card 4 - Formula Faceoff -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Formula FaceOff - Cover.jpg" alt="Formula Faceoff Cover">
                     </div>
@@ -336,7 +357,7 @@
                 </div>
 
                 <!-- Project Card 3 - Reminiscence -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Reminiscence - Cover.png" alt="Reminiscence Cover">
                     </div>
@@ -404,7 +425,7 @@
                 </div>
 
                 <!-- Project Card 2 - Covid Colony -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Covid Colony - Cover.png" alt="Covid Colony Cover">
                     </div>
@@ -472,7 +493,7 @@
                 </div>
 
                 <!-- Project Card 1 - Unreal Logic -->
-                <div class="project-card">
+                <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Unreal Logic - Cover.png" alt="Unreal Logic Cover">
                     </div>

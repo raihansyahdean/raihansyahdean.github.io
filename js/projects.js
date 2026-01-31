@@ -84,3 +84,60 @@ document.addEventListener('keydown', function(event) {
         closeInProgressModal();
     }
 });
+
+// Filter Projects Function
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Update active button
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-filter') === category) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Filter cards
+    cards.forEach(card => {
+        const types = card.getAttribute('data-types');
+        
+        if (category === 'all') {
+            card.classList.remove('hidden');
+        } else {
+            if (types && types.includes(category)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        }
+    });
+}
+
+// Update project counts on page load
+function updateProjectCounts() {
+    const cards = document.querySelectorAll('.project-card');
+    const counts = {
+        all: cards.length,
+        games: 0,
+        'visual-audio': 0,
+        'graphics-tech': 0
+    };
+    
+    cards.forEach(card => {
+        const types = card.getAttribute('data-types');
+        if (types) {
+            if (types.includes('games')) counts.games++;
+            if (types.includes('visual-audio')) counts['visual-audio']++;
+            if (types.includes('graphics-tech')) counts['graphics-tech']++;
+        }
+    });
+    
+    document.getElementById('count-all').textContent = counts.all;
+    document.getElementById('count-games').textContent = counts.games;
+    document.getElementById('count-visual-audio').textContent = counts['visual-audio'];
+    document.getElementById('count-graphics-tech').textContent = counts['graphics-tech'];
+}
+
+// Initialize counts on page load
+updateProjectCounts();
