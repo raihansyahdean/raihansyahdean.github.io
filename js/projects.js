@@ -2,6 +2,7 @@
 const projectAvailability = {
     'pages-projects/template.html': true,
     'pages-projects/light-grows.html': false,      // Change to true when created
+    'pages-projects/underwater-shader.html': false,      // Change to true when created
     'pages-projects/pitch-it.html': false,      // Change to true when created
     'pages-projects/formula-faceoff.html': false,      // Change to true when created
     'pages-projects/reminiscence.html': false,       // Change to true when created
@@ -11,8 +12,8 @@ const projectAvailability = {
 
 // Configuration: External project links (set to null or empty string if in progress)
 const externalLinks = {
-    'https://selahhan.itch.io/light-grows': 'https://selahhan.itch.io/light-grows',
     'https://example.com/vr-adventure': null,        // null = in progress
+    'https://selahhan.itch.io/light-grows': 'https://selahhan.itch.io/light-grows',
     'https://jduaar.itch.io/reminiscence': 'https://jduaar.itch.io/reminiscence',
     'https://raihansyah-dean.itch.io/covid-colony': 'https://raihansyah-dean.itch.io/covid-colony',
     'https://raihansyah-dean.itch.io/unreal-logic': 'https://raihansyah-dean.itch.io/unreal-logic'

@@ -55,7 +55,10 @@
             <!-- Game Description -->
             <div class="description-box">
                 <p>
-                    This is a detailed description of your game project. Explain the concept, the story, the gameplay mechanics, and what makes this game unique. Talk about the target audience, the game's setting, and the core experience you wanted to create for players. This paragraph should give readers a comprehensive understanding of what the game is about and why it matters.
+                    This is a detailed description of your game project.
+                    Explain the concept, the story, the gameplay mechanics, and what makes this game unique.
+                    Talk about the target audience, the game's setting, and the core experience you wanted to create for players.
+                    This paragraph should give readers a comprehensive understanding of what the game is about and why it matters.
                 </p>
             </div>
 
@@ -196,25 +199,239 @@
             </div>
         </section>
 
-        <!-- KEY SOLUTIONS SECTION (Placeholder) -->
+        <!-- KEY SOLUTIONS SECTION -->
         <section class="section">
             <h2 class="section-title">Key Solutions</h2>
-            <div class="description-box">
-                <p>
-                    [This section will detail the key technical solutions and innovations you implemented. I'll help you design this section once you provide more details about what you'd like to include here.]
-                </p>
+            
+            <!-- Stage Navigation -->
+            <div class="stage-navigation">
+                <a href="#stage1" class="stage-nav-btn">Stage 1: Prototyping</a>
+                <a href="#stage2" class="stage-nav-btn">Stage 2: Core Mechanics</a>
+                <a href="#stage3" class="stage-nav-btn">Stage 3: Optimization</a>
+            </div>
+
+            <!-- STAGE 1 -->
+            <div class="stage" id="stage1">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 01</div>
+                    <h3 class="stage-title">Prototyping & Foundation</h3>
+                </div>
+
+                <!-- Feature 1: With Image -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Movement System Design</h4>
+                            <ul class="feature-points">
+                                <li>Implemented physics-based character controller using <a href="#" class="highlight-link">Unity's CharacterController</a></li>
+                                <li>Created smooth acceleration and deceleration curves for natural movement feel</li>
+                                <li>Added wall-sliding mechanics to prevent player frustration</li>
+                                <li>Tuned gravity multiplier for responsive jump feel</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <img src="../images/projects/Underwater Shader/Godrays.png" alt="Movement System">
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Feature 2: With Video -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Camera Controller</h4>
+                            <ul class="feature-points">
+                                <li>Developed custom third-person camera with Cinemachine</li>
+                                <li>Implemented collision detection to prevent camera clipping</li>
+                                <li>Added smooth camera transitions between different game states</li>
+                                <li>Created field-of-view adjustments for speed variations</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <video controls>
+                                <source src="videos/project/camera-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Text Only (no media) -->
+                <div class="feature-section">
+                    <h4 class="feature-title">Input System Architecture</h4>
+                    <ul class="feature-points">
+                        <li>Utilized Unity's new Input System for cross-platform compatibility</li>
+                        <li>Created modular input action maps for different game states</li>
+                        <li>Implemented rebindable controls with UI feedback</li>
+                        <li>Added controller vibration support for impact events</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 1 Results -->
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content with-media">
+                        <div class="results-text">
+                            <p>
+                                The prototyping phase successfully established the core foundation of the game's feel. 
+                                Through iterative testing with 15+ playtesters, we refined the movement to achieve a 
+                                responsive 8.5/10 satisfaction rating. The modular input system proved invaluable during 
+                                later development, allowing seamless integration of new mechanics without refactoring. 
+                                Early performance metrics showed consistent 60 FPS on target hardware with room for 
+                                additional features.
+                            </p>
+                        </div>
+                        <div class="results-media">
+                            <img src="images/project/stage1-results.jpg" alt="Stage 1 Results">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 2 -->
+            <div class="stage" id="stage2">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 02</div>
+                    <h3 class="stage-title">Core Mechanics Implementation</h3>
+                </div>
+
+                <!-- Feature 1 -->
+                <div class="feature-section">
+                    <h4 class="feature-title">Combat System</h4>
+                    <ul class="feature-points">
+                        <li>Designed combo-based melee system with 3-hit chains</li>
+                        <li>Implemented hitbox detection using Unity's Physics.OverlapSphere</li>
+                        <li>Created animation state machine with attack canceling windows</li>
+                        <li>Added hit-stop effect for impactful combat feedback</li>
+                        <li>Balanced damage values through 50+ hours of playtesting</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: With GIF/Video -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Enemy AI Behavior</h4>
+                            <ul class="feature-points">
+                                <li>Built behavior tree system using custom state machine</li>
+                                <li>Implemented pathfinding with Unity NavMesh</li>
+                                <li>Created detection zones with line-of-sight checks</li>
+                                <li>Added varied attack patterns for different enemy types</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <video autoplay loop muted>
+                                <source src="../videos/Underwater Shader/Final Scene 2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 Results: Video -->
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content with-media">
+                        <div class="results-text">
+                            <p>
+                                The combat system became the centerpiece of the game's identity. Player feedback indicated 
+                                that combat felt "weighty and satisfying" with the hit-stop implementation proving 
+                                particularly impactful. The behavior tree architecture allowed rapid iteration on enemy 
+                                patterns, reducing AI development time by 40% compared to initial estimates. Combat 
+                                encounters now provided consistent challenge while remaining fair and learnable.
+                            </p>
+                        </div>
+                        <div class="results-media">
+                            <video controls>
+                                <source src="../videos/Underwater Shader/God Rays Alone.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 3 -->
+            <div class="stage" id="stage3">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 03</div>
+                    <h3 class="stage-title">Polish & Optimization</h3>
+                </div>
+
+                <div class="feature-section">
+                    <h4 class="feature-title">Performance Optimization</h4>
+                    <ul class="feature-points">
+                        <li>Implemented object pooling for frequently spawned entities (reduced garbage collection by 70%)</li>
+                        <li>Optimized draw calls using static batching and GPU instancing</li>
+                        <li>Created LOD system for complex meshes (30% performance improvement)</li>
+                        <li>Profiled and optimized physics calculations in Update loops</li>
+                        <li>Reduced texture memory usage by 45% through compression and atlasing</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h4 class="feature-title">Visual Polish</h4>
+                    <ul class="feature-points">
+                        <li>Added particle effects for combat impacts and environmental interactions</li>
+                        <li>Implemented screen shake system with customizable intensity curves</li>
+                        <li>Created dynamic lighting for day/night cycle</li>
+                        <li>Enhanced UI with smooth transitions and feedback animations</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 3 Results: Text Only -->
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content">
+                        <div class="results-text">
+                            <p>
+                                Optimization efforts yielded significant improvements across all target platforms. 
+                                Frame rates stabilized at 60 FPS even during intensive combat scenarios with multiple 
+                                enemies and particle effects. Memory usage was reduced by 40%, allowing the game to run 
+                                smoothly on minimum spec hardware. The visual polish pass elevated the overall presentation, 
+                                with testers noting the game felt "AAA quality" despite the indie development context. 
+                                Load times were cut in half through asset streaming optimization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- RESULTS & TAKEAWAYS SECTION (Placeholder) -->
         <section class="section">
-            <h2 class="section-title">Results & Takeaways</h2>
-            <div class="description-box">
-                <p>
-                    [This section will showcase the results of your project and key learnings. I'll help you design this section once you provide more details about what you'd like to include here.]
-                </p>
+            <h2 class="section-title">Takeaways</h2>
+            <div class="takeaways-section">
+                <h3>Project Insights & Learnings</h3>
+                <ul class="takeaways-list">
+                    <li><strong>Early prototyping paid dividends:</strong> Investing 3 weeks in core feel before building features 
+                    prevented months of rework and established a solid foundation that guided all subsequent decisions.</li>
+                    
+                    <li><strong>Modular architecture is essential:</strong> The input system and behavior tree designs proved 
+                    their worth when adding new features, saving an estimated 100+ hours of refactoring work.</li>
+                    
+                    <li><strong>Player feedback is invaluable:</strong> Regular playtesting sessions (30+ across development) 
+                    caught issues early and validated design decisions, particularly for combat timing and difficulty curves.</li>
+                    
+                    <li><strong>Optimization should be ongoing:</strong> Rather than leaving performance work to the end, 
+                    integrating profiling into weekly workflows prevented technical debt accumulation.</li>
+                    
+                    <li><strong>Successfully shipped core features:</strong> All primary mechanics (movement, combat, AI) were 
+                    completed and polished to production quality within the 18-month timeline.</li>
+                    
+                    <li><strong>Scope management was challenging:</strong> Had to cut multiplayer mode and two planned enemy types 
+                    to meet deadline, reinforcing the importance of realistic scheduling and early feature prioritization.</li>
+                    
+                    <li><strong>Technical achievement:</strong> Achieved 60 FPS target on all platforms including older hardware, 
+                    demonstrating the effectiveness of optimization strategies and LOD implementation.</li>
+                </ul>
             </div>
         </section>
+
+        <!-- External Project Link -->
+        <div class="external-project-section">
+            <a href="https://example.com/play-game" target="_blank" class="external-project-btn">
+                🎮 Play the Game
+            </a>
+        </div>
+    </div>
     </div>
 
     <script src="../js/slideshow.js"></script>

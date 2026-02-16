@@ -125,7 +125,7 @@
             <div class="project-grid">
                 <!-- <div class="project-card" data-types="games visual-audio graphics-tech"></div> -->
 
-                <!-- Project Card 6 - Light Grows -->
+                <!-- Project Card 7 - Light Grows -->
                 <div class="project-card" data-types="games">
                     <!-- Cover Image -->
                     <div class="project-cover">
@@ -222,6 +222,76 @@
                             <!-- <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
                                 ⏳ In Progress
                             </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 - Underwater Shader -->
+                <div class="project-card" data-types="graphics-tech">
+                    <!-- Cover Image -->
+                    <div class="project-cover">
+                        <img src="images/projects/Underwater Shader - Cover.png" alt="Underwater Shader Cover">
+                    </div>
+                    
+                    <!-- Text Title (when no image available) -->
+                    <div class="project-title-container">
+                        <h3 class="project-title-text">Underwater Shader</h3>
+                    </div>
+
+                    <!-- Role & Date -->
+                    <div class="project-meta">
+                        <div class="project-role">Technical Artist</div>
+                        <div class="project-date">October 2025 - December 2025</div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="project-content">
+                        <p class="project-desc">
+                            An underwater scene shader that simulates light filtration through an aqueous medium by rendering
+                            good-looking caustics in the scene, both projected onto objects and as shafts of light filtering through the medium.
+                            Computation is not done realistically but still can be done in real time.
+                            Graphical techniques used include ray marching, volumetric lighting, and procedural noise generation.
+                        </p>
+                        
+                        <!-- Project Info Sections -->
+                        <div class="project-info">
+                            <!-- Tools & Languages -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Tools & Languages</div>
+                                <div class="project-tech-tags">
+                                    <span class="project-tech-tag">Unity</span>
+                                    <span class="project-tech-tag">C#</span>
+                                    <span class="project-tech-tag">Git</span>
+                                    <span class="project-tech-tag">HLSL</span>
+                                </div>
+                            </div>
+
+                            <!-- Platforms -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Platforms</div>
+                                <div class="project-platform-icons">
+                                    <div class="project-platform-icon" data-platform="Windows">
+                                        <img src="images/platforms/windows.png" alt="Windows">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Application Types -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Genres</div>
+                                <div class="project-app-tags">
+                                    <span class="project-app-tag">Shader</span>
+                                    <span class="project-app-tag">3D</span>
+                                    <span class="project-app-tag">Decal</span>
+                                    <span class="project-app-tag">Volumetric</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details unavailable" data-project="pages-projects/underwater-shader.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -356,75 +426,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3 - Reminiscence -->
-                <div class="project-card" data-types="games">
-                    <div class="project-cover">
-                        <img src="images/projects/Reminiscence - Cover.png" alt="Reminiscence Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Reminiscence - Title.png" alt="Reminiscence Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">Producer & Programmer</div>
-                        <div class="project-date">October 2019 - January 2020</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A story-based puzzle game where every outcome will be determined by your own actions.
-                            Players will face various puzzles while also uncovering the truth about Jet's story.
-                        </p>
-
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <span class="project-tech-tag">Godot</span>
-                                    <span class="project-tech-tag">GDScript</span>
-                                    <span class="project-tech-tag">Git</span>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Puzzle</span>
-                                    <span class="project-app-tag">Story Driven</span>
-                                    <span class="project-app-tag">Multiple Endings</span>
-                                    <span class="project-app-tag">Space</span>
-                                    <span class="project-app-tag">2D</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/reminiscence.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://jduaar.itch.io/reminiscence" target="_blank" class="external-link-btn" data-external="https://jduaar.itch.io/reminiscence" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 - Covid Colony -->
+                <!-- Project Card 3 - Covid Colony -->
                 <div class="project-card" data-types="games">
                     <div class="project-cover">
                         <img src="images/projects/Covid Colony - Cover.png" alt="Covid Colony Cover">
@@ -486,6 +488,74 @@
                                 📖 View Details
                             </a>
                             <a href="https://raihansyah-dean.itch.io/covid-colony" target="_blank" class="external-link-btn" data-external="https://raihansyah-dean.itch.io/covid-colony" onclick="checkExternalLink(event, this)">
+                                🎮 Go to Project Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 - Reminiscence -->
+                <div class="project-card" data-types="games">
+                    <div class="project-cover">
+                        <img src="images/projects/Reminiscence - Cover.png" alt="Reminiscence Cover">
+                    </div>
+                    
+                    <div class="project-title-container">
+                        <img src="images/projects/Reminiscence - Title.png" alt="Reminiscence Title" class="project-title-img">
+                    </div>
+
+                    <!-- Role & Date -->
+                    <div class="project-meta">
+                        <div class="project-role">Producer & Programmer</div>
+                        <div class="project-date">October 2019 - January 2020</div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-desc">
+                            A story-based puzzle game where every outcome will be determined by your own actions.
+                            Players will face various puzzles while also uncovering the truth about Jet's story.
+                        </p>
+
+                        <!-- Project Info Sections -->
+                        <div class="project-info">
+                            <!-- Tools & Languages -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Tools & Languages</div>
+                                <div class="project-tech-tags">
+                                    <span class="project-tech-tag">Godot</span>
+                                    <span class="project-tech-tag">GDScript</span>
+                                    <span class="project-tech-tag">Git</span>
+                                </div>
+                            </div>
+
+                            <!-- Platforms -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Platforms</div>
+                                <div class="project-platform-icons">
+                                    <div class="project-platform-icon" data-platform="Windows">
+                                        <img src="images/platforms/windows.png" alt="Windows">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Application Types -->
+                            <div class="project-info-section">
+                                <div class="project-info-label">Genres</div>
+                                <div class="project-app-tags">
+                                    <span class="project-app-tag">Puzzle</span>
+                                    <span class="project-app-tag">Story Driven</span>
+                                    <span class="project-app-tag">Multiple Endings</span>
+                                    <span class="project-app-tag">Space</span>
+                                    <span class="project-app-tag">2D</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="#" class="view-details unavailable" data-project="pages-projects/reminiscence.html" onclick="checkProjectPage(event, this)">
+                                📖 View Details
+                            </a>
+                            <a href="https://jduaar.itch.io/reminiscence" target="_blank" class="external-link-btn" data-external="https://jduaar.itch.io/reminiscence" onclick="checkExternalLink(event, this)">
                                 🎮 Go to Project Page
                             </a>
                         </div>
@@ -881,10 +951,10 @@
                     <div class="skill-item">
                         <div class="skill-header">
                             <span class="skill-name">Unity</span>
-                            <span class="skill-level">8/10</span>
+                            <span class="skill-level">9/10</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     
@@ -941,20 +1011,20 @@
                     <div class="skill-item">
                         <div class="skill-header">
                             <span class="skill-name">Gameplay Programming</span>
-                            <span class="skill-level">7/10</span>
+                            <span class="skill-level">8/10</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
+                            <div class="skill-progress" style="width: 80%"></div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-header">
                             <span class="skill-name">Animation</span>
-                            <span class="skill-level">6/10</span>
+                            <span class="skill-level">7/10</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
+                            <div class="skill-progress" style="width: 70%"></div>
                         </div>
                     </div>
                 </div>
