@@ -1,6 +1,8 @@
 // Configuration: Set to true for projects that have pages created
 const projectAvailability = {
     'pages-projects/template.html': true,
+    'pages-projects/elementary.html': false,      // Change to true when created
+    'pages-projects/rube-goldberg.html': false,     // Change to true when created
     'pages-projects/light-grows.html': false,      // Change to true when created
     'pages-projects/underwater-shader.html': false,      // Change to true when created
     'pages-projects/pitch-it.html': false,      // Change to true when created
