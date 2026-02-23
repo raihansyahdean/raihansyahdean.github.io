@@ -468,6 +468,55 @@ body {
     margin-bottom: 0;
 }
 
+/* Idea Box - Problem & Solution Overview */
+.idea-box {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(16, 185, 129, 0.15));
+    border: 2px solid rgba(34, 197, 94, 0.4);
+    border-left: 5px solid #22c55e;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.idea-problem {
+    margin-bottom: 1rem;
+}
+
+.idea-problem-label {
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.idea-problem-text {
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.idea-solution-label {
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.idea-solution-text {
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Feature/Sub-header Section */
 .feature-section {
     background: rgba(20, 25, 50, 0.6);
@@ -663,6 +712,27 @@ body {
 
 .external-project-btn:active {
     transform: translateY(-1px);
+}
+
+/* Keyword Highlight */
+.highlight {
+    border-radius: 4px;
+    color: #58a6ff;
+    font-weight: 600;
+}
+
+/* Alternative: Orange highlight */
+.highlight-orange {
+    border-radius: 4px;
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+/* Alternative: Purple highlight */
+.highlight-purple {
+    border-radius: 4px;
+    color: #c792ea;
+    font-weight: 600;
 }
 
 /* Responsive Design */

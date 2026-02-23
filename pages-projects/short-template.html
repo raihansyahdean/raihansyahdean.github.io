@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Project - Portfolio</title>
+    <link rel="stylesheet" href="../css/short-projects-style.css">
+</head>
+<body>
+    <div class="project-header">
+        <a href="../index.html#projects" class="back-button" onclick="return navigateToProjects(event)">
+            ← Back to Projects
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Project Header -->
+        <h1 class="project-title">Rube Goldberg Machine in Maya</h1>
+        <p class="project-meta">Class Project | Spring 2024 | 3 weeks</p>
+        <div class="project-type">
+            <span class="type-badge">3D Animation</span>
+        </div>
+
+        <!-- Main Media Showcase -->
+        <div class="media-showcase">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <video controls>
+                        <source src="videos/rube-goldberg-final.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slide">
+                    <img src="images/project/showcase-1.jpg" alt="Project Image 1">
+                </div>
+                <div class="slide">
+                    <img src="images/project/showcase-2.jpg" alt="Project Image 2">
+                </div>
+
+                <button class="prev-slide" onclick="changeMainSlide(-1)">❮</button>
+                <button class="next-slide" onclick="changeMainSlide(1)">❯</button>
+
+                <div class="slide-controls">
+                    <span class="slide-dot active" onclick="currentMainSlide(0)"></span>
+                    <span class="slide-dot" onclick="currentMainSlide(1)"></span>
+                    <span class="slide-dot" onclick="currentMainSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example: Empty Media Showcase (will be hidden) -->
+        <!-- <div class="media-showcase empty"></div> -->
+
+        <!-- Overview -->
+        <div class="overview-section">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="overview-text">
+                Created a 30-second Rube Goldberg machine animation as part of Introduction to 3D Animation course. 
+                The project focused on understanding Maya's fundamentals including modeling, rigging, physics simulation, 
+                and rendering. The machine features 8 interconnected chain reactions using rigid body dynamics and 
+                keyframe animation to create a cohesive, entertaining sequence.
+            </p>
+        </div>
+
+        <!-- Quick Details Grid -->
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="detail-label">Duration</div>
+                <div class="detail-value">3 Weeks (Part-time)</div>
+            </div>
+            <div class="detail-card">
+                <div class="detail-label">Tools Used</div>
+                <div class="detail-tags">
+                    <span class="detail-tag">Maya</span>
+                    <span class="detail-tag">Arnold Renderer</span>
+                </div>
+            </div>
+            <div class="detail-card">
+                <div class="detail-label">My Role</div>
+                <div class="detail-value">Solo Project - All aspects</div>
+            </div>
+        </div>
+
+        <!-- Process -->
+        <div class="process-section">
+            <h2 class="section-title">Development Process</h2>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Concept & Planning</h3>
+                        <ul class="step-points">
+                            <li>Sketched out the chain reaction sequence on paper to visualize timing and flow</li>
+                            <li>Decided on classic ball-rolling-down-ramp leading to dominos setup</li>
+                            <li>Created rough blockout in Maya to test spacing and physics feasibility</li>
+                            <li>Identified critical points where chain reactions needed careful tuning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 with Slideshow (Side-by-side) -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Modeling & Setup</h3>
+                        <div class="step-with-media">
+                            <ul class="step-points">
+                                <li>Modeled all objects using basic primitives and polygon modeling techniques</li>
+                                <li>Created modular domino pieces for easy duplication and arrangement</li>
+                                <li>Built ramps with proper angles calculated for smooth ball rolling</li>
+                                <li>Designed simple rope constraint system for pendulum mechanics</li>
+                                <li>Focused on clean topology for better physics simulation results</li>
+                            </ul>
+                            
+                            <!-- Step Slideshow (on the side) -->
+                            <div class="step-slideshow" id="slideshow-step2">
+                                <div class="step-slideshow-container">
+                                    <div class="step-slide active">
+                                        <img src="images/process/modeling-1.jpg" alt="Modeling Process 1">
+                                    </div>
+                                    <div class="step-slide">
+                                        <img src="images/process/modeling-2.jpg" alt="Modeling Process 2">
+                                    </div>
+                                    <div class="step-slide">
+                                        <video autoplay loop muted playsinline>
+                                            <source src="videos/process/modeling-timelapse.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+
+                                    <button class="step-prev" onclick="changeStepSlide('step2', -1)">❮</button>
+                                    <button class="step-next" onclick="changeStepSlide('step2', 1)">❯</button>
+
+                                    <div class="step-slide-controls">
+                                        <span class="step-slide-dot active" onclick="currentStepSlide('step2', 0)"></span>
+                                        <span class="step-slide-dot" onclick="currentStepSlide('step2', 1)"></span>
+                                        <span class="step-slide-dot" onclick="currentStepSlide('step2', 2)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 with Single Image (Side-by-side) -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Physics Simulation</h3>
+                        <div class="step-with-media">
+                            <ul class="step-points">
+                                <li>Set up rigid body dynamics for all interactive elements</li>
+                                <li>Tuned mass, friction, and bounciness through extensive trial and error</li>
+                                <li>Baked successful simulations to keyframes for consistency</li>
+                                <li>Added custom constraints to pendulum for desired swing arc</li>
+                                <li>Created hybrid approach: physics + keyframes for reliable results</li>
+                            </ul>
+
+                            <!-- Single Image -->
+                            <div class="step-slideshow" id="slideshow-step3">
+                                <div class="step-slideshow-container">
+                                    <div class="step-slide active">
+                                        <img src="images/process/physics-setup.jpg" alt="Physics Setup">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Learning spans full width -->
+                        <div class="highlight-box">
+                            <p><strong>Key Learning:</strong> Physics simulation in Maya requires careful balance between 
+                            realism and artistic control. Sometimes "cheating" with keyframes produces better results 
+                            than pure physics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 - No Media -->
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Lighting & Rendering</h3>
+                        <ul class="step-points">
+                            <li>Implemented three-point lighting setup with Arnold lights</li>
+                            <li>Added ambient occlusion and global illumination for realistic depth</li>
+                            <li>Applied basic materials with varied colors to distinguish objects</li>
+                            <li>Rendered at 1080p with 5 samples per pixel for clean results</li>
+                            <li>Total render time: approximately 45 minutes for 30-second sequence</li>
+                        </ul>
+                        
+                        <!-- Empty slideshow (hidden) -->
+                        <div class="step-slideshow empty" id="slideshow-step4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenge/Solution -->
+        <div class="challenge-solution">
+            <div class="challenge-box">
+                <h4>🚧 Main Challenge</h4>
+                <p>
+                    The domino chain kept falling inconsistently due to physics glitches. Some dominos would fall 
+                    too fast, others wouldn't fall at all, making the timing unpredictable and ruining the chain reaction.
+                </p>
+            </div>
+            <div class="solution-box">
+                <h4>✓ Solution Applied</h4>
+                <p>
+                    Switched to a hybrid approach: ran physics simulation for the first 3 dominos to get natural 
+                    motion, then keyframed the remaining dominos based on that timing. This gave me full control 
+                    while maintaining realistic movement.
+                </p>
+            </div>
+        </div>
+
+        <!-- Key Learnings -->
+        <div class="learnings-section">
+            <h2 class="section-title">Key Learnings</h2>
+            <ul class="learnings-list">
+                <li><strong>Maya fundamentals mastered:</strong> Gained solid understanding of interface, modeling tools, 
+                animation graph editor, and render settings through hands-on practice.</li>
+                
+                <li><strong>Physics simulation workflow:</strong> Learned when to use dynamics vs keyframes, importance 
+                of baking simulations, and how object properties affect physical behavior.</li>
+                
+                <li><strong>Iteration is essential:</strong> Went through 15+ simulation attempts before achieving 
+                desired results. Each failure taught me about physics parameter tuning.</li>
+                
+                <li><strong>Planning saves time:</strong> Initial paper sketches and blockout prevented wasted effort 
+                on complex ideas that wouldn't work physically.</li>
+                
+                <li><strong>Lighting makes the difference:</strong> Simple three-point lighting elevated the entire 
+                presentation. Shadows and highlights made the 3D space feel more tangible.</li>
+            </ul>
+        </div>
+
+        <!-- Optional: External Link -->
+        <div class="external-link-section">
+            <a href="https://vimeo.com/your-video" target="_blank" class="external-link-btn">
+                🎥 Watch Full Video
+            </a>
+        </div>
+    </div>
+
+    <script src="../js/short-projects.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CHANGE TITLE -->
-    <title>Work - [WORK NAME]</title>
+    <title>Project - Underwater Shader</title>
     <link rel="stylesheet" href="../css/experience-page.css">
 </head>
 <body>
@@ -16,29 +16,29 @@
 
     <div class="container">
         <!-- Project Title -->
-        <h1 class="project-title">Senior Game Developer Project</h1>
-        <p class="project-subtitle">Gaming Studio Inc. | 2023 - Present</p>
+        <h1 class="project-title">Underwater Shader Graphics Project</h1>
+        <p class="project-subtitle">University of Southern California | October 2025 - December 2025</p>
 
         <!-- GAME DETAILS SECTION -->
         <section class="section">
-            <h2 class="section-title">Game Details</h2>
+            <h2 class="section-title">Project Details</h2>
 
             <!-- Slideshow -->
             <div class="slideshow-container">
                 <div class="slide active">
-                    <video controls>
-                        <source src="videos/project-demo.mp4" type="video/mp4">
+                    <video controls muted>
+                        <source src="../videos/Underwater Shader/Final Scene 3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot1.jpg" alt="Game Screenshot 1">
+                    <img src="../images/projects/Underwater Shader/Side View.png" alt="Complete Sideshot">
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot2.jpg" alt="Game Screenshot 2">
+                    <img src="../images/projects/Underwater Shader/Caustics Decal.png" alt="Caustics Sideshot">
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot3.jpg" alt="Game Screenshot 3">
+                    <img src="../images/projects/Underwater Shader/Godrays.png" alt="Godrays Sideshot">
                 </div>
 
                 <button class="prev-slide" onclick="changeSlide(-1)">❮</button>
@@ -55,10 +55,12 @@
             <!-- Game Description -->
             <div class="description-box">
                 <p>
-                    This is a detailed description of your game project.
-                    Explain the concept, the story, the gameplay mechanics, and what makes this game unique.
-                    Talk about the target audience, the game's setting, and the core experience you wanted to create for players.
-                    This paragraph should give readers a comprehensive understanding of what the game is about and why it matters.
+                    This project sought to represent two different phenomena regarding how light interacts with water.
+                    To be specific, it aims to render an <span class="highlight">underwater scene</span> featuring both <span class="highlight-purple">water caustics and “god rays”</span> (beams of light coming from the water’s surface).
+                    Initially, the methods for rendering the caustics and the god rays were intended to be directly linked.
+                    This is because it was believed that rendering one (in this case, the god rays) would necessarily beget the other (the caustics).
+                    However, further research indicated that these phenomena are seldom rendered in this way and are usually created with separate methods.
+                    Therefore, this project implements god rays with <span class="highlight-orange">ray marching</span> as a shader effect and caustics with 3-dimensional <span class="highlight-orange">Worley noise</span>.
                 </p>
             </div>
 
@@ -67,33 +69,32 @@
                 <div class="info-list">
                     <h3>Project Details</h3>
                     <ul>
-                        <li>Team size: 5 developers</li>
-                        <li>Duration: 18 months</li>
-                        <li>Engine: Unity 2022</li>
-                        <li>Platform: PC, Console</li>
-                        <li>My Role: Lead Programmer</li>
+                        <li>Team size: 4 developers</li>
+                        <li>Duration: 2 months</li>
+                        <li>Engine: Unity 6.2</li>
+                        <li>Platform: PC</li>
+                        <li>My Role: Technical Artist</li>
                     </ul>
                 </div>
 
                 <div class="info-list">
                     <h3>Goals</h3>
                     <ul>
-                        <li>Create immersive multiplayer experience</li>
-                        <li>Implement advanced AI systems</li>
-                        <li>Optimize for 60 FPS on all platforms</li>
-                        <li>Build scalable backend infrastructure</li>
-                        <li>Launch with 100K+ active users</li>
+                        <li>Create a shader that's capable of showing an underwater scene</li>
+                        <li>Implement our own 3D Worley noise to generate caustics</li>
+                        <li>Use ray marching in order to render god rays in the water volume</li>
+                        <li>Rendering both parts simultaneously in engine</li>
+                        <li>Animate both parts simulating a real underwater scene</li>
                     </ul>
                 </div>
 
                 <div class="info-list">
                     <h3>Constraints</h3>
                     <ul>
-                        <li>Tight 18-month deadline</li>
-                        <li>Limited budget for middleware</li>
-                        <li>Cross-platform compatibility required</li>
-                        <li>Small team with multiple responsibilities</li>
-                        <li>Performance requirements for older hardware</li>
+                        <li>Tight 2-month deadline</li>
+                        <li>Real-time rendering and animation required for both parts</li>
+                        <li>Custom 3D Worley noise generation</li>
+                        <li>Custom volumetric rendering for the volume of water</li>
                     </ul>
                 </div>
             </div>
@@ -107,37 +108,36 @@
             <div class="process-columns">
                 <div class="process-column">
                     <div class="process-number">01</div>
-                    <h3>Planning & Design</h3>
+                    <h3>Research & Planning</h3>
                     <ul>
-                        <li>Conducted market research</li>
-                        <li>Created design documents</li>
-                        <li>Built prototypes</li>
-                        <li>Gathered team feedback</li>
-                        <li>Defined technical requirements</li>
+                        <li>Conducted research to existing approaches</li>
+                        <li>Comparing methods of rendering god rays via ray tracing vs ray marching</li>
+                        <li>Figuring out which formula to use in order to represent light attenuation through water</li>
+                        <li>Looking into how to best generate the Worley noise for caustics that is then capable of being animated in real time</li>
+                        <li>Planning of how the final scene would look like</li>
                     </ul>
                 </div>
 
                 <div class="process-column">
                     <div class="process-number">02</div>
-                    <h3>Development</h3>
+                    <h3>Methods & Development</h3>
                     <ul>
-                        <li>Set up version control</li>
-                        <li>Implemented core mechanics</li>
-                        <li>Built multiplayer systems</li>
-                        <li>Created AI behaviors</li>
-                        <li>Optimized performance</li>
+                        <li>Setting up the git project</li>
+                        <li>Implemented algorithm for generating 3D Worley noise</li>
+                        <li>Animating the 3D Worley noise</li>
+                        <li>Implemented algorithm for volumetric rendering of the water</li>
+                        <li>Animating the volume of water with god rays</li>
                     </ul>
                 </div>
 
                 <div class="process-column">
                     <div class="process-number">03</div>
-                    <h3>Testing & Launch</h3>
+                    <h3>Polishing & The Scene</h3>
                     <ul>
-                        <li>Alpha testing phase</li>
-                        <li>Beta testing with users</li>
-                        <li>Bug fixing iteration</li>
-                        <li>Platform certification</li>
-                        <li>Marketing and launch</li>
+                        <li>Building the scene in Unity with 3D objects</li>
+                        <li>Created the caustics to be a "Decal" material</li>
+                        <li>Finding good colors for both parts</li>
+                        <li>Testing out various settings in order to produce the best results</li>
                     </ul>
                 </div>
             </div>
@@ -149,51 +149,44 @@
                 <!-- Breakdown Item 1 -->
                 <div class="breakdown-item">
                     <div class="breakdown-content">
-                        <h4>Initial Prototyping</h4>
+                        <h4>Existing Methods</h4>
                         <ul>
-                            <li>Built <a href="https://unity.com" class="highlight-link" target="_blank">Unity prototype</a> in first 2 weeks</li>
-                            <li>Tested core gameplay loop with focus group</li>
-                            <li>Implemented <a href="#" class="highlight-link">custom physics system</a> for unique movement</li>
-                            <li>Created modular architecture for scalability</li>
-                            <li>Established coding standards and documentation</li>
+                            <li>Rendering realistic god rays with a custom volume renderer by <a href="https://open.clemson.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=3047&context=all_theses" class="highlight-link" target="_blank">Gowthaman Ilango</a></li>
+                            <li>Rendering real-time underwater caustics and godrays by <a href="https://graphics.cs.aueb.gr/graphics/docs/papers/GraphiCon09_PapadopoulosPapaioannou.pdf" class="highlight-link" target="_blank">C. Papadopoulos and G. Papaioannou</a></li>
                         </ul>
                     </div>
                     <div class="breakdown-image">
-                        <img src="images/process/prototyping.jpg" alt="Prototyping Phase">
+                        <img src="../images/projects/Underwater Shader/Existing Methods.png" alt="Existing Methods">
                     </div>
                 </div>
 
                 <!-- Breakdown Item 2 -->
                 <div class="breakdown-item">
                     <div class="breakdown-content">
-                        <h4>Multiplayer Implementation</h4>
+                        <h4>Developing the Solution</h4>
                         <ul>
-                            <li>Integrated <a href="https://www.photonengine.com" class="highlight-link" target="_blank">Photon networking</a> framework</li>
-                            <li>Developed custom server architecture</li>
-                            <li>Implemented lag compensation techniques</li>
-                            <li>Created matchmaking system with ELO ranking</li>
-                            <li>Stress tested with 10,000+ concurrent users</li>
+                            <li>An algorithm that is capable of <span class="highlight-purple">generating caustics</span> that can be animated over time</li>
+                            <li>An algorithm that is capable of rendering a <span class="highlight-purple">volume of water</span> with god rays visible on several regions of the volume</li>
+                            <li>Applying both algorithm on an underwater scene in <span class="highlight-orange">real-time</span></li>
                         </ul>
                     </div>
                     <div class="breakdown-image">
-                        <img src="images/process/multiplayer.jpg" alt="Multiplayer Development">
+                        <img src="../images/projects/Underwater Shader/Godrays Theory.png" alt="God Rays Algo">
                     </div>
                 </div>
 
                 <!-- Breakdown Item 3 -->
                 <div class="breakdown-item">
                     <div class="breakdown-content">
-                        <h4>AI & Optimization</h4>
+                        <h4>Evaluation</h4>
                         <ul>
-                            <li>Built behavior tree system for enemy AI</li>
-                            <li>Used <a href="#" class="highlight-link">Unity Profiler</a> to identify bottlenecks</li>
-                            <li>Optimized rendering with LOD systems</li>
-                            <li>Reduced memory footprint by 40%</li>
-                            <li>Achieved stable 60 FPS on target hardware</li>
+                            <li>Applying the caustics texture not only on a plane but also on <span class="highlight-orange">objects</span></li>
+                            <li><span class="highlight-orange">Fine-tuning</span> the god rays algorithm in order to still be able to render in real-time</li>
+                            <li>Taking a <span class="highlight-purple">specific angle shot</span> to render the final underwater scene</li>
                         </ul>
                     </div>
                     <div class="breakdown-image">
-                        <img src="images/process/optimization.jpg" alt="AI and Optimization">
+                        <img src="../images/projects/Underwater Shader - Cover.png" alt="Polished Shot">
                     </div>
                 </div>
             </div>
@@ -205,32 +198,51 @@
             
             <!-- Stage Navigation -->
             <div class="stage-navigation">
-                <a href="#stage1" class="stage-nav-btn">Stage 1: Prototyping</a>
-                <a href="#stage2" class="stage-nav-btn">Stage 2: Core Mechanics</a>
-                <a href="#stage3" class="stage-nav-btn">Stage 3: Optimization</a>
+                <a href="#stage1" class="stage-nav-btn">Algorithm 1: Caustics</a>
+                <a href="#stage2" class="stage-nav-btn">Algorithm 2: God Rays</a>
+                <a href="#stage3" class="stage-nav-btn">Polishing & Optimization</a>
             </div>
 
             <!-- STAGE 1 -->
             <div class="stage" id="stage1">
                 <div class="stage-header">
-                    <div class="stage-number">Stage 01</div>
-                    <h3 class="stage-title">Prototyping & Foundation</h3>
+                    <div class="stage-number">Algorithm 01</div>
+                    <h3 class="stage-title">Caustics Algorithm</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">
+                            Need some noise generation algorithm that can simulate water caustics that changes seamlessly through time.
+                            The noise would also need to be rendered to a plane to visualize the bottom floor of the sea level.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">
+                            Implement an algorithm that would generate 3D Worley noise data. Each slice represents one timestep of the animation.
+                            Animating it would then only be traversing the slices on the z-axis.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Feature 1: With Image -->
                 <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
-                            <h4 class="feature-title">Movement System Design</h4>
+                            <h4 class="feature-title">3D Worley Noise</h4>
                             <ul class="feature-points">
-                                <li>Implemented physics-based character controller using <a href="#" class="highlight-link">Unity's CharacterController</a></li>
-                                <li>Created smooth acceleration and deceleration curves for natural movement feel</li>
-                                <li>Added wall-sliding mechanics to prevent player frustration</li>
-                                <li>Tuned gravity multiplier for responsive jump feel</li>
+                                <li>Using Unity's <a href="https://docs.unity3d.com/Manual/urp/urp-introduction.html" class="highlight-link" target="_blank">Universal Render Pipeline</a>
+                                     as the base system of the project</li>
+                                <li>Created an algorithm that would generate <span class="highlight-purple">3D Worley</span> noise</li>
+                                <li>Using <span class="highlight-orange">C#</span> script to compute the values</li>
+                                <li>Generate random points three-dimensional space to serve as the centers of the Worley cells</li>
+                                <li>Apply nearest-neighbor algorithm to compute noise value at each point in the volume</li>
                             </ul>
                         </div>
                         <div class="feature-media">
-                            <img src="../images/projects/Underwater Shader/Godrays.png" alt="Movement System">
+                            <img src="../images/projects/Underwater Shader/3D Worley.png" alt="3D Worley">
                         </div>
                     </div>
                 </div>
@@ -239,31 +251,37 @@
                 <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
-                            <h4 class="feature-title">Camera Controller</h4>
+                            <h4 class="feature-title">Generating on a Plane</h4>
                             <ul class="feature-points">
-                                <li>Developed custom third-person camera with Cinemachine</li>
-                                <li>Implemented collision detection to prevent camera clipping</li>
-                                <li>Added smooth camera transitions between different game states</li>
-                                <li>Created field-of-view adjustments for speed variations</li>
+                                <li>Sampling a <span class="highlight-purple">single slice</span> of the Worley field along the <span class="highlight-orange">x-z plane</span></li>
+                                <li>Moving along the <span class="highlight-orange">y-axis</span> for every slice over time</li>
+                                <li>First iteration of the caustics shown on the video. Caustics are seen but still black and white in color.</li>
                             </ul>
                         </div>
                         <div class="feature-media">
-                            <video controls>
-                                <source src="videos/project/camera-demo.mp4" type="video/mp4">
+                            <video autoplay loop muted>
+                                <source src="../videos/Underwater Shader/Worley 3D Early.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
 
-                <!-- Feature 3: Text Only (no media) -->
+                <!-- Feature 3: With Image -->
                 <div class="feature-section">
-                    <h4 class="feature-title">Input System Architecture</h4>
-                    <ul class="feature-points">
-                        <li>Utilized Unity's new Input System for cross-platform compatibility</li>
-                        <li>Created modular input action maps for different game states</li>
-                        <li>Implemented rebindable controls with UI feedback</li>
-                        <li>Added controller vibration support for impact events</li>
-                    </ul>
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Animating</h4>
+                            <ul class="feature-points">
+                                <li>By slicing the 3D Worley noise on the y-axis over time, it was able to generate seamless animation that resembles caustics</li>
+                                <li>Added <a href="https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-2-rendering-water-caustics" class="highlight-link" target="_blank">distortion</a>
+                                        so that portions of the caustics varied according to the simulated high and low tides of the ocean surface</li>
+                                <li>The color of each pixel was subsequently determined by <span class="highlight-purple">interpolating among three colors:</span> white, light blue, and deep blue, to achieve the desired caustic effect.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <img src="../images/projects/Underwater Shader/Caustics Theory.png" alt="Caustics Algo">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Stage 1 Results -->
@@ -272,16 +290,16 @@
                     <div class="results-content with-media">
                         <div class="results-text">
                             <p>
-                                The prototyping phase successfully established the core foundation of the game's feel. 
-                                Through iterative testing with 15+ playtesters, we refined the movement to achieve a 
-                                responsive 8.5/10 satisfaction rating. The modular input system proved invaluable during 
-                                later development, allowing seamless integration of new mechanics without refactoring. 
-                                Early performance metrics showed consistent 60 FPS on target hardware with room for 
-                                additional features.
+                                This algorithm was capable to simulate <span class="highlight-purple">realistic</span> caustic effects that is done in <span class="highlight-purple">real-time</span> on a single plane.
+                                The algorithm was also able to show an animation of the caustic that is <span class="highlight">seamless</span> and can be made to <span class="highlight">loop infinitely</span>.
+                                In its current state, this Worley texture cannot be directly applied to the scene.
+                                The output image would need to be blended with every object's base color texture and then meticulously scaled to look even and continuous across every object.
                             </p>
                         </div>
                         <div class="results-media">
-                            <img src="images/project/stage1-results.jpg" alt="Stage 1 Results">
+                            <video autoplay loop muted>
+                                <source src="../videos/Underwater Shader/Water Caustics Mid.mp4" type="video/mp4" alt="Worley Mid Progress">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -290,38 +308,70 @@
             <!-- STAGE 2 -->
             <div class="stage" id="stage2">
                 <div class="stage-header">
-                    <div class="stage-number">Stage 02</div>
-                    <h3 class="stage-title">Core Mechanics Implementation</h3>
+                    <div class="stage-number">Algorithm 02</div>
+                    <h3 class="stage-title">God Rays</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">
+                            Need for a way to be able to render a volume of water with varying light intensity.
+                            Some parts of the water would need to be seen as transparent while others are brighter.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">
+                            Implement a custom shader that utilizes raymarch to simulate god rays in a volume of water.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Text Only (no media) -->
+                <div class="feature-section">
+                    <h4 class="feature-title">HLSL & Shader Graph</h4>
+                    <ul class="feature-points">
+                        <li>Implemented using custom <span class="highlight-purple">HLSL</span> shader code</li>
+                        <li>Combine with Unity's built-in 
+                            <a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@17.5/manual/index.html" class="highlight-link" target="_blank">Shader Graph</a></li>
+                    </ul>
                 </div>
 
                 <!-- Feature 1 -->
                 <div class="feature-section">
-                    <h4 class="feature-title">Combat System</h4>
-                    <ul class="feature-points">
-                        <li>Designed combo-based melee system with 3-hit chains</li>
-                        <li>Implemented hitbox detection using Unity's Physics.OverlapSphere</li>
-                        <li>Created animation state machine with attack canceling windows</li>
-                        <li>Added hit-stop effect for impactful combat feedback</li>
-                        <li>Balanced damage values through 50+ hours of playtesting</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 2: With GIF/Video -->
-                <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
-                            <h4 class="feature-title">Enemy AI Behavior</h4>
+                            <h4 class="feature-title">Volumetric Rendering</h4>
                             <ul class="feature-points">
-                                <li>Built behavior tree system using custom state machine</li>
-                                <li>Implemented pathfinding with Unity NavMesh</li>
-                                <li>Created detection zones with line-of-sight checks</li>
-                                <li>Added varied attack patterns for different enemy types</li>
+                                <li>Treating the water as a single <a href="https://www.youtube.com/watch?v=hXYOlXVRRL8" class="highlight-link" target="_blank">homogenous volume</a></li>
+                                <li>Perform <span class="highlight-purple">raymarch</span> in the volume of water, sampling a <span class="highlight-purple">water density</span>. In our case, uniform water density was assumed.</li>
+                                <li>At each step of the primary raymarch, perform a <span class="highlight-orange">secondary raymarch</span> towards the light.</li>
+                                <li>On each step of the secondary raymarch, sample a <span class="highlight-orange">3D Simplex noise</span> representing light density within the volume</li>
                             </ul>
                         </div>
                         <div class="feature-media">
-                            <video autoplay loop muted>
-                                <source src="../videos/Underwater Shader/Final Scene 2.mp4" type="video/mp4">
-                            </video>
+                            <img src="../images/projects/Underwater Shader/Godrays Theory.png" alt="Godrays Algo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: With Image -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Beer's Law</h4>
+                            <ul class="feature-points">
+                                <li>Using the accumulated light density from the secondary raymarch to compute the <span class="highlight-purple">shadow</span> value</li>
+                                <li><a href="https://www.sciencefacts.net/beer-lambert-law.html" class="highlight-link" target="_blank">Beer's Law</a> is the formula used to calculate <span class="highlight-purple">final light contribution</span> at each point in the volume</li>
+                                <li>The accumulated final light values, taken from each step of the primary raymarch, is then used to  
+                                    generate the <span class="highlight-purple">color</span> of each pixel by <span class="highlight">interpolating</span> between shadow color and god ray light color</li>
+                                <li>The accumulated water density was then also applied through Beer's Law to determine the <span class="highlight-purple">alpha</span> value of each pixel</li>
+                                <li>Pass the interpolated color and alpha to the fragment shader</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <img src="../images/projects/Underwater Shader/Beer's Law.jpg" alt="Beer's Law">
                         </div>
                     </div>
                 </div>
@@ -332,16 +382,15 @@
                     <div class="results-content with-media">
                         <div class="results-text">
                             <p>
-                                The combat system became the centerpiece of the game's identity. Player feedback indicated 
-                                that combat felt "weighty and satisfying" with the hit-stop implementation proving 
-                                particularly impactful. The behavior tree architecture allowed rapid iteration on enemy 
-                                patterns, reducing AI development time by 40% compared to initial estimates. Combat 
-                                encounters now provided consistent challenge while remaining fair and learnable.
+                                This algorithm is capable to simulate <span class="highlight-purple">realistic</span> god rays that is done in <span class="highlight-purple">real-time</span>.
+                                Albeit some fine tuning of the parameters are required as the <span class="highlight">shorter</span> the step <span class="highlight">more computations</span> are needed.
+                                The algorithm also takes into consideration the <span class="highlight-orange">direction</span> of the light source.
+                                The god rays are also seen <span class="highlight-orange">refracted</span> inside the volume water giving a more realistic look.
                             </p>
                         </div>
                         <div class="results-media">
-                            <video controls>
-                                <source src="../videos/Underwater Shader/God Rays Alone.mp4" type="video/mp4">
+                            <video autoplay loop muted>
+                                <source src="../videos/Underwater Shader/God Rays.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -351,29 +400,72 @@
             <!-- STAGE 3 -->
             <div class="stage" id="stage3">
                 <div class="stage-header">
-                    <div class="stage-number">Stage 03</div>
-                    <h3 class="stage-title">Polish & Optimization</h3>
+                    <div class="stage-number">Bringing it Together</div>
+                    <h3 class="stage-title">Polishing & Optimization</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">
+                            A good underwater scene with several objects on floor level with varying materials and textures.
+                            Caustics should be rendered on top of each object not only on the seafloor plane.
+                            God rays should also run on top of it and caustics as well as the objects can still be seen clearly.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">
+                            Implement a single scene and fine-tune the variables so that both algorithms can run in real time.
+                            Converted the generated Worley textures to decal material.
+                            Adjusted the volume of water and god rays algorithm parameters.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="feature-section">
-                    <h4 class="feature-title">Performance Optimization</h4>
+                    <h4 class="feature-title">Building the Scene</h4>
                     <ul class="feature-points">
-                        <li>Implemented object pooling for frequently spawned entities (reduced garbage collection by 70%)</li>
-                        <li>Optimized draw calls using static batching and GPU instancing</li>
-                        <li>Created LOD system for complex meshes (30% performance improvement)</li>
-                        <li>Profiled and optimized physics calculations in Update loops</li>
-                        <li>Reduced texture memory usage by 45% through compression and atlasing</li>
+                        <li>Requires some models and textures of an underwater scene.</li>
+                        <li>An underwater shot with <span class="highlight-purple">caustics</span> on the ground and on some objects.</li>
+                        <li>A <span class="highlight-purple">volume of water with god rays</span> visible in it</li>
                     </ul>
                 </div>
 
                 <div class="feature-section">
-                    <h4 class="feature-title">Visual Polish</h4>
-                    <ul class="feature-points">
-                        <li>Added particle effects for combat impacts and environmental interactions</li>
-                        <li>Implemented screen shake system with customizable intensity curves</li>
-                        <li>Created dynamic lighting for day/night cycle</li>
-                        <li>Enhanced UI with smooth transitions and feedback animations</li>
-                    </ul>
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Decal Material</h4>
+                            <ul class="feature-points">
+                                <li><span class="highlight-orange">Blend</span> the Worley texture with every object's base color texture</li>
+                                <li>Scale the blended texture to keep it look <span class="highlight-orange">even and continuous</span> across every object</li>
+                                <li>Using Unity's 
+                                <a href="https://docs.unity3d.com/6000.3/Documentation/Manual/visual-effects-decals.html" class="highlight-link" target="_blank">decal</a> system</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <video controls muted>
+                                <source src="../videos/Underwater Shader/Caustics Decal.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Animating God Rays</h4>
+                            <ul class="feature-points">
+                                <li>Similar to the caustics, move over the Simplex 3D noise over time</li>
+                                <li>Also changing the direction of the light to simulate light coming from different directions</li>
+                                <li>Showing that some parts of the volume of water remain <span class="highlight-orange">transparent</span> while others exhibit <span class="highlight-orange">lighter blue shading</span> representing areas affected by god rays</li>
+                                <li>God rays appear to originate from a <span class="highlight-purple">single directional light source</span>. But within the water, the god rays are <span class="highlight-purple">refracted</span> effectively and does not remain parallel</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <img src="../images/projects/Underwater Shader/Godrays.png" alt="God Rays Shot">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Stage 3 Results: Text Only -->
@@ -382,12 +474,11 @@
                     <div class="results-content">
                         <div class="results-text">
                             <p>
-                                Optimization efforts yielded significant improvements across all target platforms. 
-                                Frame rates stabilized at 60 FPS even during intensive combat scenarios with multiple 
-                                enemies and particle effects. Memory usage was reduced by 40%, allowing the game to run 
-                                smoothly on minimum spec hardware. The visual polish pass elevated the overall presentation, 
-                                with testers noting the game felt "AAA quality" despite the indie development context. 
-                                Load times were cut in half through asset streaming optimization.
+                                By building a scene and applying a decal material to our caustics, we were able to render the caustics <span class="highlight">on top of several objects</span>.
+                                The caustics also didn't break and still look <span class="highlight">seamless when animated over time</span>.
+                                <span class="highlight-purple">Fine-tuning</span> the god rays parameters also allows the scene to still be rendered particularly well with all components present.
+                                It can be seen quite well on the final render shot that the caustics are moving underneath the volume of water and on the objects in the scene
+                                while on top of them god rays are seemingly visible that are refracted in different directions but still seemingly originated from one direction.
                             </p>
                         </div>
                     </div>
@@ -401,36 +492,30 @@
             <div class="takeaways-section">
                 <h3>Project Insights & Learnings</h3>
                 <ul class="takeaways-list">
-                    <li><strong>Early prototyping paid dividends:</strong> Investing 3 weeks in core feel before building features 
-                    prevented months of rework and established a solid foundation that guided all subsequent decisions.</li>
+                    <li><span class="highlight">Procedural Generation:</span> Great practice of using several procedural generation algorithms in order to create
+                    various noise generation used for both caustics and god rays generation</li>
+
+                    <li><span class="highlight-orange">Volumetric Rendering:</span> Gained valuable experience in implementing the raymarching method
+                    to render a volumetric object with varying colors and transparency</li>
+
+                    <li><span class="highlight">Shader programming:</span> Gained experience in developing my own shaders in HLSL
+                        and applying it inside a game engine to render a combination of results</li>
+
+                    <li><span class="highlight-orange">Utilizing Engine:</span> Capability to develop custom made algorithms and integrating it
+                    inside an existing engine then utilizing it's capabilities to deliver an excelent combinations of elements</li>
                     
-                    <li><strong>Modular architecture is essential:</strong> The input system and behavior tree designs proved 
-                    their worth when adding new features, saving an estimated 100+ hours of refactoring work.</li>
-                    
-                    <li><strong>Player feedback is invaluable:</strong> Regular playtesting sessions (30+ across development) 
-                    caught issues early and validated design decisions, particularly for combat timing and difficulty curves.</li>
-                    
-                    <li><strong>Optimization should be ongoing:</strong> Rather than leaving performance work to the end, 
-                    integrating profiling into weekly workflows prevented technical debt accumulation.</li>
-                    
-                    <li><strong>Successfully shipped core features:</strong> All primary mechanics (movement, combat, AI) were 
-                    completed and polished to production quality within the 18-month timeline.</li>
-                    
-                    <li><strong>Scope management was challenging:</strong> Had to cut multiplayer mode and two planned enemy types 
-                    to meet deadline, reinforcing the importance of realistic scheduling and early feature prioritization.</li>
-                    
-                    <li><strong>Technical achievement:</strong> Achieved 60 FPS target on all platforms including older hardware, 
-                    demonstrating the effectiveness of optimization strategies and LOD implementation.</li>
+                    <li><span class="highlight">Optimization:</span> Developed a deeper understanding of fine tuning parameters such that algorithms would still run in real-time
+                    and able to be rendered in the scene seamlessly</li>
                 </ul>
             </div>
         </section>
 
         <!-- External Project Link -->
-        <div class="external-project-section">
+        <!-- <div class="external-project-section">
             <a href="https://example.com/play-game" target="_blank" class="external-project-btn">
                 🎮 Play the Game
             </a>
-        </div>
+        </div> -->
     </div>
 
     <script src="../js/slideshow.js"></script>

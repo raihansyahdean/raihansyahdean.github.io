@@ -4,7 +4,7 @@ const projectAvailability = {
     'pages-projects/elementary.html': false,      // Change to true when created
     'pages-projects/rube-goldberg.html': false,     // Change to true when created
     'pages-projects/light-grows.html': false,      // Change to true when created
-    'pages-projects/underwater-shader.html': false,      // Change to true when created
+    'pages-projects/underwater-shader.html': true,
     'pages-projects/pitch-it.html': false,      // Change to true when created
     'pages-projects/formula-faceoff.html': false,      // Change to true when created
     'pages-projects/reminiscence.html': false,       // Change to true when created

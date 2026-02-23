@@ -586,17 +586,31 @@ h1 {
         font-size: 2rem;
     }
 
+    .filter-section {
+        margin-bottom: 2rem;
+    }
+
+    .filter-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
     .filter-buttons {
         gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
     .filter-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+        flex: 1 1 calc(50% - 0.25rem);
+        min-width: 140px;
+        text-align: center;
     }
 
     .project-count {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         padding: 0.1rem 0.4rem;
+        margin-left: 0.3rem;
     }
 }
