@@ -16,29 +16,48 @@ navLinks.forEach(link => {
         
         // Smooth scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Update URL hash
+        window.location.hash = targetId;
     });
+});
+
+function navigateToSection(sectionId) {
+    // Remove # if present
+    const targetId = sectionId.replace('#', '');
+    
+    // Update nav active states
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + targetId) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Update page visibility
+    pages.forEach(page => page.classList.remove('active'));
+    const targetPage = document.getElementById(targetId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+    }
+    
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Update URL hash
+    window.location.hash = targetId;
+}
+
+// Handle hash changes (back/forward browser buttons)
+window.addEventListener('hashchange', function() {
+    const hash = window.location.hash.substring(1) || 'home';
+    navigateToSection(hash);
 });
 
 // Handle hash navigation on page load
 window.addEventListener('load', function() {
-    if (window.location.hash) {
-        const hash = window.location.hash;
-        setTimeout(() => {
-            const targetElement = document.querySelector(hash);
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pages = document.querySelectorAll('.page');
-            
-            if (targetElement) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                pages.forEach(page => page.classList.remove('active'));
-                
-                const targetLink = document.querySelector(`a[href="${hash}"]`);
-                if (targetLink) {
-                    targetLink.classList.add('active');
-                }
-                targetElement.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }, 100);
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        navigateToSection(hash);
     }
 });
