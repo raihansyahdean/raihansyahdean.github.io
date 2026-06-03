@@ -265,12 +265,12 @@ h1 {
     white-space: nowrap;
 }
 
-.role-pill--producer        { background: rgba(88, 166, 255, 0.12); border-color: #58a6ff; color: #58a6ff; }
-.role-pill--designer        { background: rgba(255, 107, 53, 0.12); border-color: #ff6b35; color: #ff6b35; }
-.role-pill--programmer      { background: rgba(199, 146, 234, 0.12); border-color: #c792ea; color: #c792ea; }
-.role-pill--artist          { background: rgba(247, 147, 30, 0.12); border-color: #f7931e; color: #f7931e; }
-.role-pill--technical-artist{ background: rgba(100, 210, 180, 0.12); border-color: #64d2b4; color: #64d2b4; }
-.role-pill--audio-designer  { background: rgba(255, 210, 63, 0.12); border-color: #ffd23f; color: #ffd23f; }
+.role-pill--producer        { background: rgba(88, 166, 255, 0.12); border-color: #f7931e; color: #f7931e; }
+.role-pill--designer        { background: rgba(255, 107, 53, 0.12); border-color: #58a6ff; color: #58a6ff; }
+.role-pill--engineer      { background: rgba(199, 146, 234, 0.12); border-color: #64d2b4; color: #64d2b4; }
+.role-pill--artist          { background: rgba(247, 147, 30, 0.12); border-color: #f472b6; color: #f472b6; }
+.role-pill--technical-artist{ background: rgba(100, 210, 180, 0.12); border-color: #9d6fd9; color: #9d6fd9; }
+.role-pill--audio           { background: rgba(255, 210, 63, 0.12); border-color: #e8b84b; color: #e8b84b; }
 .role-pill--solo-developer  { background: rgba(255, 107, 53, 0.12); border-color: #ff6b35; color: #ff6b35; }
 
 .project-date {

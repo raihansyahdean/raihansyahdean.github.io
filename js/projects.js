@@ -29,7 +29,7 @@ const externalLinks = {
 
 // All filter slug values — used for counting
 const ALL_TYPES = ['games', 'visual-audio', 'graphics-tech'];
-const ALL_ROLES = ['producer', 'designer', 'programmer', 'artist', 'technical-artist', 'audio', 'solo-developer'];
+const ALL_ROLES = ['producer', 'designer', 'engineer', 'artist', 'technical-artist', 'audio', 'solo-developer'];
  
 // Active filter state
 let activeType = 'all';
