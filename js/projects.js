@@ -1,3 +1,9 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// projects.js
+// Handles: project page availability, modal popups, dual filter (type + role),
+//          and count badges for both filter rows.
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Configuration: Set to true for projects that have pages created
 const projectAvailability = {
     'pages-projects/template.html': true,
@@ -20,6 +26,16 @@ const externalLinks = {
     'https://raihansyah-dean.itch.io/covid-colony': 'https://raihansyah-dean.itch.io/covid-colony',
     'https://raihansyah-dean.itch.io/unreal-logic': 'https://raihansyah-dean.itch.io/unreal-logic'
 };
+
+// All filter slug values — used for counting
+const ALL_TYPES = ['games', 'visual-audio', 'graphics-tech'];
+const ALL_ROLES = ['producer', 'designer', 'programmer', 'artist', 'technical-artist', 'audio', 'solo-developer'];
+ 
+// Active filter state
+let activeType = 'all';
+let activeRole = 'all';
+
+// ── Modal helpers ─────────────────────────────────────────────────────────────
 
 // Check if project detail page exists
 function checkProjectPage(event, element) {
@@ -88,59 +104,63 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Filter Projects Function
-function filterProjects(category) {
+// ── Filtering ─────────────────────────────────────────────────────────────────
+
+function applyFilters() {
     const cards = document.querySelectorAll('.project-card');
-    const buttons = document.querySelectorAll('.filter-btn');
-    
-    // Update active button
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-filter') === category) {
-            btn.classList.add('active');
-        }
+ 
+    // Pass 1: show/hide cards based on both active filters
+    cards.forEach(function (card) {
+        const types = (card.dataset.types || '').split(',').map(s => s.trim());
+        const roles = (card.dataset.roles || '').split(',').map(s => s.trim());
+        const typeMatch = activeType === 'all' || types.includes(activeType);
+        const roleMatch = activeRole === 'all' || roles.includes(activeRole);
+        card.classList.toggle('hidden', !(typeMatch && roleMatch));
     });
-    
-    // Filter cards
-    cards.forEach(card => {
-        const types = card.getAttribute('data-types');
-        
-        if (category === 'all') {
-            card.classList.remove('hidden');
-        } else {
-            if (types && types.includes(category)) {
-                card.classList.remove('hidden');
-            } else {
-                card.classList.add('hidden');
-            }
-        }
+ 
+    // Pass 2: type counts — always all cards, role filter ignored
+    const typeCounts = { all: 0 };
+    ALL_TYPES.forEach(t => { typeCounts[t] = 0; });
+    cards.forEach(function (card) {
+        const types = (card.dataset.types || '').split(',').map(s => s.trim());
+        typeCounts.all++;
+        types.forEach(t => { if (typeCounts[t] !== undefined) typeCounts[t]++; });
+    });
+    Object.keys(typeCounts).forEach(function (key) {
+        const el = document.getElementById('count-' + key);
+        if (el) el.textContent = typeCounts[key];
+    });
+ 
+    // Pass 3: role counts — always all cards, type filter ignored
+    const roleCounts = { all: 0 };
+    ALL_ROLES.forEach(r => { roleCounts[r] = 0; });
+    cards.forEach(function (card) {
+        const roles = (card.dataset.roles || '').split(',').map(s => s.trim());
+        roleCounts.all++;
+        roles.forEach(r => { if (roleCounts[r] !== undefined) roleCounts[r]++; });
+    });
+    Object.keys(roleCounts).forEach(function (key) {
+        const el = document.getElementById('count-role-' + key);
+        if (el) el.textContent = roleCounts[key];
     });
 }
 
-// Update project counts on page load
-function updateProjectCounts() {
-    const cards = document.querySelectorAll('.project-card');
-    const counts = {
-        all: cards.length,
-        games: 0,
-        'visual-audio': 0,
-        'graphics-tech': 0
-    };
-    
-    cards.forEach(card => {
-        const types = card.getAttribute('data-types');
-        if (types) {
-            if (types.includes('games')) counts.games++;
-            if (types.includes('visual-audio')) counts['visual-audio']++;
-            if (types.includes('graphics-tech')) counts['graphics-tech']++;
-        }
+// Wire all filter buttons on load
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const group = this.dataset.group;
+            const filter = this.dataset.filter;
+ 
+            document.querySelectorAll(`.filter-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+ 
+            if (group === 'type') activeType = filter;
+            if (group === 'role') activeRole = filter;
+ 
+            applyFilters();
+        });
     });
-    
-    document.getElementById('count-all').textContent = counts.all;
-    document.getElementById('count-games').textContent = counts.games;
-    document.getElementById('count-visual-audio').textContent = counts['visual-audio'];
-    document.getElementById('count-graphics-tech').textContent = counts['graphics-tech'];
-}
-
-// Initialize counts on page load
-updateProjectCounts();
+ 
+    applyFilters();
+});
