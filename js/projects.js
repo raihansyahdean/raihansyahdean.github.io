@@ -45,6 +45,7 @@ function checkProjectPage(event, element) {
     // Check if project is available in our config
     if (projectAvailability[projectUrl]) {
         // Project exists, navigate to it
+        setProjectReferrer('index-projects');
         window.location.href = projectUrl;
     } else {
         // Project doesn't exist yet, show modal
@@ -164,3 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
  
     applyFilters();
 });
+
+// Write referrer to sessionStorage before navigating to a project detail page
+function setProjectReferrer(source) {
+    if (source === 'portfolio') {
+        sessionStorage.setItem('projectReferrerUrl', document.location.href);
+    }
+    sessionStorage.setItem('projectReferrer', source);
+}
