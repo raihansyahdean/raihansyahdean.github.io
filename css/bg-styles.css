@@ -147,11 +147,11 @@ nav {
         rgba(199, 146, 234, 0.5),
         transparent
     ) 1;
-    overflow: hidden;
 }
 
 /* Animated nav glow line */
 .nav-glow {
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     left: -100%;
@@ -185,7 +185,8 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav a {
+nav a,
+.nav-dropdown-btn {
     color: #58a6ff;
     text-decoration: none;
     font-size: 1.1rem;
@@ -195,6 +196,10 @@ nav a {
     position: relative;
     overflow: hidden;
     display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .nav-text {
@@ -214,17 +219,22 @@ nav a {
 }
 
 nav a:hover .nav-hover-effect,
-nav a.active .nav-hover-effect {
+nav a.active .nav-hover-effect,
+.nav-dropdown-btn:hover .nav-hover-effect,
+.nav-dropdown.open .nav-dropdown-btn .nav-hover-effect {
     width: 100%;
 }
 
-nav a:hover, nav a.active {
+nav a:hover, nav a.active,
+.nav-dropdown-btn:hover,
+.nav-dropdown.open .nav-dropdown-btn {
     color: #fff;
     text-shadow: 0 0 10px #58a6ff, 0 0 20px #ff6b35;
     background: rgba(88, 166, 255, 0.1);
 }
 
-nav a::before {
+nav a::before,
+.nav-dropdown-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -239,6 +249,55 @@ nav a::before {
     transition: left 0.5s;
 }
 
-nav a:hover::before {
+nav a:hover::before,
+.nav-dropdown-btn:hover::before {
     left: 100%;
+}
+
+/* ── Portfolios Nav Dropdown ─────────────────────────────────────────── */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 14, 39, 0.97);
+    border: 1px solid rgba(88, 166, 255, 0.25);
+    border-radius: 12px;
+    padding: 0.5rem;
+    list-style: none;
+    min-width: 200px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    white-space: nowrap;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.18s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.nav-dropdown-item {
+    display: block;
+    padding: 0.55rem 1rem;
+    color: #c0c0c0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-dropdown-item:hover {
+    background: rgba(255, 107, 53, 0.12);
+    color: #ff6b35;
+    padding-left: 1.3rem;
 }
