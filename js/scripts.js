@@ -1,5 +1,5 @@
 // Navigation functionality
-const navLinks = document.querySelectorAll('.nav-link:not(.nav-dropdown-btn)');
+const navLinks = document.querySelectorAll('.nav-link:not(.nav-dropdown-btn):not(.nav-external)');
 const pages = document.querySelectorAll('.page');
  
 navLinks.forEach(link => {
@@ -50,6 +50,7 @@ function navigateToSection(sectionId) {
  
 // Handle hash changes (back/forward browser buttons)
 window.addEventListener('hashchange', function() {
+    if (pages.length === 0) return;
     const hash = window.location.hash.substring(1) || 'home';
     navigateToSection(hash);
 });
@@ -57,7 +58,7 @@ window.addEventListener('hashchange', function() {
 // Handle hash navigation on page load
 window.addEventListener('load', function() {
     const hash = window.location.hash.substring(1);
-    if (hash) {
+    if (hash && pages.length > 0) {
         navigateToSection(hash);
     }
 });
@@ -81,5 +82,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (target && typeof navigateToSection === 'function') {
         sessionStorage.removeItem('navigateTo');
         navigateToSection(target);
+    }
+
+    // ── Mark Portfolios dropdown as active on portfolio pages ─────────
+    // Portfolio pages have class "portfolio-page" on their .page div
+    if (document.querySelector('.portfolio-page')) {
+        var dropdown = document.querySelector('.nav-dropdown');
+        if (dropdown) {
+            dropdown.classList.add('active');
+            var btn = dropdown.querySelector('.nav-dropdown-btn');
+            if (btn) btn.classList.add('active');
+        }
     }
 });

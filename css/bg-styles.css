@@ -221,13 +221,15 @@ nav a,
 nav a:hover .nav-hover-effect,
 nav a.active .nav-hover-effect,
 .nav-dropdown-btn:hover .nav-hover-effect,
-.nav-dropdown.open .nav-dropdown-btn .nav-hover-effect {
+.nav-dropdown.open .nav-dropdown-btn .nav-hover-effect,
+.nav-dropdown.active .nav-dropdown-btn .nav-hover-effect  {
     width: 100%;
 }
 
 nav a:hover, nav a.active,
 .nav-dropdown-btn:hover,
-.nav-dropdown.open .nav-dropdown-btn {
+.nav-dropdown.open .nav-dropdown-btn,
+.nav-dropdown.active .nav-dropdown-btn {
     color: #fff;
     text-shadow: 0 0 10px #58a6ff, 0 0 20px #ff6b35;
     background: rgba(88, 166, 255, 0.1);
