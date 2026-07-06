@@ -966,6 +966,46 @@ input:focus, textarea:focus {
     flex-shrink: 0;
 }
 
+.skill-icon--dark,
+.skill-icon--emoji.skill-icon--dark {
+    background: rgba(88, 166, 255, 0.10);
+    border: 1px solid rgba(88, 166, 255, 0.30);
+    border-radius: 7px;
+    padding: 4px;
+    width: 34px;
+    height: 34px;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.skill-icon--light,
+.skill-icon--emoji.skill-icon--light {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
+    padding: 4px;
+    width: 34px;
+    height: 34px;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Shared hover for both box variants */
+.skill-icon--dark:hover,
+.skill-icon--light:hover,
+.skill-icon--emoji.skill-icon--dark:hover,
+.skill-icon--emoji.skill-icon--light:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.skill-name-wrapper:hover .skill-icon--dark {
+    background: rgba(88, 166, 255, 0.18);
+}
+
+/* Slightly warm the light box on hover */
+.skill-name-wrapper:hover .skill-icon--light {
+    background: rgba(255, 255, 255, 0.20);
+}
+
 .skill-level {
     font-size: 0.95rem;
     color: #ff6b35;
