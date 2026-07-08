@@ -345,6 +345,27 @@
 
                 <div class="featured-projects">
 
+                    <!-- ═══════════════════════════════════════════════════════
+                         FEATURED CARD
+                         Use class "featured-card--horizontal" for the side-by-side
+                         layout. Media goes in .featured-image, content on the right.
+ 
+                         MEDIA OPTIONS — pick ONE for each card:
+ 
+                         A) Static image (default)
+                            → just an <img> inside .featured-image
+ 
+                         B) Local video (autoplay loop, no controls — acts like GIF)
+                            → <video> inside .featured-image
+                            For a playable video add the "controls" attribute instead
+ 
+                         C) YouTube embed
+                            → add class "featured-image--video" to .featured-image
+                            → put an <iframe> inside it
+                            Replace VIDEO_ID with the 11-char YouTube ID
+                            e.g. youtube.com/watch?v=dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ
+                    ═══════════════════════════════════════════════════════════ -->
+
                     <!-- CUSTOMIZE: Featured Card 1 — copy/paste from index.html featured section -->
 
                     <!-- For individual project cards — just use href, no onclick -->
@@ -354,6 +375,26 @@
                         <div class="featured-image">
                             <img src="../images/projects/Elementary - Cover.png" alt="Project Cover">
                         </div>
+
+                        <!-- - - OPTION B: Local video — delete A and uncomment this
+                        <div class="featured-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="../videos/[project-clip].mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        - - -->
+ 
+                        <!-- - - OPTION C: YouTube embed — delete A and uncomment this
+                        <div class="featured-image featured-image--video">
+                            <iframe
+                                src="https://www.youtube.com/embed/VIDEO_ID"
+                                title="[Project Name]"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        - - -->
+                        
                         <div class="featured-content">
                             <h3 class="featured-title">[Project Name]</h3>
                             <div class="featured-meta">
