@@ -1171,3 +1171,233 @@ input:focus, textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   RESUME PAGE
+   ════════════════════════════════════════════════════════════════════════ */
+ 
+/* ── Resume CTA button on Home page ─────────────────────────────────── */
+.resume-cta {
+    text-align: center;
+    margin: 2.5rem 0 0;
+}
+ 
+.resume-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 2.2rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 18px rgba(255, 107, 53, 0.35);
+    letter-spacing: 0.3px;
+}
+ 
+.resume-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(255, 107, 53, 0.55);
+}
+ 
+/* ── Resume field selector ───────────────────────────────────────────── */
+.resume-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+ 
+.resume-dropdown-wrapper {
+    position: relative;
+}
+ 
+.resume-dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.4rem;
+    background: rgba(20, 25, 50, 0.7);
+    border: 2px solid rgba(88, 166, 255, 0.35);
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    min-width: 220px;
+    justify-content: space-between;
+}
+ 
+.resume-dropdown-btn:hover,
+.resume-dropdown-btn.open {
+    border-color: #ff6b35;
+    box-shadow: 0 4px 18px rgba(255, 107, 53, 0.25);
+    color: #fff;
+}
+ 
+.resume-dropdown-arrow {
+    font-size: 0.85rem;
+    transition: transform 0.25s;
+    color: #58a6ff;
+}
+ 
+.resume-dropdown-btn.open .resume-dropdown-arrow {
+    transform: rotate(180deg);
+}
+ 
+.resume-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    right: 0;
+    background: rgba(10, 14, 39, 0.97);
+    border: 1px solid rgba(88, 166, 255, 0.25);
+    border-radius: 10px;
+    padding: 0.4rem;
+    list-style: none;
+    z-index: 500;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    animation: resumeDropFadeIn 0.18s ease-out;
+}
+ 
+.resume-dropdown-menu.open {
+    display: block;
+}
+ 
+@keyframes resumeDropFadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.resume-option {
+    padding: 0.6rem 1rem;
+    border-radius: 7px;
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+ 
+.resume-option:hover {
+    background: rgba(255, 107, 53, 0.12);
+    color: #ff6b35;
+    padding-left: 1.3rem;
+}
+ 
+.resume-option.active {
+    background: rgba(88, 166, 255, 0.12);
+    color: #58a6ff;
+    font-weight: 600;
+}
+ 
+/* ── PDF viewer container ────────────────────────────────────────────── */
+.resume-viewer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(20, 25, 50, 0.6);
+    border: 2px solid rgba(88, 166, 255, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s;
+}
+ 
+.resume-viewer-container:hover {
+    border-color: rgba(88, 166, 255, 0.5);
+}
+ 
+/* Viewer top bar */
+.resume-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 1.4rem;
+    background: rgba(10, 14, 39, 0.7);
+    border-bottom: 1px solid rgba(88, 166, 255, 0.2);
+}
+ 
+.resume-viewer-title {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+ 
+.resume-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+ 
+.resume-download-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.45);
+}
+ 
+/* iframe frame */
+.resume-viewer-frame {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    background: #1a1a2e;
+}
+ 
+.resume-viewer-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+ 
+/* Fallback message (hidden by default, shown if iframe load fails) */
+.resume-fallback {
+    display: none;
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #a0a0a0;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem;
+}
+ 
+.resume-fallback a {
+    color: #58a6ff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+ 
+@media (max-width: 768px) {
+    .resume-viewer-frame {
+        height: 65vh;
+        min-height: 420px;
+    }
+ 
+    .resume-dropdown-btn {
+        min-width: 180px;
+        font-size: 0.9rem;
+    }
+ 
+    .resume-viewer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+}

@@ -47,6 +47,10 @@
                 <span class="nav-text">Experience</span>
                 <span class="nav-hover-effect"></span>
             </a></li>
+            <li><a href="#resume" class="nav-link">
+                <span class="nav-text">Resume</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
             <li><a href="#contact" class="nav-link">
                 <span class="nav-text">Contact</span>
                 <span class="nav-hover-effect"></span>
@@ -435,6 +439,13 @@
 
                 <a href="#projects" class="all-projects-btn" onclick="navigateToSection('projects'); return false;">View All Projects</a>
             </section>
+
+            <!-- Resume CTA Button -->
+            <div class="resume-cta">
+                <a href="#resume" class="resume-cta-btn" onclick="navigateToSection('resume'); return false;">
+                    📄 View My Resume
+                </a>
+            </div>
 
             <!-- Compact Quote Section -->
             <div class="quote-section">
@@ -1541,6 +1552,72 @@
             </div>
         </div>
 
+        <!-- Resume Page -->
+        <div id="resume" class="page">
+            <h1 style="text-align:center; margin-bottom:0.5rem;">Resume</h1>
+            <p style="text-align:center; color:#a0a0a0; margin-bottom:2.5rem;">
+                Select a field below to view my resume for that role.
+            </p>
+ 
+            <!-- Resume Selector Dropdown -->
+            <div class="resume-selector">
+                <div class="resume-dropdown-wrapper">
+                    <button class="resume-dropdown-btn" id="resumeDropdownBtn">
+                        <span class="resume-dropdown-icon">🎮</span>
+                        <span class="resume-dropdown-label" id="resumeDropdownLabel">Game Production</span>
+                        <span class="resume-dropdown-arrow">▾</span>
+                    </button>
+                    <ul class="resume-dropdown-menu" id="resumeDropdownMenu">
+                        <li class="resume-option active" data-file="pdfs/resumes/resume-producer.pdf" data-icon="🎮" data-label="Game Production">
+                            🎮 Game Production
+                        </li>
+                        <li class="resume-option" data-file="pdfs/resumes/resume-designer.pdf" data-icon="🎨" data-label="Game Design">
+                            🎨 Game Design
+                        </li>
+                        <!-- <li class="resume-option" data-file="pdfs/resumes/resume-technical-artist.pdf" data-icon="🔧" data-label="Technical Art">
+                            🔧 Technical Art
+                        </li> -->
+
+                        <!-- <li class="resume-option" data-file="pdfs/resumes/resume-audio.pdf" data-icon="🎵" data-label="Game Audio">
+                            🎵 Game Audio
+                        </li>
+                        <li class="resume-option" data-file="pdfs/resumes/resume-engineer.pdf" data-icon="💻" data-label="Game Engineering">
+                            💻 Game Engineering
+                        </li>
+                        <li class="resume-option" data-file="pdfs/resumes/resume-artist.pdf" data-icon="🖼️" data-label="Art">
+                            🖼️ Art
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PDF Viewer -->
+            <div class="resume-viewer-container">
+                <div class="resume-viewer-header">
+                    <span class="resume-viewer-title" id="resumeViewerTitle">Game Production Resume</span>
+                    <a class="resume-download-btn" id="resumeDownloadBtn" href="pdfs/resumes/resume-producer.pdf" download>
+                        ⬇ Download PDF
+                    </a>
+                </div>
+                <div class="resume-viewer-frame">
+                    <iframe
+                        id="resumeIframe"
+                        src="pdfs/resumes/resume-producer.pdf"
+                        title="Resume Viewer"
+                        frameborder="0">
+                    </iframe>
+
+                    <!-- Fallback for browsers that block iframe PDFs -->
+                    <div class="resume-fallback" id="resumeFallback">
+                        <p>Your browser couldn't display the PDF inline.</p>
+                        <a id="resumeFallbackLink" href="pdfs/resumes/resume-producer.pdf" target="_blank">
+                            Open PDF in new tab →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Contact Page -->
         <div id="contact" class="page">
@@ -1611,5 +1688,6 @@
     <script src="js/particles.js"></script>
     <script src="js/workModal.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/resume-switcher.js"></script>
 </body>
 </html>
