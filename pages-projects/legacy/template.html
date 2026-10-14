@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE TITLE -->
+    <title>[PROJECT NAME] — Raihansyah A. Andrian</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- This page type -->
+    <link rel="stylesheet" href="../css/pages/detail.css">
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════════════════════
+         BACK BUTTON
+         The label and link are set by js/core/backButton.js based on
+         where the visitor came from (Projects, Experience, a portfolio
+         page, or Home), so leave the text and href as the fallback.
+         ═══════════════════════════════════════════════════════════════ -->
+    <div class="project-header">
+        <a href="../projects.html" class="back-button">← Back to Projects</a>
+    </div>
+
+    <div class="container">
+        <!-- CUSTOMIZE: title + one line of context -->
+        <h1 class="project-title">[Project Name]</h1>
+        <p class="project-subtitle">[Role] | [Date Range]</p>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 1 — GAME DETAILS
+             ═══════════════════════════════════════════════════════ -->
+        <section class="section">
+            <h2 class="section-title">Game Details</h2>
+
+            <!-- ───────────────────────────────────────────────────
+                 SLIDESHOW
+                 Add or remove .slide blocks freely — the dots are
+                 generated automatically, one per slide. Give the
+                 FIRST slide class="slide active".
+                 A single slide hides the arrows and dots by itself.
+                 ─────────────────────────────────────────────────── -->
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <video controls>
+                        <source src="../videos/project-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="slide">
+                    <img src="../images/projects/screenshot1.jpg" alt="Game Screenshot 1">
+                </div>
+                <div class="slide">
+                    <img src="../images/projects/screenshot2.jpg" alt="Game Screenshot 2">
+                </div>
+                <div class="slide">
+                    <img src="../images/projects/screenshot3.jpg" alt="Game Screenshot 3">
+                </div>
+
+                <button class="prev-slide" type="button" aria-label="Previous slide">❮</button>
+                <button class="next-slide" type="button" aria-label="Next slide">❯</button>
+                <div class="slide-controls"></div>
+            </div>
+
+            <!-- Game Description -->
+            <div class="description-box">
+                <p>
+                    [Describe the concept, the story, the gameplay mechanics, and what makes this
+                    project unique. Mention the target audience, the setting, and the core
+                    experience you wanted to create.]
+                </p>
+            </div>
+
+            <!-- Details / Goals / Constraints — add or remove .info-list blocks freely -->
+            <div class="info-grid">
+                <div class="info-list">
+                    <h3>Project Details</h3>
+                    <ul>
+                        <li>Team size: 5 developers</li>
+                        <li>Duration: 18 months</li>
+                        <li>Engine: Unity 2022</li>
+                        <li>Platform: PC, Console</li>
+                        <li>My Role: Lead Programmer</li>
+                    </ul>
+                </div>
+
+                <div class="info-list">
+                    <h3>Goals</h3>
+                    <ul>
+                        <li>[Goal 1]</li>
+                        <li>[Goal 2]</li>
+                        <li>[Goal 3]</li>
+                    </ul>
+                </div>
+
+                <div class="info-list">
+                    <h3>Constraints</h3>
+                    <ul>
+                        <li>[Constraint 1]</li>
+                        <li>[Constraint 2]</li>
+                        <li>[Constraint 3]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 2 — PROCESS
+             ═══════════════════════════════════════════════════════ -->
+        <section class="section">
+            <h2 class="section-title">Process</h2>
+
+            <!-- 3-column overview -->
+            <div class="process-columns">
+                <div class="process-column">
+                    <div class="process-number">01</div>
+                    <h3>Planning &amp; Design</h3>
+                    <ul>
+                        <li>Conducted market research</li>
+                        <li>Created design documents</li>
+                        <li>Built prototypes</li>
+                    </ul>
+                </div>
+
+                <div class="process-column">
+                    <div class="process-number">02</div>
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Set up version control</li>
+                        <li>Implemented core mechanics</li>
+                        <li>Optimized performance</li>
+                    </ul>
+                </div>
+
+                <div class="process-column">
+                    <div class="process-number">03</div>
+                    <h3>Testing &amp; Launch</h3>
+                    <ul>
+                        <li>Alpha testing phase</li>
+                        <li>Bug fixing iteration</li>
+                        <li>Marketing and launch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed breakdown — items alternate sides automatically -->
+            <div class="process-breakdown">
+                <h3 class="breakdown-heading">Detailed Breakdown</h3>
+
+                <!-- Breakdown Item 1 -->
+                <div class="breakdown-item">
+                    <div class="breakdown-content">
+                        <h4>Initial Prototyping</h4>
+                        <ul>
+                            <li>Built a <a href="https://unity.com" class="highlight-link" target="_blank" rel="noopener">Unity prototype</a> in the first 2 weeks</li>
+                            <li>Tested the core gameplay loop with a focus group</li>
+                            <li>Created a modular architecture for scalability</li>
+                        </ul>
+                    </div>
+                    <div class="breakdown-image">
+                        <img src="../images/process/prototyping.jpg" alt="Prototyping Phase">
+                    </div>
+                </div>
+
+                <!-- Breakdown Item 2 -->
+                <div class="breakdown-item">
+                    <div class="breakdown-content">
+                        <h4>[Phase Name]</h4>
+                        <ul>
+                            <li>[Point 1]</li>
+                            <li>[Point 2]</li>
+                            <li>[Point 3]</li>
+                        </ul>
+                    </div>
+                    <div class="breakdown-image">
+                        <img src="../images/process/multiplayer.jpg" alt="[Phase Name]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 3 — KEY SOLUTIONS
+             Each stage gets a nav button (colours cycle through 4,
+             so any number of stages works) and a .stage block whose
+             id matches the button's href.
+             ═══════════════════════════════════════════════════════ -->
+        <section class="section">
+            <h2 class="section-title">Key Solutions</h2>
+
+            <div class="stage-navigation">
+                <a href="#stage1" class="stage-nav-btn">Stage 1: Prototyping</a>
+                <a href="#stage2" class="stage-nav-btn">Stage 2: Core Mechanics</a>
+                <a href="#stage3" class="stage-nav-btn">Stage 3: Optimization</a>
+            </div>
+
+            <!-- ─────────────── STAGE 1 ─────────────── -->
+            <div class="stage" id="stage1">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 01</div>
+                    <h3 class="stage-title">Prototyping &amp; Foundation</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">
+                            [What wasn't working, and why it mattered.]
+                        </p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">
+                            [What you did about it.]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature with an image: wrap in .feature-header + .feature-text -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Movement System Design</h4>
+                            <ul class="feature-points">
+                                <li>Implemented a physics-based character controller</li>
+                                <li>Created smooth acceleration and deceleration curves</li>
+                                <li>Tuned the gravity multiplier for responsive jump feel</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <img src="../images/projects/Underwater Shader/Godrays.png" alt="Movement System">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature with a video -->
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Camera Controller</h4>
+                            <ul class="feature-points">
+                                <li>Developed a custom third-person camera</li>
+                                <li>Implemented collision detection to prevent clipping</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <video controls>
+                                <source src="../videos/project/camera-demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature with no media: no .feature-header wrapper needed -->
+                <div class="feature-section">
+                    <h4 class="feature-title">Input System Architecture</h4>
+                    <ul class="feature-points">
+                        <li>Used Unity's Input System for cross-platform compatibility</li>
+                        <li>Created modular input action maps per game state</li>
+                    </ul>
+                </div>
+
+                <!-- Results WITH media: keep .with-media on .results-content -->
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content with-media">
+                        <div class="results-text">
+                            <p>[What this stage achieved, with numbers where you have them.]</p>
+                        </div>
+                        <div class="results-media">
+                            <img src="../images/projects/stage1-results.jpg" alt="Stage 1 Results">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── STAGE 2 ─────────────── -->
+            <div class="stage" id="stage2">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 02</div>
+                    <h3 class="stage-title">Core Mechanics Implementation</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">[Problem]</p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">[Solution]</p>
+                    </div>
+                </div>
+
+                <div class="feature-section">
+                    <h4 class="feature-title">Combat System</h4>
+                    <ul class="feature-points">
+                        <li>Designed a combo-based melee system with 3-hit chains</li>
+                        <li>Added a hit-stop effect for impactful combat feedback</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <div class="feature-header">
+                        <div class="feature-text">
+                            <h4 class="feature-title">Enemy AI Behavior</h4>
+                            <ul class="feature-points">
+                                <li>Built a behavior tree system</li>
+                                <li>Implemented pathfinding with Unity NavMesh</li>
+                            </ul>
+                        </div>
+                        <div class="feature-media">
+                            <video autoplay loop muted playsinline>
+                                <source src="../videos/Underwater Shader/Final Scene 2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content with-media">
+                        <div class="results-text">
+                            <p>[What this stage achieved.]</p>
+                        </div>
+                        <div class="results-media">
+                            <video controls>
+                                <source src="../videos/Underwater Shader/God Rays Alone.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── STAGE 3 ─────────────── -->
+            <div class="stage" id="stage3">
+                <div class="stage-header">
+                    <div class="stage-number">Stage 03</div>
+                    <h3 class="stage-title">Polish &amp; Optimization</h3>
+                </div>
+
+                <div class="idea-box">
+                    <div class="idea-problem">
+                        <span class="idea-problem-label">⚠️ Problem</span>
+                        <p class="idea-problem-text">[Problem]</p>
+                    </div>
+                    <div>
+                        <span class="idea-solution-label">✓ Solution</span>
+                        <p class="idea-solution-text">[Solution]</p>
+                    </div>
+                </div>
+
+                <div class="feature-section">
+                    <h4 class="feature-title">Performance Optimization</h4>
+                    <ul class="feature-points">
+                        <li>Implemented object pooling for frequently spawned entities</li>
+                        <li>Optimized draw calls using static batching and GPU instancing</li>
+                    </ul>
+                </div>
+
+                <!-- Results with NO media: drop .with-media -->
+                <div class="stage-results">
+                    <h4>Stage Results</h4>
+                    <div class="results-content">
+                        <div class="results-text">
+                            <p>[What this stage achieved.]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 4 — FINAL RESULTS
+             Keep ONE .final-media-frame; delete the rest.
+             The frame holds a 16:9 shape, so every option fills it.
+             ═══════════════════════════════════════════════════════ -->
+        <section class="section">
+            <h2 class="section-title">Final Results</h2>
+            <p class="final-results-desc">
+                [Describe the final outcome — what was shipped, demonstrated, or achieved.]
+            </p>
+
+            <div class="final-results-media">
+
+                <!-- OPTION A — YouTube. Replace VIDEO_ID with the 11-character ID.
+                     e.g. https://youtu.be/dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ -->
+                <div class="final-media-frame">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="Final Results"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- OPTION B — Local video. Add autoplay loop muted playsinline to act like a GIF.
+                <div class="final-media-frame">
+                    <video controls>
+                        <source src="../videos/final-result.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                -->
+
+                <!-- OPTION C — GIF (keep it under ~5 MB)
+                <div class="final-media-frame">
+                    <img src="../images/final-result.gif" alt="Final Result" class="final-gif">
+                </div>
+                -->
+
+                <!-- OPTION D — Static image
+                <div class="final-media-frame">
+                    <img src="../images/final-result.jpg" alt="Final Result" class="final-image">
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 5 — TAKEAWAYS
+             ═══════════════════════════════════════════════════════ -->
+        <section class="section">
+            <h2 class="section-title">Takeaways</h2>
+            <div class="takeaways-section">
+                <h3>Project Insights &amp; Learnings</h3>
+                <ul class="takeaways-list">
+                    <li><strong>Early prototyping paid dividends:</strong> [What you learned and the
+                    evidence for it.]</li>
+
+                    <li><strong>Modular architecture is essential:</strong> [What you learned.]</li>
+
+                    <li><strong>Scope management was challenging:</strong> [What you'd do
+                    differently — the honest ones are the most interesting to read.]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             EXTERNAL LINK — delete this block if there's nowhere to go
+             ═══════════════════════════════════════════════════════ -->
+        <div class="external-project-section">
+            <a href="https://example.com/play-game" class="external-project-btn" target="_blank" rel="noopener">
+                🎮 Play the Game
+            </a>
+        </div>
+    </div>
+
+    <!-- Shared -->
+    <script src="../js/core/slideshow.js"></script>
+    <script src="../js/core/backButton.js"></script>
+</body>
+</html>
