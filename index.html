@@ -3,1691 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Game Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bg-styles.css">
-    <link rel="stylesheet" href="css/experience-style.css">
-    <link rel="stylesheet" href="css/projects-style.css">
+    <title>Raihansyah Andrian | Game Developer</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/sections.css">
+    <!-- This page -->
+    <link rel="stylesheet" href="css/pages/home.css">
 </head>
-<body>
+<body data-page="home">
+    <!-- Background + nav are rendered here (edit them in js/core/layout.js) -->
+    <script src="js/core/layout.js"></script>
 
-    <!-- Animated Background -->
-    <div class="bg-grid"></div>
-    <div class="bg-particles" id="particlesContainer"></div>
-    <div class="bg-gradient-orb bg-gradient-orb-1"></div>
-    <div class="bg-gradient-orb bg-gradient-orb-2"></div>
-    <div class="bg-gradient-orb bg-gradient-orb-3"></div>
-    
-    <nav>
-        <div class="nav-glow"></div>
-        <ul>
-            <li><a href="#home" class="nav-link active">
-                <span class="nav-text">Home</span>
-                <span class="nav-hover-effect"></span>
-            </a></li>
-            <li class="nav-dropdown">
-                <button class="nav-link nav-dropdown-btn">
-                    <span class="nav-text">Portfolios ▾</span>
-                    <span class="nav-hover-effect"></span>
-                </button>
-                <ul class="nav-dropdown-menu">
-                    <li><a href="portfolios/producer.html" class="nav-dropdown-item">🎮 Game Producing</a></li>
-                    <li><a href="portfolios/designer.html" class="nav-dropdown-item">🎨 Game Design</a></li>
-                    <li><a href="portfolios/technical-artist.html" class="nav-dropdown-item">🔧 Technical Art</a></li>
-                    <!-- <li><a href="portfolios/audio.html" class="nav-dropdown-item">🎵 Game Audio</a></li>
-                    <li><a href="portfolios/engineer.html" class="nav-dropdown-item">💻 Game Engineering</a></li>
-                    <li><a href="portfolios/artist.html" class="nav-dropdown-item">🖼️ Art</a></li> -->
-                </ul>
-            </li>
-            <li><a href="#projects" class="nav-link">
-                <span class="nav-text">Projects</span>
-                <span class="nav-hover-effect"></span>
-            </a></li>
-            <li><a href="#experience" class="nav-link">
-                <span class="nav-text">Experience</span>
-                <span class="nav-hover-effect"></span>
-            </a></li>
-            <li><a href="#resume" class="nav-link">
-                <span class="nav-text">Resume</span>
-                <span class="nav-hover-effect"></span>
-            </a></li>
-            <li><a href="#contact" class="nav-link">
-                <span class="nav-text">Contact</span>
-                <span class="nav-hover-effect"></span>
-            </a></li>
-        </ul>
-    </nav>
+    <main class="container page active">
 
-    <div class="container">
-        <!-- Home Page -->
-        <div id="home" class="page active">
-            <h1 style="text-align: center; margin-bottom: 0.5rem;">Raihansyah A. Andrian</h1>
-            <p style="text-align: center; color: #a0a0a0; margin-bottom: 2rem;">Game Producer · Designer · Technical Artist</p>
-            <!-- <p style="text-align: center; color: #a0a0a0; margin-bottom: 2rem;">Game Producer · Engineer · Designer · Technical Artist · Artist · Audio Designer</p> -->
+        <h1 class="h1--compact">Raihansyah A. Andrian</h1>
+        <p class="page-lead">Game Producer · Designer · Technical Artist</p>
+        <!-- <p class="page-lead">Game Producer · Engineer · Designer · Technical Artist · Artist · Audio Designer</p> -->
 
-            <div class="about-layout">
-                <!-- Profile Card -->
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <img src = "images/Profile-1.jpg" alt = "Raihansyah Andrian" class = "profile-pic">
-                        <div class="profile-placeholder"></div>
-                        <!-- 👤 -->
-                    </div>
-                    <h2 class="profile-name">Dean</h2>
-                    <p class="profile-title">Game Producer, Designer, & Technical Artist</p>
-                    <div class="profile-stats">
-                        <div class="stat">
-                            <div class="stat-number">7+</div>
-                            <div class="stat-label">Years</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Shipped</div>
-                        </div>
-                    </div>
+        <!-- ═══════════════ ABOUT ═══════════════ -->
+        <div class="about-layout">
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="images/Profile-1.jpg" alt="Raihansyah Andrian" class="profile-pic">
+                    <div class="profile-placeholder"></div>
                 </div>
-
-                <!-- About Content -->
-                <div class="about-main">
-                    <div class="about-section">
-                        <h3 class="section-heading">My Journey</h3>
-
-                        <p>
-                            Hello there! My name is Raihansyah but you can call me <span class="highlight-purple">Dean</span>.
-                            I am a passionate <span class="highlight-orange">game producer</span>, <span class="highlight">designer</span>, and <span class="highlight-purple">technical artist</span> from Indonesia!
-                            Currently I am pursuing my Master's in Computer Science of game development at University of Southern California (USC).
-                            
-                            My journey in game development has taken me from building video game <span class="highlight-orange">RPGs</span>, developing <span class="highlight">board games</span>, and to 
-                            crafting <span class="highlight-orange">unique puzzle mechanics</span> but always with a focus on delivering memorable player experiences.
-
-                            My goal is to create <span class="highlight-purple">engaging and innovative experiences.</span> 
-                        </p>
+                <h2 class="profile-name">Dean</h2>
+                <p class="profile-title">Game Producer, Designer, &amp; Technical Artist</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Years</div>
                     </div>
-
-                    <div class="about-section">
-                        <h3 class="section-heading">What I Do</h3>
-                        <div class="expertise-grid expertise-grid--6">
-                            <a href="portfolios/producer.html" class="expertise-item">
-                                <div class="expertise-icon">🎮</div>
-                                <h4>Game Producing</h4>
-                                <p>Produce games by creating efficient workflows and pipelines. Improve team efficiency and achieving maximum milestones with Jira & Atlassian.</p>
-                            </a>
-                            <a href="portfolios/designer.html" class="expertise-item">
-                                <div class="expertise-icon">🎨</div>
-                                <h4>Game Design</h4>
-                                <p>Engaging mechanics, balanced systems, and dynamic behaviors. Including level design, AI design, and combat systems.</p>
-                            </a>
-                            <a href="portfolios/technical-artist.html" class="expertise-item">
-                                <div class="expertise-icon">🔧</div>
-                                <h4>Technical Art</h4>
-                                <p>Shaders, VFX, and rendering pipelines using OpenGL, HLSL, and C++. Physics-based models and procedural generation for graphics and animation.</p>
-                            </a>
-                            <!-- <a href="portfolios/audio.html" class="expertise-item">
-                                <div class="expertise-icon">🎵</div>
-                                <h4>Game Audio</h4>
-                                <p>Sound design and composition using Reaper. Audio middleware integration with Wwise for adaptive and interactive audio in Unity and Unreal.</p>
-                            </a>
-                            <a href="portfolios/engineer.html" class="expertise-item">
-                                <div class="expertise-icon">💻</div>
-                                <h4>Game Engineering</h4>
-                                <p>Gameplay systems, AI, physics, and optimization using C#, C++, and UE Blueprint. Expert-level knowledge across Unity and Unreal Engine.</p>
-                            </a>
-                            <a href="portfolios/artist.html" class="expertise-item">
-                                <div class="expertise-icon">🖼️</div>
-                                <h4>Art</h4>
-                                <p>3D modelling, rigging, and animation using Maya. Cinematic composition, lighting, and rendering for real-time and pre-rendered projects.</p>
-                            </a> -->
-                        </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Shipped</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Skills Section -->
-            <div class="skills-section">
-                <h3 class="section-heading section-heading--main" style="text-align: center; margin-bottom: 2rem;">Skills</h3>
-                <div class="skills-container">
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images/tools/Unity.svg" alt="Unity" class="skill-icon skill-icon--light">
-                                <span class="skill-name">Unity</span>
-                            </span>
-                            <span class="skill-level">9/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\Unreal Engine.svg" alt="Unreal Engine" class="skill-icon skill-icon--light">
-                                <span class="skill-name">Unreal Engine</span>
-                            </span>
-                            <span class="skill-level">7/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
+            <!-- About Content -->
+            <div class="about-main">
+                <div class="about-section">
+                    <h3 class="section-heading">My Journey</h3>
+                    <p>
+                        Hello there! My name is Raihansyah but you can call me <span class="highlight-purple">Dean</span>.
+                        I am a passionate <span class="highlight-orange">game producer</span>, <span class="highlight">designer</span>, and <span class="highlight-purple">technical artist</span> from Indonesia!
+                        Currently I am pursuing my Master's in Computer Science of game development at University of Southern California (USC).
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Game Producing</span>
-                            <span class="skill-level">10/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 100%"></div>
-                        </div>
-                    </div>
+                        My journey in game development has taken me from building video game <span class="highlight-orange">RPGs</span>, developing <span class="highlight">board games</span>, and to
+                        crafting <span class="highlight-orange">unique puzzle mechanics</span> but always with a focus on delivering memorable player experiences.
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Game Design</span>
-                            <span class="skill-level">9/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Game Engineering</span>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Game Audio</span>
-                            <span class="skill-level">7/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\CSharp.svg" alt="CSharp" class="skill-icon skill-icon--dark">
-                                <span class="skill-name">C#</span>
-                            </span>
-                            <span class="skill-level">9/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\CPP.svg" alt="CPP" class="skill-icon skill-icon--dark">
-                                <span class="skill-name">C++</span>
-                            </span>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\OpenGL.svg" alt="OpenGL" class="skill-icon skill-icon--light">
-                                <span class="skill-name">Computer Graphics</span>
-                            </span>
-                            <span class="skill-level">7/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\Maya.png" alt="Maya" class="skill-icon skill-icon--dark">
-                                <span class="skill-name">3D Art & Animation</span>
-                            </span>
-                            <span class="skill-level">6/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Technical Art - Animation</span>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Technical Art - VFX</span>
-                            <span class="skill-level">6/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\Perforce.png" alt="Perforce" class="skill-icon skill-icon--light">
-                                <span class="skill-name">Perforce</span>
-                            </span>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\Git.svg" alt="Git" class="skill-icon skill-icon--dark">
-                                <span class="skill-name">Git</span>
-                            </span>
-                            <span class="skill-level">9/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\wwise.png" alt="Wwise" class="skill-icon skill-icon--dark">
-                                <span class="skill-name">Wwise</span>
-                            </span>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name-wrapper">
-                                <img src="images\tools\Reaper.png" alt="Reaper" class="skill-icon skill-icon--light">
-                                <span class="skill-name">Reaper</span>
-                            </span>
-                            <span class="skill-level">7/10</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <!-- Featured Projects -->
-            <section class="featured-section">
-                <div class="section-header">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">A glimpse into my recent and best works</p>
-                </div>
-
-                <div class="featured-projects">
-                    <!-- Featured Project 1 -->
-                    <a href="#projects" class="featured-card" onclick="navigateToSection('projects'); return false;">
-                        <div class="featured-image">
-                            <img src="images\projects\Elementary - Cover.png" alt="Elementary Cover">
-                        </div>
-                        <div class="featured-content">
-                            <h3 class="featured-title">Elementary</h3>
-                            <div class="featured-meta">
-                                <span class="featured-badge">Unity 3D</span>
-                                <span class="featured-badge">Adventure</span>
-                                <span class="featured-badge">Roguelike</span>
-                                <span class="featured-badge">Windows PC</span>
-                            </div>
-                            <p class="featured-desc">
-                                As a mage who can manipulate the environment in various ways by harnessing the four elemental powers,
-                                explore an abandoned temple in order to discover it's deepest and darkest secrets.
-                            </p>
-                            <!-- <span class="view-project">View Project →</span> -->
-                        </div>
-                    </a>
-
-                    <!-- Featured Project 2 -->
-                    <a href="pages-projects/underwater-shader.html" class="featured-card" onclick="setProjectReferrer('index-home')">
-                        <div class="featured-image">
-                            <img src="images\projects\Underwater Shader - Cover.png" alt="Underwater Shader Cover">
-                        </div>
-                        <div class="featured-content">
-                            <h3 class="featured-title">Underwater Shader</h3>
-                            <div class="featured-meta">
-                                <span class="featured-badge">Unity 3D</span>
-                                <span class="featured-badge">C#</span>
-                                <span class="featured-badge">Procedural Generation</span>
-                                <span class="featured-badge">HLSL Shader</span>
-                            </div>
-                            <p class="featured-desc">
-                                An underwater scene shader that simulates light filtration through an aqueous medium by rendering good-looking caustics in the scene,
-                                both projected onto objects and as shafts of light (god rays) filtering through the medium.
-                            </p>
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </a>
-
-                    <!-- Featured Project 3 -->
-                    <a href="#projects" class="featured-card" onclick="navigateToSection('projects'); return false;">
-                        <div class="featured-image">
-                            <img src="images\projects\Covid Colony\World Exploration.png" alt="Covid Colony Cover">
-                        </div>
-                        <div class="featured-content">
-                            <h3 class="featured-title">Covid Colony</h3>
-                            <div class="featured-meta">
-                                <span class="featured-badge">Unity 2D</span>
-                                <span class="featured-badge">Platformer</span>
-                                <span class="featured-badge">Shooter</span>
-                                <span class="featured-badge">Educational</span>
-                            </div>
-                            <p class="featured-desc">
-                                An action based platforming game combined with side-scroller mechanics and puzzles 
-                                with the intention to tell people regarding the dangers of COVID.
-                            </p>
-                            <!-- <span class="view-project">View Project →</span> -->
-                        </div>
-                    </a>
-
-                    <!-- Featured Project 4 -->
-                    <a href="#projects" class="featured-card" onclick="navigateToSection('projects'); return false;">
-                        <div class="featured-image">
-                            <img src="images\projects\Reminiscence\World Look 2.png" alt="Reminiscence Cover">
-                        </div>
-                        <div class="featured-content">
-                            <h3 class="featured-title">Reminiscence</h3>
-                            <div class="featured-meta">
-                                <span class="featured-badge">Godot 2D</span>
-                                <span class="featured-badge">Puzzle</span>
-                                <span class="featured-badge">Story Driven</span>
-                                <span class="featured-badge">Multiple Endings</span>
-                            </div>
-                            <p class="featured-desc">
-                                A short, story-based puzzle game where a space explorer got lost in a distant alien planet.
-                                Players decisions in solving the puzzles will impact the outcome of the story.
-                            </p>
-                            <!-- <span class="view-project">View Project →</span> -->
-                        </div>
-                    </a>
-                </div>
-
-                <a href="#projects" class="all-projects-btn" onclick="navigateToSection('projects'); return false;">View All Projects</a>
-            </section>
-
-            <!-- Resume CTA Button -->
-            <div class="resume-cta">
-                <a href="#resume" class="resume-cta-btn" onclick="navigateToSection('resume'); return false;">
-                    📄 View My Resume
-                </a>
-            </div>
-
-            <!-- Compact Quote Section -->
-            <div class="quote-section">
-                <div class="quote-container">
-                    <div class="quote-mark">"</div>
-                    <p class="quote-text">
-                        It's not about ideas. It's about making ideas happen.
+                        My goal is to create <span class="highlight-purple">engaging and innovative experiences.</span>
                     </p>
-                    <div class="quote-author">— Dean</div>
                 </div>
-            </div>
 
-            <!-- Thank You Section -->
-            <div class="thank-you-section">
-                <div class="thank-you-text">Thank You for Visiting!</div>
-                <p class="thank-you-subtext">
-                    Feel free to explore my projects and get in touch if you'd like to collaborate.
-                </p>
+                <div class="about-section">
+                    <h3 class="section-heading">What I Do</h3>
+                    <div class="expertise-grid expertise-grid--6">
+                        <a href="portfolios/producer.html" class="expertise-item">
+                            <div class="expertise-icon">🎮</div>
+                            <h4>Game Producing</h4>
+                            <p>Produce games by creating efficient workflows and pipelines. Improve team efficiency and achieving maximum milestones with Jira &amp; Atlassian.</p>
+                        </a>
+                        <a href="portfolios/designer.html" class="expertise-item">
+                            <div class="expertise-icon">🎨</div>
+                            <h4>Game Design</h4>
+                            <p>Engaging mechanics, balanced systems, and dynamic behaviors. Including level design, AI design, and combat systems.</p>
+                        </a>
+                        <a href="portfolios/technical-artist.html" class="expertise-item">
+                            <div class="expertise-icon">🔧</div>
+                            <h4>Technical Art</h4>
+                            <p>Shaders, VFX, and rendering pipelines using OpenGL, HLSL, and C++. Physics-based models and procedural generation for graphics and animation.</p>
+                        </a>
+                        <!-- <a href="portfolios/audio.html" class="expertise-item">
+                            <div class="expertise-icon">🎵</div>
+                            <h4>Game Audio</h4>
+                            <p>Sound design and composition using Reaper. Audio middleware integration with Wwise for adaptive and interactive audio in Unity and Unreal.</p>
+                        </a>
+                        <a href="portfolios/engineer.html" class="expertise-item">
+                            <div class="expertise-icon">💻</div>
+                            <h4>Game Engineering</h4>
+                            <p>Gameplay systems, AI, physics, and optimization using C#, C++, and UE Blueprint. Expert-level knowledge across Unity and Unreal Engine.</p>
+                        </a>
+                        <a href="portfolios/artist.html" class="expertise-item">
+                            <div class="expertise-icon">🖼️</div>
+                            <h4>Art</h4>
+                            <p>3D modelling, rigging, and animation using Maya. Cinematic composition, lighting, and rendering for real-time and pre-rendered projects.</p>
+                        </a> -->
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- ═══════════════ SKILLS ═══════════════
+             Template — copy one block, change name / level / width.
+             Icon box: skill-icon--light for light logos, skill-icon--dark for dark logos.
 
-        <!-- Projects Page -->
-        <div id="projects" class="page">
-            <h1>Featured Projects</h1>
+             <div class="skill-item">
+                 <div class="skill-header">
+                     <span class="skill-name-wrapper">
+                         <img src="images/tools/NAME.svg" alt="NAME" class="skill-icon skill-icon--light">
+                         <span class="skill-name">NAME</span>
+                     </span>
+                     <span class="skill-level">8/10</span>
+                 </div>
+                 <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+             </div>
+        -->
+        <div class="skills-section">
+            <h3 class="section-heading section-heading--main">Skills</h3>
+            <div class="skills-container">
 
-            <!-- Filter Section -->
-            <div class="filter-section">
-                <div class="filter-group">
-                    <span class="filter-label">Filter by Type</span>
-                    <div class="filter-buttons" id="type-filter-buttons">
-                        <button class="filter-btn active" data-filter="all" data-group="type" onclick="filterProjects()">
-                            All Types <span class="project-count" id="count-all">6</span>
-                        </button>
-                        <button class="filter-btn" data-filter="games" data-group="type" onclick="filterProjects()">
-                            🎮 Games <span class="project-count" id="count-games">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="visual-audio" data-group="type" onclick="filterProjects()">
-                            🎵 Visual & Audio <span class="project-count" id="count-visual-audio">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="graphics-tech" data-group="type" onclick="filterProjects()">
-                            🎨 Graphics & Technical Art <span class="project-count" id="count-graphics-tech">0</span>
-                        </button>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Unity.svg" alt="Unity" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unity</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
                     </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
                 </div>
 
-                <div class="filter-group">
-                    <span class="filter-label">Filter by Role</span>
-                    <div class="filter-buttons" id="role-filter-buttons">
-                        <button class="filter-btn active" data-filter="all" data-group="role" onclick="filterProjects()">
-                            All Roles <span class="project-count" id="count-role-all">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="producer" data-group="role" onclick="filterProjects()">
-                            📋 Producer <span class="project-count" id="count-role-producer">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="designer" data-group="role" onclick="filterProjects()">
-                            🎨 Designer <span class="project-count" id="count-role-designer">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="engineer" data-group="role" onclick="filterProjects()">
-                            💻 Engineer <span class="project-count" id="count-role-engineer">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="artist" data-group="role" onclick="filterProjects()">
-                            🖼️ Artist <span class="project-count" id="count-role-artist">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="technical-artist" data-group="role" onclick="filterProjects()">
-                            🔧 Technical Artist <span class="project-count" id="count-role-technical-artist">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="audio" data-group="role" onclick="filterProjects()">
-                            🎵 Audio <span class="project-count" id="count-role-audio">0</span>
-                        </button>
-                        <button class="filter-btn" data-filter="solo-developer" data-group="role" onclick="filterProjects()">
-                            🧑‍💻 Solo Developer <span class="project-count" id="count-role-solo-developer">0</span>
-                        </button>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Unreal Engine.svg" alt="Unreal Engine" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unreal Engine</span>
+                        </span>
+                        <span class="skill-level">7/10</span>
                     </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
                 </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Producing</span>
+                        <span class="skill-level">10/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 100%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Design</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Engineering</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Audio</span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/CSharp.svg" alt="CSharp" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C#</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/CPP.svg" alt="CPP" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C++</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/OpenGL.svg" alt="OpenGL" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Computer Graphics</span>
+                        </span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Maya.png" alt="Maya" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">3D Art &amp; Animation</span>
+                        </span>
+                        <span class="skill-level">6/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Technical Art - Animation</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Technical Art - VFX</span>
+                        <span class="skill-level">6/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Perforce.png" alt="Perforce" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Perforce</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Git.svg" alt="Git" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">Git</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/wwise.png" alt="Wwise" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">Wwise</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="images/tools/Reaper.png" alt="Reaper" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Reaper</span>
+                        </span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ═══════════════ FEATURED PROJECTS ═══════════════
+             Cards without a detail page link to projects.html.
+             Cards WITH a detail page link straight to it and call
+             setProjectReferrer('index-home') so its Back button returns here. -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A glimpse into my recent and best works</p>
             </div>
 
-            <div class="project-grid">
-
-
-                <!-- SEMESTER 2 | Spring 2026 -->
-
-                <!-- Project Card 13 - Elementary - CTIN 532 -->
-                <div class="project-card" data-types="games, visual-audio" data-roles="producer,designer,artist,audio">
-                    <!-- Cover Image -->
-                    <div class="project-cover">
+            <div class="featured-projects">
+                <!-- Featured Project 1 -->
+                <a href="projects.html" class="featured-card">
+                    <div class="featured-image">
                         <img src="images/projects/Elementary - Cover.png" alt="Elementary Cover">
                     </div>
-                    
-                    <!-- Title Image with Orange Background -->
-                    <div class="project-title-container">
-                        <img src="images/projects/Elementary - Title.png" alt="Elementary Title" class="project-title-img">
-                        <!-- or class="project-title-img-stretch" -->
-                    </div>
-                    <!-- Text Title (when no image available) -->
-                    <!-- <div class="project-title-container">
-                        <h3 class="project-title-text">Elementary</h3>
-                    </div> -->
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                            <span class="role-pill role-pill--artist">🖼️ Artist</span>
-                            <span class="role-pill role-pill--audio">🎵 Audio</span>
-                            <!-- <span class="role-pill role-pill--designer">🎨 Designer</span> -->
-                            <!-- <span class="role-pill role-pill--technical-artist">🔧 Technical Artist</span> -->
-                            <!-- <span class="role-pill role-pill--engineer">💻 Engineer</span> -->
+                    <div class="featured-content">
+                        <h3 class="featured-title">Elementary</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Unity 3D</span>
+                            <span class="featured-badge">Adventure</span>
+                            <span class="featured-badge">Roguelike</span>
+                            <span class="featured-badge">Windows PC</span>
                         </div>
-                        <div class="project-date">January 2026 - June 2026</div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="project-content">
-                        <p class="project-desc">
-                            An ancient power slumbers deep within the mythical Labyrinth. Harness the four elements (Fire, Water, Earth, and Air) 
-                            from “words of power” hidden around the dungeon. Control your limited magical resources and manipulate the environment 
-                            to explore the depths of this cryptic tomb. Will the answers you seek lead to triumph, or despair?
+                        <p class="featured-desc">
+                            As a mage who can manipulate the environment in various ways by harnessing the four elemental powers,
+                            explore an abandoned temple in order to discover it's deepest and darkest secrets.
                         </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <!-- <span class="project-tech-tag">Unity</span>
-                                    <span class="project-tech-tag">C#</span>
-                                    <span class="project-tech-tag">Perforce</span>
-                                    <span class="project-tech-tag">Maya</span>
-                                    <span class="project-tech-tag">wWise</span>
-                                    <span class="project-tech-tag">Reaper</span> -->
-
-                                    <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
-                                    <!-- <div class="project-tech-icon" data-tool="Unreal Engine"><img src="images/tools/Unreal Engine.svg" alt="UE5"><span class="tech-tooltip">Unreal Engine</span></div> -->
-                                    <!-- <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div> -->
-
-                                    <!-- <div class="project-tech-icon" data-tool="C++"><img src="images/tools/CPP.svg" alt="C++"><span class="tech-tooltip">C++</span></div> -->
-                                    <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
-                                    <!-- <div class="project-tech-icon" data-tool="Open GL"><img src="images/tools/OpenGL.svg" alt="Open GL"><span class="tech-tooltip">HLSL</span></div> -->
-
-                                    <div class="project-tech-icon" data-tool="Perforce"><img src="images/tools/Perforce.png" alt="Perforce"><span class="tech-tooltip">Perforce</span></div>
-                                    <!-- <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div> -->
-
-                                    <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
-                                    <div class="project-tech-icon" data-tool="Audiokinetic Wwise"><img src="images/tools/wwise.png" alt="wWise"><span class="tech-tooltip">Audiokinetic Wwise</span></div>
-                                    <div class="project-tech-icon" data-tool="Reaper DAW"><img src="images/tools/Reaper.png" alt="Reaper"><span class="tech-tooltip">Reaper DAW</span></div>
-
-                                    <!-- <div class="project-tech-icon project-tech-icon--emoji" data-tool="Board Game"><span class="tech-emoji">🎲</span><span class="tech-tooltip">Board Game</span></div> -->
-                                    <!-- <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div> -->
-                                    <!-- <div class="project-tech-icon project-tech-icon--emoji" data-tool="Timer"><span class="tech-emoji">⏱️</span><span class="tech-tooltip">Timer</span></div> -->
-                                    <!-- <div class="project-tech-icon project-tech-icon--emoji" data-tool="Laser Printed"><span class="tech-emoji">🖨️</span><span class="tech-tooltip">Laser Printed</span></div> -->
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-
-                                    <!-- <div class="project-platform-icon" data-platform="macOS">
-                                        <img src="images/platforms/macos.png" alt="macOS">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="PlayStation">
-                                        <img src="images/platforms/playstation.png" alt="PlayStation">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="Xbox">
-                                        <img src="images/platforms/xbox.png" alt="Xbox">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="Switch">
-                                        <img src="images/platforms/switch.png" alt="Nintendo Switch">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="Android">
-                                        <img src="images/platforms/android.png" alt="Android">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="iOS">
-                                        <img src="images/platforms/ios.png" alt="iOS">
-                                    </div>
-                                    <div class="project-platform-icon" data-platform="Board Game">
-                                        <img src="images/platforms/board-game.png" alt="Board Game">
-                                    </div> -->
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Roguelike</span>
-                                    <span class="project-app-tag">Adventure</span>
-                                    <span class="project-app-tag">3D</span>
-                                    <span class="project-app-tag">Puzzle</span>
-                                    <span class="project-app-tag">Shaders</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/elementary.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://dankacles.itch.io/elementary" target="_blank" class="external-link-btn" data-external="https://dankacles.itch.io/elementary" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                            <!-- <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
-                                ⏳ In Progress
-                            </button> -->
-                        </div>
+                        <!-- <span class="view-project">View Project →</span> -->
                     </div>
-                </div>
+                </a>
 
-                <!-- Project Card 14 - PSCP Gamejam -->
-                <div class="project-card" data-types="games, visual-audio" data-roles="artist">
-                    <!-- Cover Image -->
-                    <div class="project-cover">
-                        <img src="images\projects\Pulse and Pole - Cover.png" alt="Pulse & Pole Cover">
-                    </div>
-                    
-                    <!-- Text Title (when no image available) -->
-                    <div class="project-title-container">
-                        <h3 class="project-title-text">Pulse & Pole</h3>
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--artist">🖼️ Artist</span>
-                        </div>
-                        <div class="project-date">April 2026 - June 2026</div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A rhythm-based combat game where you control two magnetic forces: one positive and one negative.
-                            Positioned on opposite sides of the screen, your goal is to defeat an enemy standing between them
-                            by matching your inputs to the beat of the music.
-                        </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Unreal Engine"><img src="images/tools/Unreal Engine.svg" alt="UE5"><span class="tech-tooltip">Unreal Engine</span></div>
-
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-
-                                    <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Rhythm</span>
-                                    <span class="project-app-tag">3D</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/elementary.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://d3adg00se.itch.io/pulse-pole" target="_blank" class="external-link-btn" data-external="https://d3adg00se.itch.io/pulse-pole" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                            <!-- <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
-                                ⏳ In Progress
-                            </button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TODO: Project Card 12 | HW 3 - IK | CSCI 520 -->
-
-                <!-- TODO: Project Card 11 | HW 2 - Motion Capture + Keyframes | CSCI 520 -->
-
-                <!-- TODO: Project Card 10 | HW 1 - Jello Cube | CSCI 520 -->
-
-                <!-- Project Card 9 | Rube Goldberg | CTAN 452 -->
-                <div class="project-card" data-types="visual-audio" data-roles="artist">
-                    <!-- Cover Image -->
-                    <div class="project-cover">
-                        <img src="images/projects/Rube Goldberg - Cover.png" alt="Rube Goldberg Cover">
-                    </div>
-                    
-                    <!-- Title Image with Orange Background -->
-                    <!-- <div class="project-title-container">
-                        <img src="images/projects/Light Grows - Title.PNG" alt="Light Grows Title" class="project-title-img">
-                    </div> -->
-                    <!-- Text Title (when no image available) -->
-                    <div class="project-title-container">
-                        <h3 class="project-title-text">Rube Goldberg Animation</h3>
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--artist">🖼️ Artist</span>
-                        </div>
-                        <div class="project-date">January 2026 - March 2026</div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A personalized Rube-Goldberg machinery made in Maya using basic animation principles.
-                            3D models are custom made and animations are made using keyframing and graph editor techniques.
-                            Final cinematic clip uses basic fundamentals of cinematography and lighting effects for rendering.
-                        </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Artist Skills</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Maya Animation</span>
-                                    <span class="project-app-tag">3D Modelling</span>
-                                    <span class="project-app-tag">Cinematic Shots</span>
-                                    <span class="project-app-tag">Lighting</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/rube-goldberg.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <!-- <a href="https://selahhan.itch.io/light-grows" target="_blank" class="external-link-btn" data-external="https://selahhan.itch.io/light-grows" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TODO: Project Card 8 | Audio Etude 1-3 | CTIN 406 -->
-
-                <!-- SEMESTER 1 | Fall 2025 -->
-
-                <!-- Project Card 7 - Light Grows -->
-                <div class="project-card" data-types="games" data-roles="producer,designer">
-                    <!-- Cover Image -->
-                    <div class="project-cover">
-                        <img src="images/projects/Light Grows - Cover.png" alt="Light Grows Cover">
-                    </div>
-                    
-                    <!-- Title Image with Orange Background -->
-                    <div class="project-title-container">
-                        <img src="images/projects/Light Grows - Title.PNG" alt="Light Grows Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                        </div>
-                        <div class="project-date">December 2025 - January 2026</div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A parkour-platformer game with various movement mechanics built in a hand-drawn visual world.
-                            Players follow Lumi, a small bunny, on the search for the cause of sudden destruction in her forest. 
-                        </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
-                                    <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Platformer</span>
-                                    <span class="project-app-tag">2D</span>
-                                    <span class="project-app-tag">Fantasy</span>
-                                    <span class="project-app-tag">Puzzle</span>
-                                    <span class="project-app-tag">Parkour</span>
-                                    <span class="project-app-tag">Parallax</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/light-grows.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://selahhan.itch.io/light-grows" target="_blank" class="external-link-btn" data-external="https://selahhan.itch.io/light-grows" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 6 - Underwater Shader -->
-                <div class="project-card" data-types="graphics-tech" data-roles="technical-artist">
-                    <!-- Cover Image -->
-                    <div class="project-cover">
+                <!-- Featured Project 2 -->
+                <a href="pages-projects/underwater-shader.html" class="featured-card" onclick="setProjectReferrer('index-home')">
+                    <div class="featured-image">
                         <img src="images/projects/Underwater Shader - Cover.png" alt="Underwater Shader Cover">
                     </div>
-                    
-                    <!-- Text Title (when no image available) -->
-                    <div class="project-title-container">
-                        <h3 class="project-title-text">Underwater Shader</h3>
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--technical-artist">🔧 Technical Artist</span>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Underwater Shader</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Unity 3D</span>
+                            <span class="featured-badge">C#</span>
+                            <span class="featured-badge">Procedural Generation</span>
+                            <span class="featured-badge">HLSL Shader</span>
                         </div>
-                        <div class="project-date">October 2025 - December 2025</div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="project-content">
-                        <p class="project-desc">
-                            An underwater scene shader that simulates light filtration through an aqueous medium by rendering
-                            good-looking caustics in the scene, both projected onto objects and as shafts of light filtering through the medium.
-                            Computation is not done realistically but still can be done in real time.
-                            Graphical techniques used include ray marching, volumetric lighting, and procedural noise generation.
+                        <p class="featured-desc">
+                            An underwater scene shader that simulates light filtration through an aqueous medium by rendering good-looking caustics in the scene,
+                            both projected onto objects and as shafts of light (god rays) filtering through the medium.
                         </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
-                                    <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
-                                    <div class="project-tech-icon" data-tool="GLSL"><img src="images/tools/OpenGL.svg" alt="Open GL"><span class="tech-tooltip">GLSL</span></div>
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-                                </div>
-                            </div>
+                        <span class="view-project">View Project →</span>
+                    </div>
+                </a>
 
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Shader</span>
-                                    <span class="project-app-tag">3D</span>
-                                    <span class="project-app-tag">Decal</span>
-                                    <span class="project-app-tag">Volumetric</span>
-                                </div>
-                            </div>
+                <!-- Featured Project 3 -->
+                <a href="projects.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="images/projects/Covid Colony/World Exploration.png" alt="Covid Colony Cover">
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Covid Colony</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Unity 2D</span>
+                            <span class="featured-badge">Platformer</span>
+                            <span class="featured-badge">Shooter</span>
+                            <span class="featured-badge">Educational</span>
                         </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details" data-project="pages-projects/underwater-shader.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 5 - Pitch It! -->
-                <div class="project-card" data-types="games" data-roles="producer,designer">
-                    <div class="project-cover">
-                        <img src="images/projects/Pitch It - Cover.jpg" alt="Pitch It! Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Pitch It - Title.png" alt="Pitch It! Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                        </div>
-                        <div class="project-date">November 2025 - December 2025</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A 4-player game where players scramble to sell the most ridiculous products they can dream up before time runs out.
-                            In each round, one player becomes the "Shark", deciding which idea actually lands and who are the best at selling their ideas. 
+                        <p class="featured-desc">
+                            An action based platforming game combined with side-scroller mechanics and puzzles
+                            with the intention to tell people regarding the dangers of COVID.
                         </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div>
-                                    <div class="project-tech-icon project-tech-icon--emoji" data-tool="Timer"><span class="tech-emoji">⏱️</span><span class="tech-tooltip">Timer</span></div>
-                                </div>
-                            </div>
+                        <!-- <span class="view-project">View Project →</span> -->
+                    </div>
+                </a>
 
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Board Game">
-                                        <img src="images/platforms/board-game.png" alt="Board Game">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Card Game</span>
-                                    <span class="project-app-tag">Social Game</span>
-                                    <span class="project-app-tag">Player Imagination</span>
-                                    <span class="project-app-tag">4 Players</span>
-                                </div>
-                            </div>
+                <!-- Featured Project 4 -->
+                <a href="projects.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="images/projects/Reminiscence/World Look 2.png" alt="Reminiscence Cover">
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Reminiscence</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Godot 2D</span>
+                            <span class="featured-badge">Puzzle</span>
+                            <span class="featured-badge">Story Driven</span>
+                            <span class="featured-badge">Multiple Endings</span>
                         </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/pitch-it.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 4 - Formula Faceoff -->
-                <div class="project-card" data-types="games" data-roles="producer,designer">
-                    <div class="project-cover">
-                        <img src="images/projects/Formula FaceOff - Cover.jpg" alt="Formula Faceoff Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Formula FaceOff - Title.png" alt="Formula Face-Off Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                        </div>
-                        <div class="project-date">September 2025 - October 2025</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A 1v1 strategy and memory game where players play as rival scientists looking to steal the other half of a new monster formula.
-                            Each player sets up their own maze to defend their half and tries to navigate the opposing maze in a series of actions.
+                        <p class="featured-desc">
+                            A short, story-based puzzle game where a space explorer got lost in a distant alien planet.
+                            Players decisions in solving the puzzles will impact the outcome of the story.
                         </p>
-                        
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div>
-                                    <div class="project-tech-icon project-tech-icon--emoji" data-tool="Laser Printed"><span class="tech-emoji">🖨️</span><span class="tech-tooltip">Laser Printed</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Board Game">
-                                        <img src="images/platforms/board-game.png" alt="Board Game">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">1v1</span>
-                                    <span class="project-app-tag">Strategy</span>
-                                    <span class="project-app-tag">Memory</span>
-                                    <span class="project-app-tag">Tile-based</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/formula-faceoff.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <!-- <button class="external-link-btn in-progress" onclick="showInProgressModal(event)">
-                                ⏳ In Progress
-                            </button> -->
-                        </div>
+                        <!-- <span class="view-project">View Project →</span> -->
                     </div>
-                </div>
+                </a>
+            </div>
 
-                <!-- PRE MASTERS -->
+            <a href="projects.html" class="all-projects-btn">View All Projects</a>
+        </section>
 
-                <!-- Project Card 3 - Covid Colony -->
-                <div class="project-card" data-types="games" data-roles="producer,designer,engineer">
-                    <div class="project-cover">
-                        <img src="images/projects/Covid Colony - Cover.png" alt="Covid Colony Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Covid Colony - Title.png" alt="Covid Colony Title" class="project-title-img">
-                    </div>
+        <!-- ═══════════════ RESUME CTA ═══════════════ -->
+        <div class="resume-cta">
+            <a href="resume.html" class="resume-cta-btn">📄 View My Resume</a>
+        </div>
 
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                            <span class="role-pill role-pill--engineer">💻 Engineer</span>
-                        </div>
-                        <div class="project-date">January 2021 - June 2021</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A 2D platformer and shooter game combined with side-scroller mechanics and puzzles based in Indonesian language.
-                            It was developed with the intention to tell people regarding the dangers of COVID and ways to prevent spreading of this deadly virus through the various mechanics, gameplay, and story present in the game.
-                        </p>
-
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
-                                    <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Platformer</span>
-                                    <span class="project-app-tag">Shooter</span>
-                                    <span class="project-app-tag">2D</span>
-                                    <span class="project-app-tag">Side-Scroller</span>
-                                    <span class="project-app-tag">Puzzle</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/covid-colony.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://raihansyah-dean.itch.io/covid-colony" target="_blank" class="external-link-btn" data-external="https://raihansyah-dean.itch.io/covid-colony" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 - Reminiscence -->
-                <div class="project-card" data-types="games" data-roles="producer,designer,engineer">
-                    <div class="project-cover">
-                        <img src="images/projects/Reminiscence - Cover.png" alt="Reminiscence Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Reminiscence - Title.png" alt="Reminiscence Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--producer">📋 Producer</span>
-                            <span class="role-pill role-pill--designer">🎨 Designer</span>
-                            <span class="role-pill role-pill--engineer">💻 Engineer</span>
-                        </div>
-                        <div class="project-date">October 2019 - January 2020</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A story-based puzzle game where every outcome will be determined by your own actions.
-                            Players will face various puzzles while also uncovering the truth about Jet's story.
-                        </p>
-
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div>
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Genres</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Puzzle</span>
-                                    <span class="project-app-tag">Story Driven</span>
-                                    <span class="project-app-tag">Multiple Endings</span>
-                                    <span class="project-app-tag">Space</span>
-                                    <span class="project-app-tag">2D</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/reminiscence.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://jduaar.itch.io/reminiscence" target="_blank" class="external-link-btn" data-external="https://jduaar.itch.io/reminiscence" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 1 - Unreal Logic -->
-                <div class="project-card" data-types="games" data-roles="solo-developer">
-                    <div class="project-cover">
-                        <img src="images/projects/Unreal Logic - Cover.png" alt="Unreal Logic Cover">
-                    </div>
-                    
-                    <div class="project-title-container">
-                        <img src="images/projects/Unreal Logic - Title.png" alt="Unreal Logic Title" class="project-title-img">
-                    </div>
-
-                    <!-- Role & Date -->
-                    <div class="project-meta">
-                        <div class="project-role">
-                            <span class="role-pill role-pill--solo-developer">🧑‍💻 Solo Developer</span>
-                        </div>
-                        <div class="project-date">October 2019</div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-desc">
-                            A grid base puzzle game where you can change the foundational rules of the world!
-                            Change how the game works, repurpose things you find, and find suprising interactions!
-                        </p>
-
-                        <!-- Project Info Sections -->
-                        <div class="project-info">
-                            <!-- Tools & Languages -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Tools & Languages</div>
-                                <div class="project-tech-tags">
-                                    <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div>
-                                    <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Platforms -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Platforms</div>
-                                <div class="project-platform-icons">
-                                    <div class="project-platform-icon" data-platform="Windows">
-                                        <img src="images/platforms/windows.png" alt="Windows">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Application Types -->
-                            <div class="project-info-section">
-                                <div class="project-info-label">Application Types</div>
-                                <div class="project-app-tags">
-                                    <span class="project-app-tag">Puzzle</span>
-                                    <span class="project-app-tag">2D</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-actions">
-                            <a href="#" class="view-details unavailable" data-project="pages-projects/unreal-logic.html" onclick="checkProjectPage(event, this)">
-                                📖 View Details
-                            </a>
-                            <a href="https://raihansyah-dean.itch.io/unreal-logic" target="_blank" class="external-link-btn" data-external="https://raihansyah-dean.itch.io/unreal-logic" onclick="checkExternalLink(event, this)">
-                                🎮 Go to Project Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- ═══════════════ QUOTE ═══════════════ -->
+        <div class="quote-section">
+            <div class="quote-container">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">It's not about ideas. It's about making ideas happen.</p>
+                <div class="quote-author">— Dean</div>
             </div>
         </div>
 
-        <!-- Experience Page -->
-        <div id="experience" class="page">
-            <div class="experience-container">
-                <h1 style="text-align: center; margin-bottom: 2rem;">Work Experience</h1>
-
-                <div class="timeline">
-                    <!-- Experience Item 3 -->
-                    <div class="timeline-item">
-                        <!-- Delete "unavailable" class to make available + update javascript -->
-                        <a href="#" class="timeline-image-link unavailable" data-project="pages-experience/exp-ecomindo.html" onclick="checkWorkPage(event, this)">
-                            <img src="images/experience/ecomindo - cover.jpg" alt="eComindo">
-                        </a>
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-content">
-                            <div class="timeline-date">Sep 2024 - Jul 2025</div>
-                            <h3 class="timeline-title">Associate Software Engineer</h3>
-                            <p class="timeline-company">PT. eComindo</p>
-                            
-                            <ul class="timeline-description">
-                                <li>Backend engineer worked with a team of 7 developers</li>
-                                <li>Developing features regarding user loan applications and payments</li>
-                                <li>Associated with 10+ external systems of banks, ensuring a smooth loan process</li>
-                                <li>Consult on the client's creation of the system, ensuring a well-structured code base</li>
-                            </ul>
-
-                            <div class="timeline-info">
-                                <!-- Tools & Technologies -->
-                                <div class="info-section">
-                                    <div class="info-label">Tools & Languages</div>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag">Java</span>
-                                        <span class="tech-tag">Springboot</span>
-                                        <span class="tech-tag">PostgreSQL</span>
-                                        <span class="tech-tag">Redis</span>
-                                        <span class="tech-tag">Apache Kafka</span>
-                                        <span class="tech-tag">Git</span>
-
-                                        <!-- <span class="tech-tag">Unity</span>
-                                        <span class="tech-tag">C#</span>
-                                        <span class="tech-tag">C++</span>
-                                        <span class="tech-tag">Photon</span>
-                                        <span class="tech-tag">Unreal Engine</span>
-                                        <span class="tech-tag">Blueprint</span> -->
-                                    </div>
-                                </div>
-
-                                <!-- Platforms -->
-                                <div class="info-section">
-                                    <div class="info-label">Platforms</div>
-                                    <div class="platform-icons">
-                                        <!-- <div class="platform-icon" data-platform="Windows">
-                                            <img src="images/platforms/windows.png" alt="Windows">
-                                        </div>
-                                        <div class="platform-icon" data-platform="macOS">
-                                            <img src="images/platforms/macos.png" alt="macOS">
-                                        </div>
-                                        <div class="platform-icon" data-platform="PlayStation">
-                                            <img src="images/platforms/playstation.png" alt="PlayStation">
-                                        </div>
-                                        <div class="platform-icon" data-platform="Xbox">
-                                            <img src="images/platforms/xbox.png" alt="Xbox">
-                                        </div>
-                                        <div class="platform-icon" data-platform="Switch">
-                                            <img src="images/platforms/switch.png" alt="Nintendo Switch">
-                                        </div> -->
-                                        <div class="platform-icon" data-platform="Android">
-                                            <img src="images/platforms/android.png" alt="Android">
-                                        </div>
-                                        <div class="platform-icon" data-platform="iOS">
-                                            <img src="images/platforms/ios.png" alt="iOS">
-                                        </div>
-                                        <!-- <div class="platform-icon" data-platform="Board Game">
-                                            <img src="images/platforms/board-game.png" alt="Board Game">
-                                        </div> -->
-                                    </div>
-                                </div>
-
-                                <!-- Genres -->
-                                <div class="info-section">
-                                    <div class="info-label">Application Types</div>
-                                    <div class="genre-tags">
-                                        <span class="genre-tag">Web App</span>
-                                        <span class="genre-tag">Mobile App</span>
-                                        <span class="genre-tag">Databases</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Sep 2023 - May 2024</div>
-                            <h3 class="timeline-title">Associate Game Designer</h3>
-                            <p class="timeline-company">Potato Pirates | Codomo Pte Ltd</p>
-                            
-                            <ul class="timeline-description">
-                                <li>Led a 3-person design team with an overall team of 20+ people</li>
-                                <li>Designed the mechanics for a coding educational PvP card game</li>
-                                <li>Balanced each component of the game such as character health points and card deck composition</li>
-                                <li>Utilizing 20+ online playtests and iterate on designs</li>
-                            </ul>
-
-                            <div class="timeline-info">
-                                <!-- Tools & Technologies -->
-                                <div class="info-section">
-                                    <div class="info-label">Tools & Languages</div>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag">Board Game</span>
-                                        <span class="tech-tag">Card Game</span>
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Excel</span>
-                                    </div>
-                                </div>
-
-                                <!-- Platforms -->
-                                <div class="info-section">
-                                    <div class="info-label">Platforms</div>
-                                    <div class="platform-icons">
-                                        <div class="platform-icon" data-platform="Board Game">
-                                            <img src="images/platforms/board-game.png" alt="Board Game">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Genres -->
-                                <div class="info-section">
-                                    <div class="info-label">Game Genres</div>
-                                    <div class="genre-tags">
-                                        <span class="genre-tag">Educational</span>
-                                        <span class="genre-tag">Multiplayer</span>
-                                        <span class="genre-tag">Co-Op</span>
-                                        <span class="genre-tag">Competitive</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline-dot"></div>
-
-                        <a href="#" class="timeline-image-link unavailable" data-project="pages-experience/exp-codomo.html" onclick="checkWorkPage(event, this)">
-                            <img src="images/experience/Potato Pirates - Cover.png" alt="Codomo">
-                        </a>
-                    </div>
-
-                    <!-- Experience Item 1 -->
-                    <div class="timeline-item">
-                        <a href="#" class="timeline-image-link unavailable" data-project="pages-experience/exp-projectseed.html" onclick="checkWorkPage(event, this)">
-                            <img src="images/experience/Outland Odyssey - Cover.png" alt="Project Seed">
-                        </a>
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-content">
-                            <div class="timeline-date">Jul 2022 - Aug 2023</div>
-                            <h3 class="timeline-title">Junior Game Designer</h3>
-                            <p class="timeline-company">Outland Odyssey | Project Seed</p>
-                            
-                            <ul class="timeline-description">
-                                <li>Designed 20+ creatures and 1 boss AI behavior</li>
-                                <li>Contributed to the overall combat design for a mobile ARPG game</li>
-                                <li>Created and balanced a rigorous flow of combat using 10+ damage formulas, character progression, and equipment progression stats</li>
-                                <li>Developed a calculation system for character and equipment progression statuses</li>
-                            </ul>
-
-                            <div class="timeline-info">
-                                <!-- Tools & Technologies -->
-                                <div class="info-section">
-                                    <div class="info-label">Tools & Languages</div>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag">Unity</span>
-                                        <span class="tech-tag">C#</span>
-                                        <span class="tech-tag">Git</span>
-                                    </div>
-                                </div>
-
-                                <!-- Platforms -->
-                                <div class="info-section">
-                                    <div class="info-label">Platforms</div>
-                                    <div class="platform-icons">
-                                        <div class="platform-icon" data-platform="Windows">
-                                            <img src="images/platforms/windows.png" alt="Windows">
-                                        </div>
-                                        <div class="platform-icon" data-platform="macOS">
-                                            <img src="images/platforms/macos.png" alt="macOS">
-                                        </div>
-                                        <div class="platform-icon" data-platform="Android">
-                                            <img src="images/platforms/android.png" alt="Android">
-                                        </div>
-                                        <div class="platform-icon" data-platform="iOS">
-                                            <img src="images/platforms/ios.png" alt="iOS">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Genres -->
-                                <div class="info-section">
-                                    <div class="info-label">Game Genres</div>
-                                    <div class="genre-tags">
-                                        <span class="genre-tag">3D</span>
-                                        <span class="genre-tag">Mobile</span>
-                                        <span class="genre-tag">Action RPG</span>
-                                        <span class="genre-tag">Adventure</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Popup -->
-        <div id="workModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-icon">📋</div>
-                <h2 class="modal-title">Coming Soon</h2>
-                <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
-                <button class="modal-close" onclick="closeWorkModal()">Got it</button>
-            </div>
-        </div>
-
-        <!-- Modal Popup for Project Details -->
-        <div id="projectModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-icon">🎮</div>
-                <h2 class="modal-title">Coming Soon</h2>
-                <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
-                <button class="modal-close" onclick="closeProjectModal()">Got it</button>
-            </div>
-        </div>
-
-        <!-- Modal Popup for In Progress Projects -->
-        <div id="inProgressModal" class="modal">
-            <div class="modal-content in-progress-modal">
-                <div class="modal-icon">⏳</div>
-                <h2 class="modal-title">Work in Progress</h2>
-                <p class="modal-message">This project is currently in development. The project page will be available once it's released!</p>
-                <button class="modal-close" onclick="closeInProgressModal()">Understood</button>
-            </div>
-        </div>
-
-        <!-- Resume Page -->
-        <div id="resume" class="page">
-            <h1 style="text-align:center; margin-bottom:0.5rem;">Resume</h1>
-            <p style="text-align:center; color:#a0a0a0; margin-bottom:2.5rem;">
-                Select a field below to view my resume for that role.
+        <!-- ═══════════════ THANK YOU ═══════════════ -->
+        <div class="thank-you-section">
+            <div class="thank-you-text">Thank You for Visiting!</div>
+            <p class="thank-you-subtext">
+                Feel free to explore my projects and get in touch if you'd like to collaborate.
             </p>
- 
-            <!-- Resume Selector Dropdown -->
-            <div class="resume-selector">
-                <div class="resume-dropdown-wrapper">
-                    <button class="resume-dropdown-btn" id="resumeDropdownBtn">
-                        <span class="resume-dropdown-icon">🎮</span>
-                        <span class="resume-dropdown-label" id="resumeDropdownLabel">Game Production</span>
-                        <span class="resume-dropdown-arrow">▾</span>
-                    </button>
-                    <ul class="resume-dropdown-menu" id="resumeDropdownMenu">
-                        <li class="resume-option active" data-file="pdfs/resumes/resume-producer.pdf" data-icon="🎮" data-label="Game Production">
-                            🎮 Game Production
-                        </li>
-                        <li class="resume-option" data-file="pdfs/resumes/resume-designer.pdf" data-icon="🎨" data-label="Game Design">
-                            🎨 Game Design
-                        </li>
-                        <!-- <li class="resume-option" data-file="pdfs/resumes/resume-technical-artist.pdf" data-icon="🔧" data-label="Technical Art">
-                            🔧 Technical Art
-                        </li> -->
-
-                        <!-- <li class="resume-option" data-file="pdfs/resumes/resume-audio.pdf" data-icon="🎵" data-label="Game Audio">
-                            🎵 Game Audio
-                        </li>
-                        <li class="resume-option" data-file="pdfs/resumes/resume-engineer.pdf" data-icon="💻" data-label="Game Engineering">
-                            💻 Game Engineering
-                        </li>
-                        <li class="resume-option" data-file="pdfs/resumes/resume-artist.pdf" data-icon="🖼️" data-label="Art">
-                            🖼️ Art
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-
-            <!-- PDF Viewer -->
-            <div class="resume-viewer-container">
-                <div class="resume-viewer-header">
-                    <span class="resume-viewer-title" id="resumeViewerTitle">Game Production Resume</span>
-                    <a class="resume-download-btn" id="resumeDownloadBtn" href="pdfs/resumes/resume-producer.pdf" download>
-                        ⬇ Download PDF
-                    </a>
-                </div>
-                <div class="resume-viewer-frame">
-                    <iframe
-                        id="resumeIframe"
-                        src="pdfs/resumes/resume-producer.pdf"
-                        title="Resume Viewer"
-                        frameborder="0">
-                    </iframe>
-
-                    <!-- Fallback for browsers that block iframe PDFs -->
-                    <div class="resume-fallback" id="resumeFallback">
-                        <p>Your browser couldn't display the PDF inline.</p>
-                        <a id="resumeFallbackLink" href="pdfs/resumes/resume-producer.pdf" target="_blank">
-                            Open PDF in new tab →
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
 
+    </main>
 
-        <!-- Contact Page -->
-        <div id="contact" class="page">
-            <h1 style="text-align: center; margin-bottom: 2rem;">Get In Touch</h1>
-            
-            <!-- Contact Links -->
-            <div class="contact-links">
-                <a href="mailto:raihansyah.dean@gmail.com" class="contact-link">
-                    <div class="contact-icon">✉</div>
-                    <div class="contact-info">
-                        <div class="contact-label">Email</div>
-                        <div class="contact-value">GMail</div>
-                    </div>
-                </a>
-                
-                <a href="tel:+12138496240" class="contact-link">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-info">
-                        <div class="contact-label">Phone</div>
-                        <div class="contact-value">+1 (213) 849-6240</div>
-                    </div>
-                </a>
-                
-                <div class="contact-link">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-info">
-                        <div class="contact-label">Location</div>
-                        <div class="contact-value">Los Angeles, California, USA</div>
-                    </div>
-                </div>
-                
-                <a href="https://instagram.com/raa.dean" target="_blank" class="contact-link">
-                    <div class="contact-icon">📷</div>
-                    <div class="contact-info">
-                        <div class="contact-label">Instagram</div>
-                        <div class="contact-value">@raa.dean</div>
-                    </div>
-                </a>
-                
-                <a href="https://linkedin.com/in/raihansyah-attallah-andrian/" target="_blank" class="contact-link">
-                    <div class="contact-icon">💼</div>
-                    <div class="contact-info">
-                        <div class="contact-label">LinkedIn</div>
-                        <div class="contact-value">Raihansyah Andrian</div>
-                    </div>
-                </a>
-                
-                <a href="https://github.com/raihansyahdean" target="_blank" class="contact-link">
-                    <div class="contact-icon">💻</div>
-                    <div class="contact-info">
-                        <div class="contact-label">GitHub</div>
-                        <div class="contact-value">raihansyahdean</div>
-                    </div>
-                </a>
-                
-                <a href="https://raihansyah-dean.itch.io/" target="_blank" class="contact-link">
-                    <div class="contact-icon">🎮</div>
-                    <div class="contact-info">
-                        <div class="contact-label">Itch.io</div>
-                        <div class="contact-value">raihansyah-dean</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/scripts.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/workModal.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/resume-switcher.js"></script>
+    <!-- Shared -->
+    <script src="js/core/particles.js"></script>
 </body>
 </html>

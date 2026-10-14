@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Raihansyah Andrian</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- This page -->
+    <link rel="stylesheet" href="css/pages/resume.css">
+</head>
+<body data-page="resume">
+    <!-- Background + nav are rendered here (edit them in js/core/layout.js) -->
+    <script src="js/core/layout.js"></script>
+
+    <main class="container page active">
+        <h1 class="h1--compact">Resume</h1>
+        <p class="page-lead page-lead--lg">Select a field below to view my resume for that role.</p>
+
+        <!-- ═══════════════ RESUME SELECTOR ═══════════════
+             To add a resume: add an <li class="resume-option"> with
+             data-file (PDF path), data-icon and data-label. The default
+             (first shown) resume is the one marked "active" — keep the
+             button label, iframe src and download link below in sync with it. -->
+        <div class="resume-selector">
+            <div class="resume-dropdown-wrapper">
+                <button class="resume-dropdown-btn" id="resumeDropdownBtn" type="button">
+                    <span class="resume-dropdown-icon">🎮</span>
+                    <span class="resume-dropdown-label" id="resumeDropdownLabel">Game Production</span>
+                    <span class="resume-dropdown-arrow">▾</span>
+                </button>
+                <ul class="resume-dropdown-menu" id="resumeDropdownMenu">
+                    <li class="resume-option active" data-file="pdfs/resumes/resume-producer.pdf" data-icon="🎮" data-label="Game Production">
+                        🎮 Game Production
+                    </li>
+                    <li class="resume-option" data-file="pdfs/resumes/resume-designer.pdf" data-icon="🎨" data-label="Game Design">
+                        🎨 Game Design
+                    </li>
+                    <!-- <li class="resume-option" data-file="pdfs/resumes/resume-technical-artist.pdf" data-icon="🔧" data-label="Technical Art">
+                        🔧 Technical Art
+                    </li> -->
+                    <!-- <li class="resume-option" data-file="pdfs/resumes/resume-audio.pdf" data-icon="🎵" data-label="Game Audio">
+                        🎵 Game Audio
+                    </li>
+                    <li class="resume-option" data-file="pdfs/resumes/resume-engineer.pdf" data-icon="💻" data-label="Game Engineering">
+                        💻 Game Engineering
+                    </li>
+                    <li class="resume-option" data-file="pdfs/resumes/resume-artist.pdf" data-icon="🖼️" data-label="Art">
+                        🖼️ Art
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- ═══════════════ PDF VIEWER ═══════════════ -->
+        <div class="resume-viewer-container">
+            <div class="resume-viewer-header">
+                <span class="resume-viewer-title" id="resumeViewerTitle">Game Production Resume</span>
+                <a class="resume-download-btn" id="resumeDownloadBtn" href="pdfs/resumes/resume-producer.pdf" download>
+                    ⬇ Download PDF
+                </a>
+            </div>
+            <div class="resume-viewer-frame">
+                <iframe id="resumeIframe" src="pdfs/resumes/resume-producer.pdf" title="Resume Viewer"></iframe>
+
+                <!-- Fallback for browsers that block iframe PDFs -->
+                <div class="resume-fallback" id="resumeFallback">
+                    <p>Your browser couldn't display the PDF inline.</p>
+                    <a id="resumeFallbackLink" href="pdfs/resumes/resume-producer.pdf" target="_blank" rel="noopener">
+                        Open PDF in new tab →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shared -->
+    <script src="js/core/particles.js"></script>
+    <!-- This page -->
+    <script src="js/pages/resume.js"></script>
+</body>
+</html>

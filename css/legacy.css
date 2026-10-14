@@ -1,0 +1,171 @@
+/* ════════════════════════════════════════════════════════════════════════
+   legacy.css — NOT linked by any page
+   Old rules that nothing in the current site uses. Kept only in case a
+   detail page (pages-projects/*, pages-experience/*) still relies on them.
+   Once you've checked those pages, this file can be deleted.
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* Old skills showcase cards (replaced by the skill bars in sections.css) */
+.home-skills-showcase { margin-bottom: 4rem; }
+
+.home-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.home-skill-card {
+    background: rgba(20, 25, 50, 0.6);
+    border: 2px solid rgba(88, 166, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.home-skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6b35;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.home-skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.home-skill-name {
+    font-size: 1.2rem;
+    color: #58a6ff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.home-kill-desc {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Old resume download buttons (replaced by resume.html) */
+.resume-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.resume-section h3 {
+    color: #58a6ff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.resume-btn:active { transform: translateY(-1px); }
+
+/* Old about box + skill tags */
+.about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(20, 25, 50, 0.6);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    line-height: 1.8;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid #58a6ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #58a6ff;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: rgba(88, 166, 255, 0.2);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+}
+
+/* Contact form (contact.html uses contact cards instead) */
+.contact-form {
+    max-width: 600px;
+    margin: 4rem auto 2rem;
+    background: rgba(20, 25, 50, 0.6);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-group { margin-bottom: 1.5rem; }
+
+label {
+    display: block;
+    color: #58a6ff;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CHANGE TITLE -->
     <title>Project - Underwater Shader</title>
-    <link rel="stylesheet" href="../css/experience-page.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/pages/detail.css">
 </head>
 <body>
     <div class="project-header">
-        <a href="../index.html#pojects" class="back-button" onclick="return navigateBack(event)">
-            ← Back to Projects
-        </a>
+        <a href="../projects.html" class="back-button">← Back to Projects</a>
     </div>
 
     <div class="container">
@@ -19,7 +18,9 @@
         <h1 class="project-title">Underwater Shader Graphics Project</h1>
         <p class="project-subtitle">University of Southern California | October 2025 - December 2025</p>
 
-        <!-- GAME DETAILS SECTION -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 1 — GAME DETAILS
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Project Details</h2>
 
@@ -41,15 +42,9 @@
                     <img src="../images/projects/Underwater Shader/Godrays 2.png" alt="Godrays Sideshot">
                 </div>
 
-                <button class="prev-slide" onclick="changeSlide(-1)">❮</button>
-                <button class="next-slide" onclick="changeSlide(1)">❯</button>
-
-                <div class="slide-controls">
-                    <span class="slide-dot active" onclick="currentSlide(0)"></span>
-                    <span class="slide-dot" onclick="currentSlide(1)"></span>
-                    <span class="slide-dot" onclick="currentSlide(2)"></span>
-                    <span class="slide-dot" onclick="currentSlide(3)"></span>
-                </div>
+                <button class="prev-slide" type="button" aria-label="Previous slide">❮</button>
+                <button class="next-slide" type="button" aria-label="Next slide">❯</button>
+                <div class="slide-controls"></div>
             </div>
 
             <!-- Game Description -->
@@ -65,7 +60,7 @@
             </div>
 
             <!-- Details, Goals, Constraints Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="info-grid">
                 <div class="info-list">
                     <h3>Project Details</h3>
                     <ul>
@@ -144,7 +139,7 @@
 
             <!-- Detailed Process Breakdown -->
             <div class="process-breakdown">
-                <h3 style="color: #58a6ff; font-size: 1.5rem; margin-bottom: 2rem;">Detailed Breakdown</h3>
+                <h3 class="breakdown-heading">Detailed Breakdown</h3>
 
                 <!-- Breakdown Item 1 -->
                 <div class="breakdown-item">
@@ -537,7 +532,7 @@
         </div> -->
     </div>
 
-    <script src="../js/slideshow.js"></script>
-    <script src="../js/backButton.js"></script>
+    <script src="../js/core/slideshow.js"></script>
+    <script src="../js/core/backButton.js"></script>
 </body>
 </html>

@@ -4,66 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CHANGE TITLE -->
-    <title>Work - [WORK NAME]</title>
-    <link rel="stylesheet" href="../css/experience-page.css">
+    <title>[PROJECT NAME] — Raihansyah A. Andrian</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- This page type -->
+    <link rel="stylesheet" href="../css/pages/detail.css">
 </head>
 <body>
+    <!-- ═══════════════════════════════════════════════════════════════
+         BACK BUTTON
+         The label and link are set by js/core/backButton.js based on
+         where the visitor came from (Projects, Experience, a portfolio
+         page, or Home), so leave the text and href as the fallback.
+         ═══════════════════════════════════════════════════════════════ -->
     <div class="project-header">
-        <a href="../index.html#pojects" class="back-button" onclick="return navigateBack(event)">
-            ← Back to Projects
-        </a>
+        <a href="../projects.html" class="back-button">← Back to Projects</a>
     </div>
 
     <div class="container">
-        <!-- Project Title -->
-        <h1 class="project-title">Senior Game Developer Project</h1>
-        <p class="project-subtitle">Gaming Studio Inc. | 2023 - Present</p>
+        <!-- CUSTOMIZE: title + one line of context -->
+        <h1 class="project-title">[Project Name]</h1>
+        <p class="project-subtitle">[Role] | [Date Range]</p>
 
-        <!-- GAME DETAILS SECTION -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 1 — GAME DETAILS
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Game Details</h2>
 
-            <!-- Slideshow -->
+            <!-- ───────────────────────────────────────────────────
+                 SLIDESHOW
+                 Add or remove .slide blocks freely — the dots are
+                 generated automatically, one per slide. Give the
+                 FIRST slide class="slide active".
+                 A single slide hides the arrows and dots by itself.
+                 ─────────────────────────────────────────────────── -->
             <div class="slideshow-container">
                 <div class="slide active">
                     <video controls>
-                        <source src="videos/project-demo.mp4" type="video/mp4">
+                        <source src="../videos/project-demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot1.jpg" alt="Game Screenshot 1">
+                    <img src="../images/projects/screenshot1.jpg" alt="Game Screenshot 1">
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot2.jpg" alt="Game Screenshot 2">
+                    <img src="../images/projects/screenshot2.jpg" alt="Game Screenshot 2">
                 </div>
                 <div class="slide">
-                    <img src="images/project/screenshot3.jpg" alt="Game Screenshot 3">
+                    <img src="../images/projects/screenshot3.jpg" alt="Game Screenshot 3">
                 </div>
 
-                <button class="prev-slide" onclick="changeSlide(-1)">❮</button>
-                <button class="next-slide" onclick="changeSlide(1)">❯</button>
-
-                <div class="slide-controls">
-                    <span class="slide-dot active" onclick="currentSlide(0)"></span>
-                    <span class="slide-dot" onclick="currentSlide(1)"></span>
-                    <span class="slide-dot" onclick="currentSlide(2)"></span>
-                    <span class="slide-dot" onclick="currentSlide(3)"></span>
-                </div>
+                <button class="prev-slide" type="button" aria-label="Previous slide">❮</button>
+                <button class="next-slide" type="button" aria-label="Next slide">❯</button>
+                <div class="slide-controls"></div>
             </div>
 
             <!-- Game Description -->
             <div class="description-box">
                 <p>
-                    This is a detailed description of your game project.
-                    Explain the concept, the story, the gameplay mechanics, and what makes this game unique.
-                    Talk about the target audience, the game's setting, and the core experience you wanted to create for players.
-                    This paragraph should give readers a comprehensive understanding of what the game is about and why it matters.
+                    [Describe the concept, the story, the gameplay mechanics, and what makes this
+                    project unique. Mention the target audience, the setting, and the core
+                    experience you wanted to create.]
                 </p>
             </div>
 
-            <!-- Details, Goals, Constraints Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <!-- Details / Goals / Constraints — add or remove .info-list blocks freely -->
+            <div class="info-grid">
                 <div class="info-list">
                     <h3>Project Details</h3>
                     <ul>
@@ -78,42 +87,38 @@
                 <div class="info-list">
                     <h3>Goals</h3>
                     <ul>
-                        <li>Create immersive multiplayer experience</li>
-                        <li>Implement advanced AI systems</li>
-                        <li>Optimize for 60 FPS on all platforms</li>
-                        <li>Build scalable backend infrastructure</li>
-                        <li>Launch with 100K+ active users</li>
+                        <li>[Goal 1]</li>
+                        <li>[Goal 2]</li>
+                        <li>[Goal 3]</li>
                     </ul>
                 </div>
 
                 <div class="info-list">
                     <h3>Constraints</h3>
                     <ul>
-                        <li>Tight 18-month deadline</li>
-                        <li>Limited budget for middleware</li>
-                        <li>Cross-platform compatibility required</li>
-                        <li>Small team with multiple responsibilities</li>
-                        <li>Performance requirements for older hardware</li>
+                        <li>[Constraint 1]</li>
+                        <li>[Constraint 2]</li>
+                        <li>[Constraint 3]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- PROCESS SECTION -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 2 — PROCESS
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Process</h2>
 
-            <!-- 3-Column Process Overview -->
+            <!-- 3-column overview -->
             <div class="process-columns">
                 <div class="process-column">
                     <div class="process-number">01</div>
-                    <h3>Planning & Design</h3>
+                    <h3>Planning &amp; Design</h3>
                     <ul>
                         <li>Conducted market research</li>
                         <li>Created design documents</li>
                         <li>Built prototypes</li>
-                        <li>Gathered team feedback</li>
-                        <li>Defined technical requirements</li>
                     </ul>
                 </div>
 
@@ -123,127 +128,103 @@
                     <ul>
                         <li>Set up version control</li>
                         <li>Implemented core mechanics</li>
-                        <li>Built multiplayer systems</li>
-                        <li>Created AI behaviors</li>
                         <li>Optimized performance</li>
                     </ul>
                 </div>
 
                 <div class="process-column">
                     <div class="process-number">03</div>
-                    <h3>Testing & Launch</h3>
+                    <h3>Testing &amp; Launch</h3>
                     <ul>
                         <li>Alpha testing phase</li>
-                        <li>Beta testing with users</li>
                         <li>Bug fixing iteration</li>
-                        <li>Platform certification</li>
                         <li>Marketing and launch</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Detailed Process Breakdown -->
+            <!-- Detailed breakdown — items alternate sides automatically -->
             <div class="process-breakdown">
-                <h3 style="color: #58a6ff; font-size: 1.5rem; margin-bottom: 2rem;">Detailed Breakdown</h3>
+                <h3 class="breakdown-heading">Detailed Breakdown</h3>
 
                 <!-- Breakdown Item 1 -->
                 <div class="breakdown-item">
                     <div class="breakdown-content">
                         <h4>Initial Prototyping</h4>
                         <ul>
-                            <li>Built <a href="https://unity.com" class="highlight-link" target="_blank">Unity prototype</a> in first 2 weeks</li>
-                            <li>Tested core gameplay loop with focus group</li>
-                            <li>Implemented <a href="#" class="highlight-link">custom physics system</a> for unique movement</li>
-                            <li>Created modular architecture for scalability</li>
-                            <li>Established coding standards and documentation</li>
+                            <li>Built a <a href="https://unity.com" class="highlight-link" target="_blank" rel="noopener">Unity prototype</a> in the first 2 weeks</li>
+                            <li>Tested the core gameplay loop with a focus group</li>
+                            <li>Created a modular architecture for scalability</li>
                         </ul>
                     </div>
                     <div class="breakdown-image">
-                        <img src="images/process/prototyping.jpg" alt="Prototyping Phase">
+                        <img src="../images/process/prototyping.jpg" alt="Prototyping Phase">
                     </div>
                 </div>
 
                 <!-- Breakdown Item 2 -->
                 <div class="breakdown-item">
                     <div class="breakdown-content">
-                        <h4>Multiplayer Implementation</h4>
+                        <h4>[Phase Name]</h4>
                         <ul>
-                            <li>Integrated <a href="https://www.photonengine.com" class="highlight-link" target="_blank">Photon networking</a> framework</li>
-                            <li>Developed custom server architecture</li>
-                            <li>Implemented lag compensation techniques</li>
-                            <li>Created matchmaking system with ELO ranking</li>
-                            <li>Stress tested with 10,000+ concurrent users</li>
+                            <li>[Point 1]</li>
+                            <li>[Point 2]</li>
+                            <li>[Point 3]</li>
                         </ul>
                     </div>
                     <div class="breakdown-image">
-                        <img src="images/process/multiplayer.jpg" alt="Multiplayer Development">
-                    </div>
-                </div>
-
-                <!-- Breakdown Item 3 -->
-                <div class="breakdown-item">
-                    <div class="breakdown-content">
-                        <h4>AI & Optimization</h4>
-                        <ul>
-                            <li>Built behavior tree system for enemy AI</li>
-                            <li>Used <a href="#" class="highlight-link">Unity Profiler</a> to identify bottlenecks</li>
-                            <li>Optimized rendering with LOD systems</li>
-                            <li>Reduced memory footprint by 40%</li>
-                            <li>Achieved stable 60 FPS on target hardware</li>
-                        </ul>
-                    </div>
-                    <div class="breakdown-image">
-                        <img src="images/process/optimization.jpg" alt="AI and Optimization">
+                        <img src="../images/process/multiplayer.jpg" alt="[Phase Name]">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- KEY SOLUTIONS SECTION -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 3 — KEY SOLUTIONS
+             Each stage gets a nav button (colours cycle through 4,
+             so any number of stages works) and a .stage block whose
+             id matches the button's href.
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Key Solutions</h2>
-            
-            <!-- Stage Navigation -->
+
             <div class="stage-navigation">
                 <a href="#stage1" class="stage-nav-btn">Stage 1: Prototyping</a>
                 <a href="#stage2" class="stage-nav-btn">Stage 2: Core Mechanics</a>
                 <a href="#stage3" class="stage-nav-btn">Stage 3: Optimization</a>
             </div>
 
-            <!-- STAGE 1 -->
+            <!-- ─────────────── STAGE 1 ─────────────── -->
             <div class="stage" id="stage1">
                 <div class="stage-header">
                     <div class="stage-number">Stage 01</div>
-                    <h3 class="stage-title">Prototyping & Foundation</h3>
+                    <h3 class="stage-title">Prototyping &amp; Foundation</h3>
                 </div>
 
                 <div class="idea-box">
                     <div class="idea-problem">
                         <span class="idea-problem-label">⚠️ Problem</span>
                         <p class="idea-problem-text">
-                            Players felt disconnected from character movement due to floaty, unresponsive controls 
-                            that lacked weight and precision.
+                            [What wasn't working, and why it mattered.]
                         </p>
                     </div>
                     <div>
                         <span class="idea-solution-label">✓ Solution</span>
                         <p class="idea-solution-text">
-                            Implement physics-based movement with tuned acceleration curves and immediate input 
-                            response to create a tight, responsive feel.
+                            [What you did about it.]
                         </p>
                     </div>
                 </div>
 
-                <!-- Feature 1: With Image -->
+                <!-- Feature with an image: wrap in .feature-header + .feature-text -->
                 <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
                             <h4 class="feature-title">Movement System Design</h4>
                             <ul class="feature-points">
-                                <li>Implemented physics-based character controller using <a href="#" class="highlight-link">Unity's CharacterController</a></li>
-                                <li>Created smooth acceleration and deceleration curves for natural movement feel</li>
-                                <li>Added wall-sliding mechanics to prevent player frustration</li>
-                                <li>Tuned gravity multiplier for responsive jump feel</li>
+                                <li>Implemented a physics-based character controller</li>
+                                <li>Created smooth acceleration and deceleration curves</li>
+                                <li>Tuned the gravity multiplier for responsive jump feel</li>
                             </ul>
                         </div>
                         <div class="feature-media">
@@ -252,59 +233,48 @@
                     </div>
                 </div>
 
-                 <!-- Feature 2: With Video -->
+                <!-- Feature with a video -->
                 <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
                             <h4 class="feature-title">Camera Controller</h4>
                             <ul class="feature-points">
-                                <li>Developed custom third-person camera with Cinemachine</li>
-                                <li>Implemented collision detection to prevent camera clipping</li>
-                                <li>Added smooth camera transitions between different game states</li>
-                                <li>Created field-of-view adjustments for speed variations</li>
+                                <li>Developed a custom third-person camera</li>
+                                <li>Implemented collision detection to prevent clipping</li>
                             </ul>
                         </div>
                         <div class="feature-media">
                             <video controls>
-                                <source src="videos/project/camera-demo.mp4" type="video/mp4">
+                                <source src="../videos/project/camera-demo.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
 
-                <!-- Feature 3: Text Only (no media) -->
+                <!-- Feature with no media: no .feature-header wrapper needed -->
                 <div class="feature-section">
                     <h4 class="feature-title">Input System Architecture</h4>
                     <ul class="feature-points">
-                        <li>Utilized Unity's new Input System for cross-platform compatibility</li>
-                        <li>Created modular input action maps for different game states</li>
-                        <li>Implemented rebindable controls with UI feedback</li>
-                        <li>Added controller vibration support for impact events</li>
+                        <li>Used Unity's Input System for cross-platform compatibility</li>
+                        <li>Created modular input action maps per game state</li>
                     </ul>
                 </div>
 
-                <!-- Stage 1 Results -->
+                <!-- Results WITH media: keep .with-media on .results-content -->
                 <div class="stage-results">
                     <h4>Stage Results</h4>
                     <div class="results-content with-media">
                         <div class="results-text">
-                            <p>
-                                The prototyping phase successfully established the core foundation of the game's feel. 
-                                Through iterative testing with 15+ playtesters, we refined the movement to achieve a 
-                                responsive 8.5/10 satisfaction rating. The modular input system proved invaluable during 
-                                later development, allowing seamless integration of new mechanics without refactoring. 
-                                Early performance metrics showed consistent 60 FPS on target hardware with room for 
-                                additional features.
-                            </p>
+                            <p>[What this stage achieved, with numbers where you have them.]</p>
                         </div>
                         <div class="results-media">
-                            <img src="images/project/stage1-results.jpg" alt="Stage 1 Results">
+                            <img src="../images/projects/stage1-results.jpg" alt="Stage 1 Results">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- STAGE 2 -->
+            <!-- ─────────────── STAGE 2 ─────────────── -->
             <div class="stage" id="stage2">
                 <div class="stage-header">
                     <div class="stage-number">Stage 02</div>
@@ -314,64 +284,44 @@
                 <div class="idea-box">
                     <div class="idea-problem">
                         <span class="idea-problem-label">⚠️ Problem</span>
-                        <p class="idea-problem-text">
-                            Players felt disconnected from character movement due to floaty, unresponsive controls 
-                            that lacked weight and precision.
-                        </p>
+                        <p class="idea-problem-text">[Problem]</p>
                     </div>
                     <div>
                         <span class="idea-solution-label">✓ Solution</span>
-                        <p class="idea-solution-text">
-                            Implement physics-based movement with tuned acceleration curves and immediate input 
-                            response to create a tight, responsive feel.
-                        </p>
+                        <p class="idea-solution-text">[Solution]</p>
                     </div>
                 </div>
 
-                <!-- Feature 1 -->
                 <div class="feature-section">
                     <h4 class="feature-title">Combat System</h4>
                     <ul class="feature-points">
-                        <li>Designed combo-based melee system with 3-hit chains</li>
-                        <li>Implemented hitbox detection using Unity's Physics.OverlapSphere</li>
-                        <li>Created animation state machine with attack canceling windows</li>
-                        <li>Added hit-stop effect for impactful combat feedback</li>
-                        <li>Balanced damage values through 50+ hours of playtesting</li>
+                        <li>Designed a combo-based melee system with 3-hit chains</li>
+                        <li>Added a hit-stop effect for impactful combat feedback</li>
                     </ul>
                 </div>
 
-                <!-- Feature 2: With GIF/Video -->
                 <div class="feature-section">
                     <div class="feature-header">
                         <div class="feature-text">
                             <h4 class="feature-title">Enemy AI Behavior</h4>
                             <ul class="feature-points">
-                                <li>Built behavior tree system using custom state machine</li>
+                                <li>Built a behavior tree system</li>
                                 <li>Implemented pathfinding with Unity NavMesh</li>
-                                <li>Created detection zones with line-of-sight checks</li>
-                                <li>Added varied attack patterns for different enemy types</li>
                             </ul>
                         </div>
                         <div class="feature-media">
-                            <video autoplay loop muted>
+                            <video autoplay loop muted playsinline>
                                 <source src="../videos/Underwater Shader/Final Scene 2.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
 
-                <!-- Stage 2 Results: Video -->
                 <div class="stage-results">
                     <h4>Stage Results</h4>
                     <div class="results-content with-media">
                         <div class="results-text">
-                            <p>
-                                The combat system became the centerpiece of the game's identity. Player feedback indicated 
-                                that combat felt "weighty and satisfying" with the hit-stop implementation proving 
-                                particularly impactful. The behavior tree architecture allowed rapid iteration on enemy 
-                                patterns, reducing AI development time by 40% compared to initial estimates. Combat 
-                                encounters now provided consistent challenge while remaining fair and learnable.
-                            </p>
+                            <p>[What this stage achieved.]</p>
                         </div>
                         <div class="results-media">
                             <video controls>
@@ -382,165 +332,122 @@
                 </div>
             </div>
 
-            <!-- STAGE 3 -->
+            <!-- ─────────────── STAGE 3 ─────────────── -->
             <div class="stage" id="stage3">
                 <div class="stage-header">
                     <div class="stage-number">Stage 03</div>
-                    <h3 class="stage-title">Polish & Optimization</h3>
+                    <h3 class="stage-title">Polish &amp; Optimization</h3>
                 </div>
 
                 <div class="idea-box">
                     <div class="idea-problem">
                         <span class="idea-problem-label">⚠️ Problem</span>
-                        <p class="idea-problem-text">
-                            Players felt disconnected from character movement due to floaty, unresponsive controls 
-                            that lacked weight and precision.
-                        </p>
+                        <p class="idea-problem-text">[Problem]</p>
                     </div>
                     <div>
                         <span class="idea-solution-label">✓ Solution</span>
-                        <p class="idea-solution-text">
-                            Implement physics-based movement with tuned acceleration curves and immediate input 
-                            response to create a tight, responsive feel.
-                        </p>
+                        <p class="idea-solution-text">[Solution]</p>
                     </div>
                 </div>
 
                 <div class="feature-section">
                     <h4 class="feature-title">Performance Optimization</h4>
                     <ul class="feature-points">
-                        <li>Implemented object pooling for frequently spawned entities (reduced garbage collection by 70%)</li>
+                        <li>Implemented object pooling for frequently spawned entities</li>
                         <li>Optimized draw calls using static batching and GPU instancing</li>
-                        <li>Created LOD system for complex meshes (30% performance improvement)</li>
-                        <li>Profiled and optimized physics calculations in Update loops</li>
-                        <li>Reduced texture memory usage by 45% through compression and atlasing</li>
                     </ul>
                 </div>
 
-                <div class="feature-section">
-                    <h4 class="feature-title">Visual Polish</h4>
-                    <ul class="feature-points">
-                        <li>Added particle effects for combat impacts and environmental interactions</li>
-                        <li>Implemented screen shake system with customizable intensity curves</li>
-                        <li>Created dynamic lighting for day/night cycle</li>
-                        <li>Enhanced UI with smooth transitions and feedback animations</li>
-                    </ul>
-                </div>
-
-                <!-- Stage 3 Results: Text Only -->
+                <!-- Results with NO media: drop .with-media -->
                 <div class="stage-results">
                     <h4>Stage Results</h4>
                     <div class="results-content">
                         <div class="results-text">
-                            <p>
-                                Optimization efforts yielded significant improvements across all target platforms. 
-                                Frame rates stabilized at 60 FPS even during intensive combat scenarios with multiple 
-                                enemies and particle effects. Memory usage was reduced by 40%, allowing the game to run 
-                                smoothly on minimum spec hardware. The visual polish pass elevated the overall presentation, 
-                                with testers noting the game felt "AAA quality" despite the indie development context. 
-                                Load times were cut in half through asset streaming optimization.
-                            </p>
+                            <p>[What this stage achieved.]</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FINAL RESULTS SECTION (Placeholder) -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 4 — FINAL RESULTS
+             Keep ONE .final-media-frame; delete the rest.
+             The frame holds a 16:9 shape, so every option fills it.
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Final Results</h2>
             <p class="final-results-desc">
-                <!-- CUSTOMIZE: Write 1–2 sentences summarising the outcome before the media. -->
                 [Describe the final outcome — what was shipped, demonstrated, or achieved.]
             </p>
- 
+
             <div class="final-results-media">
- 
-                <!-- ─────────────────────────────────────────────────────────
-                     OPTION A — YouTube video (embedded, plays on-page)
-                     Replace VIDEO_ID with the 11-character YouTube ID.
-                     e.g. https://youtu.be/dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ
-                ───────────────────────────────────────────────────────────── -->
-                <div class="final-media-frame final-media--youtube">
+
+                <!-- OPTION A — YouTube. Replace VIDEO_ID with the 11-character ID.
+                     e.g. https://youtu.be/dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ -->
+                <div class="final-media-frame">
                     <iframe
                         src="https://www.youtube.com/embed/VIDEO_ID"
                         title="Final Results"
-                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
                 </div>
 
-                <!-- ─────────────────────────────────────────────────────────
-                     OPTION B — Local video file (.mp4 / .webm)
-                     Supports play/pause controls. Use autoplay + loop + muted
-                     if you want it to play automatically like a GIF.
-                ───────────────────────────────────────────────────────────── -->
-                <!-- <div class="final-media-frame">
+                <!-- OPTION B — Local video. Add autoplay loop muted playsinline to act like a GIF.
+                <div class="final-media-frame">
                     <video controls>
-                        <source src="videos/final-result.mp4" type="video/mp4">
+                        <source src="../videos/final-result.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div> -->
- 
-                <!-- ─────────────────────────────────────────────────────────
-                     OPTION C — GIF (local file)
-                     GIFs auto-play and loop with no controls — good for short
-                     demos (under ~10 seconds). Keep file size under 5 MB.
-                ───────────────────────────────────────────────────────────── -->
-                <!-- <div class="final-media-frame">
-                    <img src="images/final-result.gif" alt="Final Result" class="final-gif">
-                </div> -->
- 
-                <!-- ─────────────────────────────────────────────────────────
-                     OPTION D — Static image (.jpg / .png / .webp)
-                     Use for screenshots, renders, or key art.
-                ───────────────────────────────────────────────────────────── -->
-                <!-- <div class="final-media-frame">
-                    <img src="images/final-result.jpg" alt="Final Result" class="final-image">
-                </div> -->
+                </div>
+                -->
+
+                <!-- OPTION C — GIF (keep it under ~5 MB)
+                <div class="final-media-frame">
+                    <img src="../images/final-result.gif" alt="Final Result" class="final-gif">
+                </div>
+                -->
+
+                <!-- OPTION D — Static image
+                <div class="final-media-frame">
+                    <img src="../images/final-result.jpg" alt="Final Result" class="final-image">
+                </div>
+                -->
             </div>
         </section>
 
-        <!-- RESULTS & TAKEAWAYS SECTION (Placeholder) -->
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 5 — TAKEAWAYS
+             ═══════════════════════════════════════════════════════ -->
         <section class="section">
             <h2 class="section-title">Takeaways</h2>
             <div class="takeaways-section">
-                <h3>Project Insights & Learnings</h3>
+                <h3>Project Insights &amp; Learnings</h3>
                 <ul class="takeaways-list">
-                    <li><strong>Early prototyping paid dividends:</strong> Investing 3 weeks in core feel before building features 
-                    prevented months of rework and established a solid foundation that guided all subsequent decisions.</li>
-                    
-                    <li><strong>Modular architecture is essential:</strong> The input system and behavior tree designs proved 
-                    their worth when adding new features, saving an estimated 100+ hours of refactoring work.</li>
-                    
-                    <li><strong>Player feedback is invaluable:</strong> Regular playtesting sessions (30+ across development) 
-                    caught issues early and validated design decisions, particularly for combat timing and difficulty curves.</li>
-                    
-                    <li><strong>Optimization should be ongoing:</strong> Rather than leaving performance work to the end, 
-                    integrating profiling into weekly workflows prevented technical debt accumulation.</li>
-                    
-                    <li><strong>Successfully shipped core features:</strong> All primary mechanics (movement, combat, AI) were 
-                    completed and polished to production quality within the 18-month timeline.</li>
-                    
-                    <li><strong>Scope management was challenging:</strong> Had to cut multiplayer mode and two planned enemy types 
-                    to meet deadline, reinforcing the importance of realistic scheduling and early feature prioritization.</li>
-                    
-                    <li><strong>Technical achievement:</strong> Achieved 60 FPS target on all platforms including older hardware, 
-                    demonstrating the effectiveness of optimization strategies and LOD implementation.</li>
+                    <li><strong>Early prototyping paid dividends:</strong> [What you learned and the
+                    evidence for it.]</li>
+
+                    <li><strong>Modular architecture is essential:</strong> [What you learned.]</li>
+
+                    <li><strong>Scope management was challenging:</strong> [What you'd do
+                    differently — the honest ones are the most interesting to read.]</li>
                 </ul>
             </div>
         </section>
 
-        <!-- External Project Link -->
+        <!-- ═══════════════════════════════════════════════════════
+             EXTERNAL LINK — delete this block if there's nowhere to go
+             ═══════════════════════════════════════════════════════ -->
         <div class="external-project-section">
-            <a href="https://example.com/play-game" target="_blank" class="external-project-btn">
+            <a href="https://example.com/play-game" class="external-project-btn" target="_blank" rel="noopener">
                 🎮 Play the Game
             </a>
         </div>
     </div>
 
-    <script src="../js/slideshow.js"></script>
-    <script src="../js/backButton.js"></script>
+    <!-- Shared -->
+    <script src="../js/core/slideshow.js"></script>
+    <script src="../js/core/backButton.js"></script>
 </body>
 </html>

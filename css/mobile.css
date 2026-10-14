@@ -1,0 +1,601 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   mobile.css
+   Mobile-first responsive overrides for all page types.
+   Applies at ≤768px. Add <link rel="stylesheet" href="css/mobile.css">
+   as the LAST stylesheet in every HTML file.
+   ═══════════════════════════════════════════════════════════════════════ */
+ 
+@media (max-width: 768px) {
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   1. BURGER NAV — replaces the horizontal nav bar
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    /* Hide the desktop nav list */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75vw;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(8, 11, 30, 0.98);
+        backdrop-filter: blur(24px);
+        padding: 5rem 1.5rem 2rem;
+        gap: 0.4rem;
+        z-index: 1100;
+        overflow-y: auto;
+        box-shadow: -8px 0 40px rgba(0,0,0,0.6);
+        border-left: 1px solid rgba(88,166,255,0.15);
+        transition: transform 0.3s ease;
+    }
+ 
+    nav ul.mobile-open {
+        display: flex;
+    }
+ 
+    /* Nav items full-width in sidebar */
+    nav ul li {
+        width: 100%;
+    }
+ 
+    nav a.nav-link,
+    .nav-dropdown-btn {
+        display: flex;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.9rem 1rem;
+        border-radius: 10px;
+        border-bottom: 1px solid rgba(88,166,255,0.08);
+    }
+ 
+    /* Portfolios dropdown: inline in sidebar */
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        display: none;
+        background: rgba(20,25,50,0.8);
+        border: none;
+        border-radius: 8px;
+        padding: 0.3rem 0 0.3rem 1rem;
+        margin-top: 0.3rem;
+        box-shadow: none;
+        animation: none;
+        min-width: unset;
+        white-space: normal;
+    }
+ 
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: block;
+    }
+ 
+    .nav-dropdown-item {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
+        border-radius: 6px;
+    }
+ 
+    /* Burger button */
+    .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: rgba(20,25,50,0.8);
+        border: 1px solid rgba(88,166,255,0.3);
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 8px;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1200;
+        transition: all 0.3s;
+    }
+ 
+    .burger-btn:hover {
+        border-color: #ff6b35;
+        background: rgba(255,107,53,0.1);
+    }
+ 
+    .burger-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #58a6ff;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+ 
+    /* Animate burger → X when open */
+    .burger-btn.open .burger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+        background: #ff6b35;
+    }
+    .burger-btn.open .burger-line:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    .burger-btn.open .burger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+        background: #ff6b35;
+    }
+ 
+    /* Dim overlay behind sidebar */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1050;
+        backdrop-filter: blur(2px);
+    }
+ 
+    .nav-overlay.visible {
+        display: block;
+    }
+ 
+    /* nav brand / logo area stays visible */
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.8rem 1rem;
+        height: 56px;
+    }
+ 
+    .nav-glow {
+        display: none;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   2. GENERAL LAYOUT — single column, comfortable padding
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .container {
+        padding: 72px 1rem 2rem;  /* top clears fixed nav */
+    }
+ 
+    h1 {
+        font-size: 1.8rem !important;
+    }
+ 
+    h2 {
+        font-size: 1.5rem;
+    }
+ 
+    .section-heading--main {
+        font-size: 1.6rem;
+    }
+ 
+    .section-title {
+        font-size: 1.5rem;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   3. HOME PAGE — about-layout, profile card, skills
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    /* Stack profile card above content */
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+ 
+    /* Profile card: horizontal strip on mobile */
+    .profile-card {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1rem 1.2rem;
+        text-align: left;
+    }
+ 
+    .profile-image {
+        width: 72px;
+        height: 72px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+ 
+    .profile-name {
+        font-size: 1.1rem;
+    }
+ 
+    .profile-title {
+        font-size: 0.8rem;
+    }
+ 
+    .profile-stats {
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-top: 0.5rem;
+    }
+ 
+    .stat-number {
+        font-size: 1.1rem;
+    }
+ 
+    /* What I Do: 2 columns on mobile, 1 below 480px */
+    .expertise-grid--6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+ 
+    .expertise-icon {
+        font-size: 1.4rem;
+    }
+ 
+    .expertise-item h4 {
+        font-size: 0.85rem;
+    }
+ 
+    .expertise-item p {
+        font-size: 0.75rem;
+    }
+ 
+    /* profile-intro (used on home intro box) */
+    .profile-intro {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .profile-image-container {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+    }
+ 
+    /* Skills section */
+    .skills-section {
+        padding: 1.2rem;
+    }
+ 
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Skill name wrapper */
+    .skill-name-wrapper {
+        gap: 0.5rem;
+    }
+ 
+    /* Featured projects: 1 column */
+    .featured-projects {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Quote */
+    .quote-text {
+        font-size: 1rem;
+    }
+ 
+    /* Resume CTA */
+    .resume-cta-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.6rem;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   4. COLLAPSIBLE SECTIONS — "View" toggle for long sections
+   Each collapsible section gets .collapsible-section on its wrapper.
+   The section body is hidden by default; a toggle button reveals it.
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .collapsible-section .collapsible-body {
+        display: none;
+    }
+ 
+    .collapsible-section.expanded .collapsible-body {
+        display: block;
+    }
+ 
+    .collapsible-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: rgba(20,25,50,0.7);
+        border: 1px solid rgba(88,166,255,0.25);
+        border-radius: 10px;
+        padding: 0.85rem 1.1rem;
+        color: #58a6ff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+        margin-bottom: 0;
+        transition: all 0.3s;
+    }
+ 
+    .collapsible-toggle:hover {
+        border-color: #ff6b35;
+        color: #ff6b35;
+    }
+ 
+    .collapsible-section.expanded .collapsible-toggle {
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+        background: rgba(88,166,255,0.08);
+    }
+ 
+    .collapsible-arrow {
+        font-size: 0.75rem;
+        transition: transform 0.3s;
+        color: #ff6b35;
+    }
+ 
+    .collapsible-section.expanded .collapsible-arrow {
+        transform: rotate(180deg);
+    }
+ 
+    .collapsible-body {
+        border: 1px solid rgba(88,166,255,0.25);
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        padding: 1rem;
+        background: rgba(10,14,39,0.4);
+    }
+ 
+    /* Sections that become collapsible on mobile
+       (JS will add .collapsible-section class and wrap content) */
+ 
+    /* Skills section collapsible */
+    .skills-section {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+ 
+    /* What I Do collapsible */
+    .about-section {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   5. PROJECTS PAGE
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .filter-buttons {
+        gap: 0.4rem;
+    }
+ 
+    .filter-btn {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.7rem;
+        flex: 1 1 calc(50% - 0.2rem);
+        min-width: 120px;
+    }
+ 
+    /* Role pills compact */
+    .role-pill {
+        font-size: 0.7rem;
+        padding: 0.18rem 0.45rem;
+    }
+ 
+    /* Tech icons compact */
+    .project-tech-icon {
+        width: 28px;
+        height: 28px;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   6. EXPERIENCE PAGE (timeline)
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .timeline::before {
+        left: 16px;
+    }
+ 
+    .timeline-item {
+        flex-direction: column !important;
+        padding-left: 48px !important;
+        padding-right: 0 !important;
+    }
+ 
+    .timeline-dot {
+        left: 8px !important;
+    }
+ 
+    .timeline-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   7. RESUME PAGE
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .resume-viewer-frame {
+        height: 60vh;
+        min-height: 380px;
+    }
+ 
+    .resume-viewer-header {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: flex-start;
+    }
+ 
+    .resume-dropdown-btn {
+        min-width: 0;
+        width: 100%;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   8. CONTACT PAGE
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .contact-links {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+ 
+    .contact-link {
+        gap: 1rem;
+        padding: 1.1rem;
+    }
+ 
+    .contact-icon {
+        font-size: 2rem;
+        min-width: 48px;
+        height: 48px;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   9. PORTFOLIO LANDING PAGES
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .portfolio-page .featured-projects {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Home stat cards row */
+    .home-stat-cards {
+        gap: 0.8rem;
+    }
+ 
+    .home-stat-card {
+        padding: 1rem 1.2rem;
+        min-width: 80px;
+    }
+ 
+    .home-stat-number {
+        font-size: 1.5rem;
+    }
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   10. PROJECT DETAIL PAGES (experience-page.css overrides)
+   ───────────────────────────────────────────────────────────────────── */
+ 
+    .project-title {
+        font-size: 1.8rem;
+    }
+ 
+    .project-subtitle {
+        font-size: 0.95rem;
+    }
+ 
+    .section-title {
+        font-size: 1.4rem;
+    }
+ 
+    /* Slideshow nav arrows smaller */
+    .prev-slide,
+    .next-slide {
+        padding: 0.6rem 0.8rem;
+        font-size: 1.1rem;
+    }
+ 
+    /* Process 3-col → 1-col */
+    .process-columns {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Breakdown alternating layout → stack */
+    .breakdown-item {
+        grid-template-columns: 1fr;
+        direction: ltr !important;
+    }
+ 
+    .breakdown-item:nth-child(even) {
+        direction: ltr;
+    }
+ 
+    /* Feature header: media below text */
+    .feature-header {
+        flex-direction: column;
+    }
+ 
+    .feature-media {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+ 
+    /* Stage results: media below text */
+    .results-content.with-media {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Stage nav buttons: 2 per row */
+    .stage-nav-btn {
+        flex: 1 1 calc(50% - 0.4rem);
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+    }
+ 
+    .stage-navigation {
+        flex-wrap: wrap;
+    }
+ 
+    /* Project header back button */
+    .project-header {
+        padding: 0.9rem 1rem;
+    }
+ 
+    .back-button {
+        font-size: 0.95rem;
+    }
+ 
+    /* Info grids: 1 column */
+    [style*="grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+ 
+/* ─────────────────────────────────────────────────────────────────────
+   Extra-small phones (≤ 480px)
+   ───────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+ 
+    h1 {
+        font-size: 1.5rem !important;
+    }
+ 
+    .expertise-grid--6 {
+        grid-template-columns: 1fr;
+    }
+ 
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+    .profile-stats {
+        justify-content: center;
+    }
+ 
+    .filter-btn {
+        flex: 1 1 100%;
+    }
+ 
+    .home-stat-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .home-stat-card {
+        width: 100%;
+        max-width: 240px;
+    }
+ 
+    .featured-badge {
+        font-size: 0.7rem;
+    }
+ 
+    .stage-nav-btn {
+        flex: 1 1 100%;
+    }
+}
+ 

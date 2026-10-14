@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Art Portfolio — Raihansyah A. Andrian</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bg-styles.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-particles" id="particlesContainer"></div>
+    <div class="bg-gradient-orb bg-gradient-orb-1"></div>
+    <div class="bg-gradient-orb bg-gradient-orb-2"></div>
+    <div class="bg-gradient-orb bg-gradient-orb-3"></div>
+
+    <nav>
+        <div class="nav-glow"></div>
+        <ul>
+            <li><a href="../index.html" class="nav-link nav-external">
+                <span class="nav-text">Home</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
+            <li class="nav-dropdown">
+                <button class="nav-link nav-dropdown-btn">
+                    <span class="nav-text">Portfolios ▾</span>
+                    <span class="nav-hover-effect"></span>
+                </button>
+                <ul class="nav-dropdown-menu">
+                    <li><a href="producer.html" class="nav-dropdown-item">🎮 Game Producing</a></li>
+                    <li><a href="designer.html" class="nav-dropdown-item">🎨 Game Design</a></li>
+                    <li><a href="technical-artist.html" class="nav-dropdown-item">🔧 Technical Art</a></li>
+                    <!-- <li><a href="audio.html" class="nav-dropdown-item">🎵 Game Audio</a></li> -->
+                    <!-- <li><a href="engineer.html" class="nav-dropdown-item">💻 Game Engineering</a></li> -->
+                    <!-- <li><a href="artist.html" class="nav-dropdown-item">🖼️ Art</a></li> -->
+                </ul>
+            </li>
+            <li><a href="../index.html#projects" class="nav-link nav-external">
+                <span class="nav-text">Projects</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
+            <li><a href="../index.html#experience" class="nav-link nav-external">
+                <span class="nav-text">Experience</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
+            <li><a href="../index.html#resume" class="nav-link nav-external">
+                <span class="nav-text">Resume</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
+            <li><a href="../index.html#contact" class="nav-link nav-external">
+                <span class="nav-text">Contact</span>
+                <span class="nav-hover-effect"></span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page active portfolio-page">
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 1 — PERSONAL STORY
+                 Photo + intro paragraph (like the old Home page)
+                 CUSTOMIZE: Update the subtitle, intro text, and highlights
+                 to be relevant to this specific field.
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="hero">
+                <h1>Raihansyah A. Andrian</h1>
+                <p class="subtitle">Technical Artist</p>
+
+                <div class="profile-intro">
+                    <div class="profile-image-container">
+                        <img src="../images/Profile-1.jpg" alt="Raihansyah Andrian" class="profile-pic">
+                    </div>
+                    <div class="intro-box">
+                        <p>   
+                            Hello there! My name is Raihansyah but you can call me <span class="highlight-purple">Dean</span>.
+                            I am a passionate <span class="highlight-orange">technical artist</span> from Indonesia!
+                            Currently I am pursuing my Master's in Computer Science of game development at University of Southern California (USC).
+
+                            Technical art is a field that I feel a lot of people don't fully understand, yet you can do 
+                            so many things in it such as <span class="highlight">modeling, rigging, animation, and VFX</span>.
+
+                            Having a strong background in <span class="highlight-purple">mathematics</span> 
+                            and <span class="highlight-purple">computer science</span>, 
+                            I have always loved how we can use 
+                            them to create extraordinary things. 
+
+                            This field is a direct application of it since 
+                            I can <span class="highlight-orange">clearly show</span> what I am creating and be proud of it.
+                            
+                            I have first-hand experience in applying several <span class="highlight">methods of rendering</span> 
+                            including applying it in game engines.
+
+                            I also have knowledge of how to create animation using 
+                            both a <span class="highlight-orange">3D software</span> such as <span class="highlight-orange">Maya</span> or 
+                            <span class="highlight-orange">computer generated</span> based as well. These include basic methods of
+                            <span class="highlight">motion capture interpolation, skinning, and inverse-kinematics</span> (IK).
+
+                            My goal as a developer is to create <span class="highlight-purple">engaging and innovative experiences.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 2 — QUICK STATS
+                 Same stats as the main site; customize if needed.
+                 ═══════════════════════════════════════════════════════ -->
+            <section class="stats-section">
+                <div class="home-stat-cards">
+                    <div class="home-stat-card">
+                        <div class="home-stat-number">7+</div>
+                        <div class="home-stat-label">Years Experience</div>
+                    </div>
+                    <div class="home-stat-card">
+                        <div class="home-stat-number">10+</div>
+                        <div class="home-stat-label">Projects Completed</div>
+                    </div>
+                    <div class="home-stat-card">
+                        <div class="home-stat-number">3</div>
+                        <div class="home-stat-label">Shipped Games</div>
+                    </div>
+                    <!-- CUSTOMIZE: Add a field-specific stat if relevant, e.g.:
+                    <div class="home-stat-card">
+                        <div class="home-stat-number">5</div>
+                        <div class="home-stat-label">Games Produced</div>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 3 — SKILLS
+                 Mirrors the About page skills layout.
+                 CUSTOMIZE: Keep only the skills relevant to this field.
+                 Reorder to put the most relevant ones first.
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="skills-section">
+                <h3 class="section-heading section-heading--main" style="text-align: center; margin-bottom: 2rem;">
+                    Technical Art Skills
+                </h3>
+                <div class="skills-container">
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="../images/tools/Unity.svg" alt="Unity" class="skill-icon skill-icon--light">
+                                <span class="skill-name">Unity</span>
+                            </span>
+                            <span class="skill-level">9/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="..\images\tools\Unreal Engine.svg" alt="Unreal Engine" class="skill-icon skill-icon--light">
+                                <span class="skill-name">Unreal Engine</span>
+                            </span>
+                            <span class="skill-level">7/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="..\images\tools\CSharp.svg" alt="CSharp" class="skill-icon skill-icon--dark">
+                                <span class="skill-name">C#</span>
+                            </span>
+                            <span class="skill-level">9/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="..\images\tools\CPP.svg" alt="CPP" class="skill-icon skill-icon--dark">
+                                <span class="skill-name">C++</span>
+                            </span>
+                            <span class="skill-level">8/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="..\images\tools\OpenGL.svg" alt="OpenGL" class="skill-icon skill-icon--light">
+                                <span class="skill-name">Computer Graphics</span>
+                            </span>
+                            <span class="skill-level">7/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name-wrapper">
+                                <img src="..\images\tools\Maya.png" alt="Maya" class="skill-icon skill-icon--dark">
+                                <span class="skill-name">3D Modelling & Animation</span>
+                            </span>
+                            <span class="skill-level">6/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Physics-Based Animation</span>
+                            <span class="skill-level">7/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Kinematic Animation</span>
+                            <span class="skill-level">8/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">VFX</span>
+                            <span class="skill-level">6/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Rigging</span>
+                            <span class="skill-level">6/10</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 4 — FEATURED PROJECTS
+                 CUSTOMIZE: Replace the featured cards below with projects
+                 most relevant to this field. Keep 2–4 cards.
+                 ═══════════════════════════════════════════════════════ -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <!-- CUSTOMIZE: e.g. "My best producing work" -->
+                    <p class="section-subtitle">Highlighted work in [Field]</p>
+                </div>
+
+                <div class="featured-projects">
+
+                    <!-- Featured Card 1 -->
+                    <!-- <a href="..\pages-projects\ik-skinning.html" class="featured-card" onclick="setProjectReferrer('portfolio')"></a> -->
+                    <a class="featured-card">
+                        <div class="featured-image">
+                            <video controls autoplay loop muted playsinline>
+                                <source src="../videos/IK Skinning/HandPose.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">IK & Skinning</h3>
+                            <div class="featured-meta">
+                                <span class="featured-badge">Kinematic Animation</span>
+                                <span class="featured-badge">IK</span>
+                                <span class="featured-badge">FK</span>
+                                <span class="featured-badge">Skinning</span>
+                                <span class="featured-badge">Dual Quaternion</span>
+                            </div>
+                            <p class="featured-desc">
+                                A short, story-based puzzle game where a space explorer got lost in a distant alien planet.
+                                Players decisions in solving the puzzles will impact the outcome of the story.
+                            </p>
+                            <!-- <span class="view-project">View Project →</span> -->
+                        </div>
+                    </a>
+
+                    <!-- Featured Card 2 -->
+                    <a href="../pages-projects/underwater-shader.html" class="featured-card" onclick="setProjectReferrer('portfolio')">
+                        <div class="featured-image">
+                            <video controls autoplay loop muted playsinline>
+                                <source src="..\videos\Underwater Shader\Final Scene 3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="featured-content">
+                            <h3 class="featured-title">Underwater Shader</h3>
+                            <div class="featured-meta">
+                                <span class="featured-badge">Unity 3D</span>
+                                <span class="featured-badge">C#</span>
+                                <span class="featured-badge">Procedural Generation</span>
+                                <span class="featured-badge">HLSL Shader</span>
+                            </div>
+                            <p class="featured-desc">
+                                An underwater scene shader that simulates light filtration through an aqueous medium by rendering good-looking caustics in the scene,
+                                both projected onto objects and as shafts of light (god rays) filtering through the medium.
+                            </p>
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <a href="../index.html" class="all-projects-btn" onclick="goToMainSection('projects')">View All Projects</a>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 5 — QUOTE
+                 CUSTOMIZE: Change the quote to something relevant to this
+                 field or keep Dean's signature quote.
+                 ═══════════════════════════════════════════════════════ -->
+            <!-- Compact Quote Section -->
+            <div class="quote-section">
+                <div class="quote-container">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">
+                        It's not about ideas. It's about making ideas happen.
+                    </p>
+                    <div class="quote-author">— Dean</div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 SECTION 6 — THANK YOU
+                 ═══════════════════════════════════════════════════════ -->
+            <!-- Thank You Section -->
+            <div class="thank-you-section">
+                <div class="thank-you-text">Thank You for Visiting!</div>
+                <p class="thank-you-subtext">
+                    Feel free to explore my projects and get in touch if you'd like to collaborate.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/portfolios.js"></script>
+</body>
+</html>

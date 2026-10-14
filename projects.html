@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Raihansyah Andrian</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <!-- This page -->
+    <link rel="stylesheet" href="css/pages/projects.css">
+</head>
+<body data-page="projects">
+    <!-- Background + nav are rendered here (edit them in js/core/layout.js) -->
+    <script src="js/core/layout.js"></script>
+
+    <main class="container page active">
+        <h1>Featured Projects</h1>
+
+        <!-- ═══════════════ FILTERS ═══════════════
+             data-group = "type" or "role"
+             data-filter must match the values used in each card's data-types / data-roles.
+             Counts are filled in automatically by js/pages/projects.js. -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <span class="filter-label">Filter by Type</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-group="type" data-filter="all">
+                        All Types <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="type" data-filter="games">
+                        🎮 Games <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="type" data-filter="visual-audio">
+                        🎵 Visual &amp; Audio <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="type" data-filter="graphics-tech">
+                        🎨 Graphics &amp; Technical Art <span class="project-count">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Filter by Role</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-group="role" data-filter="all">
+                        All Roles <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="producer">
+                        📋 Producer <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="designer">
+                        🎨 Designer <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="engineer">
+                        💻 Engineer <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="artist">
+                        🖼️ Artist <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="technical-artist">
+                        🔧 Technical Artist <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="audio">
+                        🎵 Audio <span class="project-count">0</span>
+                    </button>
+                    <button class="filter-btn" data-group="role" data-filter="solo-developer">
+                        🧑‍💻 Solo Developer <span class="project-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════ PROJECT GRID ═══════════════
+             Adding a project: copy a card below, then
+               • set data-types / data-roles (comma-separated, matching the filter buttons)
+               • set the "View Details" data-project path. It stays grey ("Coming Soon")
+                 until you add that path to AVAILABLE_PROJECT_PAGES in js/pages/projects.js.
+               • "Go to Project Page" is a normal link — delete it if there's no external page.
+
+             Snippets you can paste into a card:
+               Tool icons:
+                 <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
+                 <div class="project-tech-icon" data-tool="Unreal Engine"><img src="images/tools/Unreal Engine.svg" alt="UE5"><span class="tech-tooltip">Unreal Engine</span></div>
+                 <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div>
+                 <div class="project-tech-icon" data-tool="C++"><img src="images/tools/CPP.svg" alt="C++"><span class="tech-tooltip">C++</span></div>
+                 <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
+                 <div class="project-tech-icon" data-tool="Open GL"><img src="images/tools/OpenGL.svg" alt="Open GL"><span class="tech-tooltip">HLSL</span></div>
+                 <div class="project-tech-icon" data-tool="Perforce"><img src="images/tools/Perforce.png" alt="Perforce"><span class="tech-tooltip">Perforce</span></div>
+                 <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                 <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
+                 <div class="project-tech-icon" data-tool="Audiokinetic Wwise"><img src="images/tools/wwise.png" alt="wWise"><span class="tech-tooltip">Audiokinetic Wwise</span></div>
+                 <div class="project-tech-icon" data-tool="Reaper DAW"><img src="images/tools/Reaper.png" alt="Reaper"><span class="tech-tooltip">Reaper DAW</span></div>
+                 <div class="project-tech-icon project-tech-icon--emoji" data-tool="Board Game"><span class="tech-emoji">🎲</span><span class="tech-tooltip">Board Game</span></div>
+                 <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div>
+                 <div class="project-tech-icon project-tech-icon--emoji" data-tool="Timer"><span class="tech-emoji">⏱️</span><span class="tech-tooltip">Timer</span></div>
+                 <div class="project-tech-icon project-tech-icon--emoji" data-tool="Laser Printed"><span class="tech-emoji">🖨️</span><span class="tech-tooltip">Laser Printed</span></div>
+               Platform icons (windows / macos / playstation / xbox / switch / android / ios / board-game):
+                 <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+               Role pills (producer / designer / engineer / artist / technical-artist / audio / solo-developer):
+                 <span class="role-pill role-pill--designer">🎨 Designer</span>
+               Title as text instead of an image:
+                 <div class="project-title-container"><h3 class="project-title-text">Title</h3></div>
+               In-progress button instead of an external link:
+                 <button class="external-link-btn in-progress" data-open-modal="inProgressModal">⏳ In Progress</button>
+        -->
+        <div class="project-grid">
+
+            <!-- ─────────── SEMESTER 2 | Spring 2026 ─────────── -->
+
+            <!-- Project Card 13 - Elementary - CTIN 532 -->
+            <div class="project-card" data-types="games, visual-audio" data-roles="producer,designer,artist,audio">
+                <div class="project-cover">
+                    <img src="images/projects/Elementary - Cover.png" alt="Elementary Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Elementary - Title.png" alt="Elementary Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                        <span class="role-pill role-pill--artist">🖼️ Artist</span>
+                        <span class="role-pill role-pill--audio">🎵 Audio</span>
+                    </div>
+                    <div class="project-date">January 2026 - June 2026</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        An ancient power slumbers deep within the mythical Labyrinth. Harness the four elements (Fire, Water, Earth, and Air)
+                        from “words of power” hidden around the dungeon. Control your limited magical resources and manipulate the environment
+                        to explore the depths of this cryptic tomb. Will the answers you seek lead to triumph, or despair?
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
+                                <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
+                                <div class="project-tech-icon" data-tool="Perforce"><img src="images/tools/Perforce.png" alt="Perforce"><span class="tech-tooltip">Perforce</span></div>
+                                <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
+                                <div class="project-tech-icon" data-tool="Audiokinetic Wwise"><img src="images/tools/wwise.png" alt="wWise"><span class="tech-tooltip">Audiokinetic Wwise</span></div>
+                                <div class="project-tech-icon" data-tool="Reaper DAW"><img src="images/tools/Reaper.png" alt="Reaper"><span class="tech-tooltip">Reaper DAW</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Roguelike</span>
+                                <span class="project-app-tag">Adventure</span>
+                                <span class="project-app-tag">3D</span>
+                                <span class="project-app-tag">Puzzle</span>
+                                <span class="project-app-tag">Shaders</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/elementary.html">📖 View Details</a>
+                        <a href="https://dankacles.itch.io/elementary" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 14 - Pulse & Pole - PSCP Gamejam -->
+            <div class="project-card" data-types="games, visual-audio" data-roles="artist">
+                <div class="project-cover">
+                    <img src="images/projects/Pulse and Pole - Cover.png" alt="Pulse &amp; Pole Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <h3 class="project-title-text">Pulse &amp; Pole</h3>
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--artist">🖼️ Artist</span>
+                    </div>
+                    <div class="project-date">April 2026 - June 2026</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A rhythm-based combat game where you control two magnetic forces: one positive and one negative.
+                        Positioned on opposite sides of the screen, your goal is to defeat an enemy standing between them
+                        by matching your inputs to the beat of the music.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Unreal Engine"><img src="images/tools/Unreal Engine.svg" alt="UE5"><span class="tech-tooltip">Unreal Engine</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                                <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Rhythm</span>
+                                <span class="project-app-tag">3D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/pulse-pole.html">📖 View Details</a>
+                        <a href="https://d3adg00se.itch.io/pulse-pole" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Project Card 12 | HW 3 - IK | CSCI 520 -->
+
+            <!-- TODO: Project Card 11 | HW 2 - Motion Capture + Keyframes | CSCI 520 -->
+
+            <!-- TODO: Project Card 10 | HW 1 - Jello Cube | CSCI 520 -->
+
+            <!-- Project Card 9 | Rube Goldberg | CTAN 452 -->
+            <div class="project-card" data-types="visual-audio" data-roles="artist">
+                <div class="project-cover">
+                    <img src="images/projects/Rube Goldberg - Cover.png" alt="Rube Goldberg Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <h3 class="project-title-text">Rube Goldberg Animation</h3>
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--artist">🖼️ Artist</span>
+                    </div>
+                    <div class="project-date">January 2026 - March 2026</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A personalized Rube-Goldberg machinery made in Maya using basic animation principles.
+                        3D models are custom made and animations are made using keyframing and graph editor techniques.
+                        Final cinematic clip uses basic fundamentals of cinematography and lighting effects for rendering.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Autodesk Maya"><img src="images/tools/Maya.png" alt="Maya"><span class="tech-tooltip">Autodesk Maya</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Artist Skills</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Maya Animation</span>
+                                <span class="project-app-tag">3D Modelling</span>
+                                <span class="project-app-tag">Cinematic Shots</span>
+                                <span class="project-app-tag">Lighting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/rube-goldberg.html">📖 View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Project Card 8 | Audio Etude 1-3 | CTIN 406 -->
+
+            <!-- ─────────── SEMESTER 1 | Fall 2025 ─────────── -->
+
+            <!-- Project Card 7 - Light Grows -->
+            <div class="project-card" data-types="games" data-roles="producer,designer">
+                <div class="project-cover">
+                    <img src="images/projects/Light Grows - Cover.png" alt="Light Grows Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Light Grows - Title.PNG" alt="Light Grows Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                    </div>
+                    <div class="project-date">December 2025 - January 2026</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A parkour-platformer game with various movement mechanics built in a hand-drawn visual world.
+                        Players follow Lumi, a small bunny, on the search for the cause of sudden destruction in her forest.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
+                                <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Platformer</span>
+                                <span class="project-app-tag">2D</span>
+                                <span class="project-app-tag">Fantasy</span>
+                                <span class="project-app-tag">Puzzle</span>
+                                <span class="project-app-tag">Parkour</span>
+                                <span class="project-app-tag">Parallax</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/light-grows.html">📖 View Details</a>
+                        <a href="https://selahhan.itch.io/light-grows" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 - Underwater Shader -->
+            <div class="project-card" data-types="graphics-tech" data-roles="technical-artist">
+                <div class="project-cover">
+                    <img src="images/projects/Underwater Shader - Cover.png" alt="Underwater Shader Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <h3 class="project-title-text">Underwater Shader</h3>
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--technical-artist">🔧 Technical Artist</span>
+                    </div>
+                    <div class="project-date">October 2025 - December 2025</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        An underwater scene shader that simulates light filtration through an aqueous medium by rendering
+                        good-looking caustics in the scene, both projected onto objects and as shafts of light filtering through the medium.
+                        Computation is not done realistically but still can be done in real time.
+                        Graphical techniques used include ray marching, volumetric lighting, and procedural noise generation.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
+                                <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
+                                <div class="project-tech-icon" data-tool="GLSL"><img src="images/tools/OpenGL.svg" alt="Open GL"><span class="tech-tooltip">GLSL</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Shader</span>
+                                <span class="project-app-tag">3D</span>
+                                <span class="project-app-tag">Decal</span>
+                                <span class="project-app-tag">Volumetric</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/underwater-shader.html">📖 View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 - Pitch It! -->
+            <div class="project-card" data-types="games" data-roles="producer,designer">
+                <div class="project-cover">
+                    <img src="images/projects/Pitch It - Cover.jpg" alt="Pitch It! Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Pitch It - Title.png" alt="Pitch It! Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                    </div>
+                    <div class="project-date">November 2025 - December 2025</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A 4-player game where players scramble to sell the most ridiculous products they can dream up before time runs out.
+                        In each round, one player becomes the "Shark", deciding which idea actually lands and who are the best at selling their ideas.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div>
+                                <div class="project-tech-icon project-tech-icon--emoji" data-tool="Timer"><span class="tech-emoji">⏱️</span><span class="tech-tooltip">Timer</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Board Game"><img src="images/platforms/board-game.png" alt="Board Game"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Card Game</span>
+                                <span class="project-app-tag">Social Game</span>
+                                <span class="project-app-tag">Player Imagination</span>
+                                <span class="project-app-tag">4 Players</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/pitch-it.html">📖 View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4 - Formula Faceoff -->
+            <div class="project-card" data-types="games" data-roles="producer,designer">
+                <div class="project-cover">
+                    <img src="images/projects/Formula FaceOff - Cover.jpg" alt="Formula Faceoff Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Formula FaceOff - Title.png" alt="Formula Face-Off Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                    </div>
+                    <div class="project-date">September 2025 - October 2025</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A 1v1 strategy and memory game where players play as rival scientists looking to steal the other half of a new monster formula.
+                        Each player sets up their own maze to defend their half and tries to navigate the opposing maze in a series of actions.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon project-tech-icon--emoji" data-tool="Handcrafted"><span class="tech-emoji">✋</span><span class="tech-tooltip">Handcrafted</span></div>
+                                <div class="project-tech-icon project-tech-icon--emoji" data-tool="Laser Printed"><span class="tech-emoji">🖨️</span><span class="tech-tooltip">Laser Printed</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Board Game"><img src="images/platforms/board-game.png" alt="Board Game"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">1v1</span>
+                                <span class="project-app-tag">Strategy</span>
+                                <span class="project-app-tag">Memory</span>
+                                <span class="project-app-tag">Tile-based</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/formula-faceoff.html">📖 View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────── PRE MASTERS ─────────── -->
+
+            <!-- Project Card 3 - Covid Colony -->
+            <div class="project-card" data-types="games" data-roles="producer,designer,engineer">
+                <div class="project-cover">
+                    <img src="images/projects/Covid Colony - Cover.png" alt="Covid Colony Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Covid Colony - Title.png" alt="Covid Colony Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                        <span class="role-pill role-pill--engineer">💻 Engineer</span>
+                    </div>
+                    <div class="project-date">January 2021 - June 2021</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A 2D platformer and shooter game combined with side-scroller mechanics and puzzles based in Indonesian language.
+                        It was developed with the intention to tell people regarding the dangers of COVID and ways to prevent spreading of this deadly virus through the various mechanics, gameplay, and story present in the game.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Unity"><img src="images/tools/Unity.svg" alt="Unity"><span class="tech-tooltip">Unity</span></div>
+                                <div class="project-tech-icon" data-tool="C#"><img src="images/tools/CSharp.svg" alt="C#"><span class="tech-tooltip">C#</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Platformer</span>
+                                <span class="project-app-tag">Shooter</span>
+                                <span class="project-app-tag">2D</span>
+                                <span class="project-app-tag">Side-Scroller</span>
+                                <span class="project-app-tag">Puzzle</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/covid-colony.html">📖 View Details</a>
+                        <a href="https://raihansyah-dean.itch.io/covid-colony" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 - Reminiscence -->
+            <div class="project-card" data-types="games" data-roles="producer,designer,engineer">
+                <div class="project-cover">
+                    <img src="images/projects/Reminiscence - Cover.png" alt="Reminiscence Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Reminiscence - Title.png" alt="Reminiscence Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--producer">📋 Producer</span>
+                        <span class="role-pill role-pill--designer">🎨 Designer</span>
+                        <span class="role-pill role-pill--engineer">💻 Engineer</span>
+                    </div>
+                    <div class="project-date">October 2019 - January 2020</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A story-based puzzle game where every outcome will be determined by your own actions.
+                        Players will face various puzzles while also uncovering the truth about Jet's story.
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Genres</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Puzzle</span>
+                                <span class="project-app-tag">Story Driven</span>
+                                <span class="project-app-tag">Multiple Endings</span>
+                                <span class="project-app-tag">Space</span>
+                                <span class="project-app-tag">2D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/reminiscence.html">📖 View Details</a>
+                        <a href="https://jduaar.itch.io/reminiscence" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 1 - Unreal Logic -->
+            <div class="project-card" data-types="games" data-roles="solo-developer">
+                <div class="project-cover">
+                    <img src="images/projects/Unreal Logic - Cover.png" alt="Unreal Logic Cover">
+                </div>
+
+                <div class="project-title-container">
+                    <img src="images/projects/Unreal Logic - Title.png" alt="Unreal Logic Title" class="project-title-img">
+                </div>
+
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="role-pill role-pill--solo-developer">🧑‍💻 Solo Developer</span>
+                    </div>
+                    <div class="project-date">October 2019</div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-desc">
+                        A grid base puzzle game where you can change the foundational rules of the world!
+                        Change how the game works, repurpose things you find, and find suprising interactions!
+                    </p>
+
+                    <div class="project-info">
+                        <div class="project-info-section">
+                            <div class="project-info-label">Tools &amp; Languages</div>
+                            <div class="project-tech-tags">
+                                <div class="project-tech-icon" data-tool="Godot Engine"><img src="images/tools/Godot Engine.svg" alt="Godot"><span class="tech-tooltip">Godot Engine</span></div>
+                                <div class="project-tech-icon" data-tool="Git"><img src="images/tools/Git.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Platforms</div>
+                            <div class="project-platform-icons">
+                                <div class="project-platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-info-section">
+                            <div class="project-info-label">Application Types</div>
+                            <div class="project-app-tags">
+                                <span class="project-app-tag">Puzzle</span>
+                                <span class="project-app-tag">2D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#" class="view-details" data-project="pages-projects/unreal-logic.html">📖 View Details</a>
+                        <a href="https://raihansyah-dean.itch.io/unreal-logic" target="_blank" rel="noopener" class="external-link-btn">🎮 Go to Project Page</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ═══════════════ MODALS ═══════════════ -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">🎮</div>
+            <h2 class="modal-title">Coming Soon</h2>
+            <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
+            <button class="modal-close" data-close-modal>Got it</button>
+        </div>
+    </div>
+
+    <div id="inProgressModal" class="modal">
+        <div class="modal-content in-progress-modal">
+            <div class="modal-icon">⏳</div>
+            <h2 class="modal-title">Work in Progress</h2>
+            <p class="modal-message">This project is currently in development. The project page will be available once it's released!</p>
+            <button class="modal-close" data-close-modal>Understood</button>
+        </div>
+    </div>
+
+    <!-- Shared -->
+    <script src="js/core/particles.js"></script>
+    <script src="js/core/modal.js"></script>
+    <!-- This page -->
+    <script src="js/pages/projects.js"></script>
+</body>
+</html>

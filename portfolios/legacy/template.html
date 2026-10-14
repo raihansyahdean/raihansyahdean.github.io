@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ═══════════════════════════════════════════════════════════════
+         CUSTOMIZE: Change the title to match this portfolio's field.
+         e.g. "Game Producing Portfolio — Dean"
+         ═══════════════════════════════════════════════════════════════ -->
+    <title>[Field] Portfolio — Raihansyah A. Andrian</title>
+
+    <!-- Shared (note the ../ — this page is one folder deep) -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components/sections.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+</head>
+<!-- data-page="portfolio" highlights the Portfolios dropdown in the nav.
+     data-root="../"      tells the nav its links need a ../ prefix. -->
+<body data-page="portfolio" data-root="../">
+
+    <!-- Background + nav are rendered here (edit them in js/core/layout.js) -->
+    <script src="../js/core/layout.js"></script>
+
+    <main class="container page active portfolio-page">
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 1 — PERSONAL STORY
+             Photo + intro paragraph.
+             CUSTOMIZE: Update the subtitle, intro text, and highlights
+             to be relevant to this specific field.
+             ═══════════════════════════════════════════════════════ -->
+        <div class="hero">
+            <h1>Raihansyah A. Andrian</h1>
+            <!-- CUSTOMIZE: Change subtitle to reflect this field -->
+            <p class="subtitle">[Field Title] — Game Developer</p>
+
+            <div class="profile-intro">
+                <div class="profile-image-container">
+                    <img src="../images/Profile-1.jpg" alt="Raihansyah Andrian" class="profile-pic">
+                </div>
+                <div class="intro-box">
+                    <p>
+                        <!-- CUSTOMIZE: Write a personal story paragraph focused on this specific field.
+                             Use highlight spans to emphasize key terms:
+                             <span class="highlight">blue highlight</span>
+                             <span class="highlight-orange">orange highlight</span>
+                             <span class="highlight-purple">purple highlight</span>
+                        -->
+                        Hello there! My name is Raihansyah but you can call me Dean.
+                        I am a passionate technical artist from Indonesia!
+                        Currently I am pursuing my Master's in Computer Science of game development at University of Southern California (USC).
+                        Technical art is a field that I feel a lot of people don't fully understand,
+                        yet you can do so many things in it such as modeling, rigging, animation, and VFX.
+                        Having a strong background in mathematics and computer science,
+                        I have always loved how we can use them to create extraordinary things.
+                        This field is a direct application of it since I can clearly show what I am creating and be proud of it.
+                        I have first-hand experience in applying several methods of rendering including applying it in game engines.
+                        I also have knowledge of how to create animation using both a 3D software such as Maya or computer generated based as well.
+                        These include basic methods of motion capture interpolation, skinning, and inverse-kinematics (IK).
+                        My goal as a developer is to create engaging and innovative experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 2 — QUICK STATS
+             CUSTOMIZE: Same stats as the main site; adjust if needed.
+             The grid is 3 columns — adding a 4th card wraps it onto a
+             second row, so either keep 3 or change grid-template-columns
+             for .home-stat-cards in css/components/sections.css.
+             ═══════════════════════════════════════════════════════ -->
+        <section class="stats-section">
+            <div class="home-stat-cards">
+                <div class="home-stat-card">
+                    <div class="home-stat-number">7+</div>
+                    <div class="home-stat-label">Years Experience</div>
+                </div>
+                <div class="home-stat-card">
+                    <div class="home-stat-number">10+</div>
+                    <div class="home-stat-label">Projects Completed</div>
+                </div>
+                <div class="home-stat-card">
+                    <div class="home-stat-number">3</div>
+                    <div class="home-stat-label">Shipped Games</div>
+                </div>
+            </div>
+        </section>
+
+                <!-- ═══════════════════════════════════════════════════════
+             SECTION 4 — FEATURED PROJECTS
+             CUSTOMIZE: Replace the featured cards below with projects
+             most relevant to this field. Keep 2–4 cards.
+             ═══════════════════════════════════════════════════════ -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <!-- CUSTOMIZE: e.g. "My best producing work" -->
+                <p class="section-subtitle">Highlighted work in [Field]</p>
+            </div>
+
+            <div class="featured-projects">
+
+                <!-- ═══════════════════════════════════════════════════════
+                     FEATURED CARD
+
+                     WHERE THE CARD LINKS:
+                     A) No detail page yet  → href="../projects.html"  (no onclick)
+                     B) Has a detail page   → href="../pages-projects/[name].html"
+                                              onclick="setProjectReferrer('portfolio')"
+                                              so its Back button returns to THIS page.
+
+                     MEDIA OPTIONS — pick ONE for each card:
+                     A) Static image (default) → an <img> inside .featured-image
+                     B) Local video (autoplay loop, acts like a GIF)
+                        → <video> inside .featured-image; add "controls" to make it playable
+                     C) YouTube embed
+                        → add class "featured-image--video" to .featured-image
+                        → put an <iframe> inside it
+                        Replace VIDEO_ID with the 11-char YouTube ID
+                        e.g. youtube.com/watch?v=dQw4w9WgXcQ → VIDEO_ID = dQw4w9WgXcQ
+                ═══════════════════════════════════════════════════════════ -->
+
+                <!-- CUSTOMIZE: Featured Card 1 — no detail page, links to the Projects page -->
+                <a href="../projects.html" class="featured-card">
+                    <div class="featured-image">
+                        <img src="../images/projects/Elementary - Cover.png" alt="Project Cover">
+                    </div>
+
+                    <!-- - - OPTION B: Local video — delete A and uncomment this
+                    <div class="featured-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="../videos/[project-clip].mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    - - -->
+
+                    <!-- - - OPTION C: YouTube embed — delete A and uncomment this
+                    <div class="featured-image featured-image--video">
+                        <iframe
+                            src="https://www.youtube.com/embed/VIDEO_ID"
+                            title="[Project Name]"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    - - -->
+
+                    <div class="featured-content">
+                        <h3 class="featured-title">[Project Name]</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">[Badge 1]</span>
+                            <span class="featured-badge">[Badge 2]</span>
+                        </div>
+                        <p class="featured-desc">
+                            [Short description of this project and your specific role / contribution relevant to this field.]
+                        </p>
+                        <!-- <span class="view-project">View Project →</span> -->
+                    </div>
+                </a>
+
+                <!-- CUSTOMIZE: Featured Card 2 — has a detail page -->
+                <a href="../pages-projects/underwater-shader.html" class="featured-card" onclick="setProjectReferrer('portfolio')">
+                    <div class="featured-image">
+                        <img src="../images/projects/Underwater Shader - Cover.png" alt="Project Cover">
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">[Project Name]</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">[Badge 1]</span>
+                            <span class="featured-badge">[Badge 2]</span>
+                        </div>
+                        <p class="featured-desc">
+                            [Short description of this project and your specific role / contribution relevant to this field.]
+                        </p>
+                        <span class="view-project">View Project →</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- <a href="../projects.html" class="all-projects-btn">View All Projects</a> -->
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 3 — SKILLS
+             CUSTOMIZE: Keep only the skills relevant to this field.
+             Reorder to put the most relevant ones first.
+             width % = (level / 10) * 100
+             ═══════════════════════════════════════════════════════ -->
+        <div class="skills-section">
+            <!-- CUSTOMIZE: e.g. "Producing Skills", "Engineering Skills" -->
+            <h3 class="section-heading section-heading--main">[Field] Skills</h3>
+            <div class="skills-container">
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Unity.svg" alt="Unity" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unity</span>
+                        </span>
+                        <span class="skill-level">10/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 100%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Unreal Engine.svg" alt="Unreal Engine" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unreal Engine</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Producing</span>
+                        <span class="skill-level">10/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 100%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Jira & Task Tracking Tools</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Scrum & Agile Development</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Design</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Level Design</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Systems & Mechanics Design</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Balancing</span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Engineering</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Audio</span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/CSharp.svg" alt="CSharp" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C#</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/CPP.svg" alt="CPP" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C++</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/OpenGL.svg" alt="OpenGL" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Computer Graphics</span>
+                        </span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Maya.png" alt="Maya" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">3D Art &amp; Animation</span>
+                        </span>
+                        <span class="skill-level">6/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Technical Art - Animation</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Technical Art - VFX</span>
+                        <span class="skill-level">6/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Perforce.png" alt="Perforce" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Perforce</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Git.svg" alt="Git" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">Git</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/wwise.png" alt="Wwise" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">Wwise</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Reaper.png" alt="Reaper" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Reaper</span>
+                        </span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 5 — QUOTE
+             CUSTOMIZE: Change the quote to something relevant to this
+             field or keep Dean's signature quote.
+             ═══════════════════════════════════════════════════════ -->
+        <div class="quote-section">
+            <div class="quote-container">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">
+                    It's not about ideas. It's about making ideas happen.
+                </p>
+                <div class="quote-author">— Dean</div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             SECTION 6 — THANK YOU
+             ═══════════════════════════════════════════════════════ -->
+        <div class="thank-you-section">
+            <div class="thank-you-text">Thank You for Visiting!</div>
+            <p class="thank-you-subtext">
+                Feel free to explore my projects and get in touch if you'd like to collaborate.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Shared -->
+    <script src="../js/core/particles.js"></script>
+</body>
+</html>

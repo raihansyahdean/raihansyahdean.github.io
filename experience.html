@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Raihansyah Andrian</title>
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <!-- This page -->
+    <link rel="stylesheet" href="css/pages/experience.css">
+</head>
+<body data-page="experience">
+    <!-- Background + nav are rendered here (edit them in js/core/layout.js) -->
+    <script src="js/core/layout.js"></script>
+
+    <main class="container page active">
+        <div class="experience-container">
+            <h1 class="h1--spaced">Work Experience</h1>
+
+            <!-- ═══════════════ TIMELINE ═══════════════
+                 Newest job first. Items alternate sides automatically (odd = image left,
+                 even = image right) — but keep the HTML order the same as below:
+                 odd items: image → dot → content     even items: content → dot → image
+
+                 The image's data-project path stays "Coming Soon" until you add it to
+                 AVAILABLE_EXPERIENCE_PAGES in js/pages/experience.js.
+
+                 Platform icon snippet (windows / macos / playstation / xbox / switch / android / ios / board-game):
+                   <div class="platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+            -->
+            <div class="timeline">
+
+                <!-- Experience Item 3 — eComindo -->
+                <div class="timeline-item">
+                    <a href="#" class="timeline-image-link" data-project="pages-experience/exp-ecomindo.html">
+                        <img src="images/experience/ecomindo - cover.jpg" alt="eComindo">
+                    </a>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2024 - Jul 2025</div>
+                        <h3 class="timeline-title">Associate Software Engineer</h3>
+                        <p class="timeline-company">PT. eComindo</p>
+
+                        <ul class="timeline-description">
+                            <li>Backend engineer worked with a team of 7 developers</li>
+                            <li>Developing features regarding user loan applications and payments</li>
+                            <li>Associated with 10+ external systems of banks, ensuring a smooth loan process</li>
+                            <li>Consult on the client's creation of the system, ensuring a well-structured code base</li>
+                        </ul>
+
+                        <div class="timeline-info">
+                            <div class="info-section">
+                                <div class="info-label">Tools &amp; Languages</div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Springboot</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">Apache Kafka</span>
+                                    <span class="tech-tag">Git</span>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Platforms</div>
+                                <div class="platform-icons">
+                                    <div class="platform-icon" data-platform="Android"><img src="images/platforms/android.png" alt="Android"></div>
+                                    <div class="platform-icon" data-platform="iOS"><img src="images/platforms/ios.png" alt="iOS"></div>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Application Types</div>
+                                <div class="genre-tags">
+                                    <span class="genre-tag">Web App</span>
+                                    <span class="genre-tag">Mobile App</span>
+                                    <span class="genre-tag">Databases</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 — Codomo / Potato Pirates -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2023 - May 2024</div>
+                        <h3 class="timeline-title">Associate Game Designer</h3>
+                        <p class="timeline-company">Potato Pirates | Codomo Pte Ltd</p>
+
+                        <ul class="timeline-description">
+                            <li>Led a 3-person design team with an overall team of 20+ people</li>
+                            <li>Designed the mechanics for a coding educational PvP card game</li>
+                            <li>Balanced each component of the game such as character health points and card deck composition</li>
+                            <li>Utilizing 20+ online playtests and iterate on designs</li>
+                        </ul>
+
+                        <div class="timeline-info">
+                            <div class="info-section">
+                                <div class="info-label">Tools &amp; Languages</div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Board Game</span>
+                                    <span class="tech-tag">Card Game</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Excel</span>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Platforms</div>
+                                <div class="platform-icons">
+                                    <div class="platform-icon" data-platform="Board Game"><img src="images/platforms/board-game.png" alt="Board Game"></div>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Game Genres</div>
+                                <div class="genre-tags">
+                                    <span class="genre-tag">Educational</span>
+                                    <span class="genre-tag">Multiplayer</span>
+                                    <span class="genre-tag">Co-Op</span>
+                                    <span class="genre-tag">Competitive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-dot"></div>
+
+                    <a href="#" class="timeline-image-link" data-project="pages-experience/exp-codomo.html">
+                        <img src="images/experience/Potato Pirates - Cover.png" alt="Codomo">
+                    </a>
+                </div>
+
+                <!-- Experience Item 1 — Project Seed / Outland Odyssey -->
+                <div class="timeline-item">
+                    <a href="#" class="timeline-image-link" data-project="pages-experience/exp-projectseed.html">
+                        <img src="images/experience/Outland Odyssey - Cover.png" alt="Project Seed">
+                    </a>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2022 - Aug 2023</div>
+                        <h3 class="timeline-title">Junior Game Designer</h3>
+                        <p class="timeline-company">Outland Odyssey | Project Seed</p>
+
+                        <ul class="timeline-description">
+                            <li>Designed 20+ creatures and 1 boss AI behavior</li>
+                            <li>Contributed to the overall combat design for a mobile ARPG game</li>
+                            <li>Created and balanced a rigorous flow of combat using 10+ damage formulas, character progression, and equipment progression stats</li>
+                            <li>Developed a calculation system for character and equipment progression statuses</li>
+                        </ul>
+
+                        <div class="timeline-info">
+                            <div class="info-section">
+                                <div class="info-label">Tools &amp; Languages</div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Git</span>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Platforms</div>
+                                <div class="platform-icons">
+                                    <div class="platform-icon" data-platform="Windows"><img src="images/platforms/windows.png" alt="Windows"></div>
+                                    <div class="platform-icon" data-platform="macOS"><img src="images/platforms/macos.png" alt="macOS"></div>
+                                    <div class="platform-icon" data-platform="Android"><img src="images/platforms/android.png" alt="Android"></div>
+                                    <div class="platform-icon" data-platform="iOS"><img src="images/platforms/ios.png" alt="iOS"></div>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="info-label">Game Genres</div>
+                                <div class="genre-tags">
+                                    <span class="genre-tag">3D</span>
+                                    <span class="genre-tag">Mobile</span>
+                                    <span class="genre-tag">Action RPG</span>
+                                    <span class="genre-tag">Adventure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════ MODAL ═══════════════ -->
+    <div id="workModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">📋</div>
+            <h2 class="modal-title">Coming Soon</h2>
+            <p class="modal-message">Details of this project are currently not available. Check back soon for updates!</p>
+            <button class="modal-close" data-close-modal>Got it</button>
+        </div>
+    </div>
+
+    <!-- Shared -->
+    <script src="js/core/particles.js"></script>
+    <script src="js/core/modal.js"></script>
+    <!-- This page -->
+    <script src="js/pages/experience.js"></script>
+</body>
+</html>

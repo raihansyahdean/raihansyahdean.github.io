@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Portfolio — Raihansyah A. Andrian</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components/sections.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+</head>
+<body data-page="portfolio" data-root="../">
+
+    <script src="../js/core/layout.js"></script>
+
+    <main class="container page active portfolio-page">
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 1 — PERSONAL STORY
+                Photo + intro paragraph (like the old Home page)
+                CUSTOMIZE: Update the subtitle, intro text, and highlights
+                to be relevant to this specific field.
+                ═══════════════════════════════════════════════════════ -->
+        <div class="hero">
+            <h1>Raihansyah A. Andrian</h1>
+            <p class="subtitle">Game Designer</p>
+
+            <div class="profile-intro">
+                <div class="profile-image-container">
+                    <img src="../images/Profile-1.jpg" alt="Raihansyah Andrian" class="profile-pic">
+                </div>
+                <div class="intro-box">
+                    <p>
+                        Hello there! My name is Raihansyah but you can call me <span class="highlight-purple">Dean</span>.
+                        I am a passionate <span class="highlight-orange">game designer</span> from Indonesia!
+                        Currently I am pursuing my Master's in Computer Science of game development at University of Southern California (USC).
+                        
+                        I am particularly interested in game design because there are <span class="highlight">unlimited potential</span> 
+                        on how we can create games 
+                        and what we create are the <span class="highlight-orange">"Aha!"</span> and <span class="highlight-orange">jaw-dropping</span> 
+                        moments that players get excited about.
+
+                        I start design development by staking out the foundation of 
+                        the narrative world-building and experience goal of the game.
+
+                        After a base is set in stone, I would <span class="highlight-purple">collaboratively iterate</span> on the particular 
+                        systems that would support that foundation
+                        through <span class="highlight-orange">prototyping</span> and <span class="highlight-orange">balancing</span>.
+
+                        As a designer, I value being able to <span class="highlight">document</span> my design decisions well 
+                        so that the game can be implemented and visualized as intended.
+
+                        My goal as a developer is to create <span class="highlight-purple">engaging and innovative experiences.</span> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 2 — QUICK STATS
+                Same stats as the main site; customize if needed.
+                ═══════════════════════════════════════════════════════ -->
+        <section class="stats-section">
+            <div class="home-stat-cards">
+                <div class="home-stat-card">
+                    <div class="home-stat-number">7+</div>
+                    <div class="home-stat-label">Years Experience</div>
+                </div>
+                <div class="home-stat-card">
+                    <div class="home-stat-number">10+</div>
+                    <div class="home-stat-label">Projects Completed</div>
+                </div>
+                <div class="home-stat-card">
+                    <div class="home-stat-number">3</div>
+                    <div class="home-stat-label">Shipped Games</div>
+                </div>
+                <!-- CUSTOMIZE: Add a field-specific stat if relevant, e.g.: -->
+                <!-- <div class="home-stat-card">
+                    <div class="home-stat-number">5</div>
+                    <div class="home-stat-label">Games Produced</div>
+                </div> -->
+                
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 4 — FEATURED PROJECTS
+                CUSTOMIZE: Replace the featured cards below with projects
+                most relevant to this field. Keep 2–4 cards.
+                ═══════════════════════════════════════════════════════ -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Games I've designed</p>
+            </div>
+
+            <div class="featured-projects">
+
+                <!-- Featured Project 1 -->
+                <!-- <a href="..\pages-projects\elementary-designer.html" class="featured-card" onclick="setProjectReferrer('portfolio')"></a> -->
+                <a class="featured-card">
+                    <div class="featured-image">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="..\videos\Elementary\Polish - Casting.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Elementary</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Unity 3D</span>
+                            <span class="featured-badge">Adventure</span>
+                            <span class="featured-badge">Roguelike</span>
+                            <span class="featured-badge">Windows PC</span>
+                        </div>
+                        <p class="featured-desc">
+                            As a mage who can manipulate the environment in various ways by harnessing the four elemental powers,
+                            explore an abandoned temple in order to discover it's deepest and darkest secrets.
+                        </p>
+                        <!-- <span class="view-project">View Production Process →</span> -->
+                    </div>
+                </a>
+
+                <!-- Featured Project 2 -->
+                <!-- <a href="..\pages-projects\covid-colony-designer.html" class="featured-card" onclick="setProjectReferrer('portfolio')"></a> -->
+                <a class="featured-card">
+                    <div class="featured-image">
+                        <img src="..\images\projects\Covid Colony\World Exploration.png" alt="Covid Colony Cover">
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Covid Colony</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Unity 2D</span>
+                            <span class="featured-badge">Platformer</span>
+                            <span class="featured-badge">Shooter</span>
+                            <span class="featured-badge">Educational</span>
+                        </div>
+                        <p class="featured-desc">
+                            An action based platforming game combined with side-scroller mechanics and puzzles 
+                            with the intention to tell people regarding the dangers of the COVID 19 virus.
+                        </p>
+                        <!-- <span class="view-project">View Project →</span> -->
+                    </div>
+                </a>
+
+                <!-- Featured Project 3 -->
+                    <!-- <a href="..\pages-projects\reminiscence-designer.html" class="featured-card" onclick="setProjectReferrer('portfolio')"></a> -->
+                <a class="featured-card">
+                    <div class="featured-image">
+                        <img src="..\images\projects\Reminiscence\World Look 2.png" alt="Reminiscence Cover">
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Reminiscence</h3>
+                        <div class="featured-meta">
+                            <span class="featured-badge">Godot 2D</span>
+                            <span class="featured-badge">Puzzle</span>
+                            <span class="featured-badge">Story Driven</span>
+                            <span class="featured-badge">Multiple Endings</span>
+                        </div>
+                        <p class="featured-desc">
+                            A short, story-based puzzle game where a space explorer got lost in a distant alien planet.
+                            Players decisions in solving the puzzles will impact the outcome of the story.
+                        </p>
+                        <!-- <span class="view-project">View Project →</span> -->
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- <a href="../index.html" class="all-projects-btn" onclick="goToMainSection('projects')">View All Projects</a> -->
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 3 — SKILLS
+                Mirrors the About page skills layout.
+                CUSTOMIZE: Keep only the skills relevant to this field.
+                Reorder to put the most relevant ones first.
+                ═══════════════════════════════════════════════════════ -->
+        <div class="skills-section">
+            <h3 class="section-heading section-heading--main" style="text-align: center; margin-bottom: 2rem;">
+                Design Skills
+            </h3>
+            <div class="skills-container">
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="../images/tools/Unity.svg" alt="Unity" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unity</span>
+                        </span>
+                        <span class="skill-level">10/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="..\images\tools\Unreal Engine.svg" alt="Unreal Engine" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Unreal Engine</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Level Design</span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Systems & Mechanics Design</span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Game Balancing</span>
+                        <span class="skill-level">7/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="..\images\tools\CSharp.svg" alt="CSharp" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C#</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="..\images\tools\CPP.svg" alt="CPP" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">C++</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="..\images\tools\Perforce.png" alt="Perforce" class="skill-icon skill-icon--light">
+                            <span class="skill-name">Perforce</span>
+                        </span>
+                        <span class="skill-level">8/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name-wrapper">
+                            <img src="..\images\tools\Git.svg" alt="Git" class="skill-icon skill-icon--dark">
+                            <span class="skill-name">Git</span>
+                        </span>
+                        <span class="skill-level">9/10</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 5 — QUOTE
+                CUSTOMIZE: Change the quote to something relevant to this
+                field or keep Dean's signature quote.
+                ═══════════════════════════════════════════════════════ -->
+        <!-- Compact Quote Section -->
+        <div class="quote-section">
+            <div class="quote-container">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">
+                    It's not about ideas. It's about making ideas happen.
+                </p>
+                <div class="quote-author">— Dean</div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+                SECTION 6 — THANK YOU
+                ═══════════════════════════════════════════════════════ -->
+        <!-- Thank You Section -->
+        <div class="thank-you-section">
+            <div class="thank-you-text">Thank You for Visiting!</div>
+            <p class="thank-you-subtext">
+                Feel free to explore my projects and get in touch if you'd like to collaborate.
+            </p>
+        </div>
+    </div>
+
+    <script src="../js/core/particles.js"></script>
+</body>
+</html>

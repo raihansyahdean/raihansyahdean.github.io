@@ -1,0 +1,572 @@
+/* ════════════════════════════════════════════════════════════════════════
+   pages/projects.css — projects.html only
+   Filters, project grid, project cards, action buttons
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ── Dual filter (Type + Role) ───────────────────────────────────────── */
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.filter-label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.filter-btn {
+    padding: 0.4rem 0.9rem;
+    background: rgba(20, 25, 50, 0.6);
+    border: 2px solid rgba(88, 166, 255, 0.3);
+    border-radius: 20px;
+    color: #58a6ff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-btn:hover::before { left: 100%; }
+
+.filter-btn:hover {
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border-color: #ff6b35;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.filter-btn.active:hover { transform: translateY(-2px); }
+
+/* Count badge inside each filter button (filled by js/pages/projects.js) */
+.project-count {
+    display: inline-block;
+    background: rgba(88, 166, 255, 0.2);
+    padding: 0.1rem 0.4rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    margin-left: 0.3rem;
+}
+
+.filter-btn.active .project-count { background: rgba(255, 255, 255, 0.3); }
+
+/* ── Project grid ────────────────────────────────────────────────────── */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ── Project card ────────────────────────────────────────────────────── */
+.project-card {
+    background: rgba(20, 25, 50, 0.6);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card.hidden { display: none; }
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b35;
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+
+/* Cover image */
+.project-cover {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-cover img { transform: scale(1.1); }
+
+.project-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 14, 39, 0.9), transparent);
+    pointer-events: none;
+}
+
+/* Title banner (image or text) */
+.project-title-container {
+    position: relative;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.project-title-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.05) 10px,
+        rgba(255, 255, 255, 0.05) 20px
+    );
+    animation: slidePattern 20s linear infinite;
+}
+
+@keyframes slidePattern {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(28px); }
+}
+
+.project-title-img {
+    max-width: 90%;
+    max-height: 100px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.project-title-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+
+/* Role pills + date */
+.project-meta {
+    background: rgba(10, 14, 39, 0.8);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.project-role {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.role-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid;
+    white-space: nowrap;
+}
+
+/* One colour per role — add a line here when you add a new role */
+.role-pill--producer         { background: rgba(88, 166, 255, 0.12);  border-color: #f7931e; color: #f7931e; }
+.role-pill--designer         { background: rgba(255, 107, 53, 0.12);  border-color: #58a6ff; color: #58a6ff; }
+.role-pill--engineer         { background: rgba(199, 146, 234, 0.12); border-color: #64d2b4; color: #64d2b4; }
+.role-pill--artist           { background: rgba(247, 147, 30, 0.12);  border-color: #f472b6; color: #f472b6; }
+.role-pill--technical-artist { background: rgba(100, 210, 180, 0.12); border-color: #9d6fd9; color: #9d6fd9; }
+.role-pill--audio            { background: rgba(255, 210, 63, 0.12);  border-color: #e8b84b; color: #e8b84b; }
+.role-pill--solo-developer   { background: rgba(255, 107, 53, 0.12);  border-color: #ff6b35; color: #ff6b35; }
+
+.project-date {
+    color: #c792ea;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Body */
+.project-content { padding: 1.5rem; }
+
+.project-desc {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ── Info boxes (Tools / Platforms / Genres) ─────────────────────────── */
+.project-info { margin-bottom: 1.5rem; }
+
+.project-info-section {
+    background: rgba(10, 14, 39, 0.5);
+    border: 1px solid rgba(88, 166, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-info-label {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-info-label::before {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background: linear-gradient(180deg, #ff6b35, #58a6ff);
+    border-radius: 2px;
+}
+
+/* Tool icons */
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.project-tech-tag {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid #58a6ff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    color: #58a6ff;
+    font-size: 0.75rem;
+    transition: all 0.3s;
+}
+
+.project-tech-tag:hover {
+    background: rgba(88, 166, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.project-tech-icon {
+    width: 34px;
+    height: 34px;
+    background: rgba(88, 166, 255, 0.08);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.project-tech-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    filter: brightness(0.85) saturate(0.9);
+    transition: filter 0.3s;
+}
+
+.project-tech-icon:hover {
+    background: rgba(255, 107, 53, 0.15);
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.project-tech-icon:hover img { filter: brightness(1) saturate(1.1); }
+
+.project-tech-icon--emoji {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.tech-emoji {
+    pointer-events: none;
+    font-style: normal;
+}
+
+.tech-tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 14, 39, 0.95);
+    color: #fff;
+    padding: 0.3rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    z-index: 100;
+}
+
+.project-tech-icon:hover .tech-tooltip { opacity: 1; }
+
+/* Platform icons */
+.project-platform-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.project-platform-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-platform-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.project-platform-icon:hover {
+    background: rgba(255, 107, 53, 0.15);
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.project-platform-icon:hover img { transform: scale(1.1); }
+
+/* Tooltip text comes from the data-platform attribute */
+.project-platform-icon::after {
+    content: attr(data-platform);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 14, 39, 0.95);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    z-index: 100;
+}
+
+.project-platform-icon:hover::after { opacity: 1; }
+
+/* Genre tags */
+.project-app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-app-tag {
+    background: rgba(247, 147, 30, 0.1);
+    border: 1px solid #f7931e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    color: #f7931e;
+    font-size: 0.75rem;
+    transition: all 0.3s;
+}
+
+.project-app-tag:hover {
+    background: rgba(247, 147, 30, 0.2);
+    transform: translateY(-1px);
+}
+
+/* ── Card buttons ────────────────────────────────────────────────────── */
+.project-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #58a6ff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid #58a6ff;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    background: rgba(88, 166, 255, 0.2);
+    color: #ff6b35;
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+}
+
+/* Grey "View Details" — class is added automatically by js/pages/projects.js */
+.view-details.unavailable {
+    background: rgba(160, 160, 160, 0.1);
+    border: 1px solid #808080;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.view-details.unavailable:hover {
+    background: rgba(160, 160, 160, 0.15);
+    color: #a0a0a0;
+    border-color: #808080;
+    transform: none;
+    box-shadow: none;
+}
+
+.external-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.external-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.external-link-btn.in-progress {
+    background: rgba(160, 160, 160, 0.3);
+    border: 1px solid #808080;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.external-link-btn.in-progress:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .project-grid { grid-template-columns: 1fr; }
+
+    .filter-section {
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .filter-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .filter-buttons { gap: 0.5rem; }
+
+    .filter-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+        flex: 1 1 calc(50% - 0.25rem);
+        min-width: 140px;
+        text-align: center;
+    }
+
+    .project-count {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .project-role { gap: 0.3rem; }
+
+    .role-pill {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
